@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP3", "TP3\TP3.csproj", "{64F11153-4072-451D-A41F-76952181D97D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP3 Main", "TP3\TP3 Main.csproj", "{64F11153-4072-451D-A41F-76952181D97D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clases Abstractas", "Entidades\Clases Abstractas.csproj", "{5C9A2FF2-971C-44DD-910F-A6D109056627}"
 EndProject
