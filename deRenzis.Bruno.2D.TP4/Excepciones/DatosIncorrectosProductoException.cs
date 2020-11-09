@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
-    class DatosIncorrectosProductoException
+    public class DatosIncorrectosProductoException:Exception
     {
+        public DatosIncorrectosProductoException() : base("Datos incorrectos del cliente")
+        {
+
+        }
+
+        public DatosIncorrectosProductoException(string mensaje) : base(mensaje)
+        {
+
+        }
     }
 }

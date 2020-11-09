@@ -44,6 +44,15 @@ namespace Entidades
         public bool ClienteHabitual { get => clienteHabitual; set => clienteHabitual = value; }
         public int CantidadCompras { get => cantidadCompras; set => cantidadCompras = value; }
         #endregion
+
+        protected virtual string MostrarDatos()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Cliente habitual: {this.ClienteHabitual}");
+            sb.AppendLine(base.ToString());
+            return sb.ToString();
+        }
+
     }
 
 }

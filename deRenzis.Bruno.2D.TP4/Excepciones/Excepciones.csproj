@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatosIncorrectosClienteException.cs" />
+    <Compile Include="ArchivosException.cs" />
+    <Compile Include="NombreIncorrectoClienteException.cs" />
     <Compile Include="DatosIncorrectosProductoException.cs" />
-    <Compile Include="DatosIncorrectosVentaException.cs" />
+    <Compile Include="DNIIncorrectoClienteException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,5 +12,13 @@ namespace Entidades
         public static List<Producto> listaProductos;
         public static List<Vendedor> listaVendedores;
         public static List<Venta> listaVentas;
+        
+        static Comercio()
+        {
+            listaClientes = new List<Cliente>();
+            listaProductos = new List<Producto>();
+            listaVendedores = new List<Vendedor>();
+            listaVentas = new List<Venta>();
+        }
     }
 }
