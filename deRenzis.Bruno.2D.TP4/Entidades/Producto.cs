@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Xml;
+using System.Xml.Serialization;
 namespace Entidades
 {
-    public class Producto
+    [Serializable]
+    [XmlInclude(typeof(ProductoCadenaFrio))]
+    [XmlInclude(typeof(ProductoSinCadenaFrio))]
+    public abstract class Producto
     {
+        int id;
         string nombre;
         double precio;
         int cantidad;
@@ -17,7 +22,15 @@ namespace Entidades
         public double Precio { get => precio; set => precio = value; }
         public ETipoProducto TipoProducto { get => tipoProducto; set => tipoProducto = value; }
         public int Cantidad { get => cantidad; set => cantidad = value; }
+        public int Id { get => id; set => id = value; }
 
+        /// <summary>
+        /// Constructor utilizado para agregar un producto a la base de datos
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="precio"></param>
+        /// <param name="tipoProducto"></param>
+        /// <param name="cantidad"></param>
         public Producto(string nombre, double precio, ETipoProducto tipoProducto, int cantidad)
         {
             this.Nombre = nombre;
@@ -25,22 +38,90 @@ namespace Entidades
             this.TipoProducto = tipoProducto;
             this.Cantidad = cantidad;
         }
+
+        /// <summary>
+        /// Constructor utilizado para levantar productos de la base de datos
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="precio"></param>
+        /// <param name="tipoProducto"></param>
+        /// <param name="cantidad"></param>
+        /// <param name="id"></param>
+        public Producto(string nombre, double precio, ETipoProducto tipoProducto, int cantidad, int id) : this(nombre, precio, tipoProducto, cantidad)
+        {
+            this.Id = id;
+        }
         public enum ETipoProducto
         {
-            Perecedero,
-            NoPerecedero
+            CadenaFrio,
+            SinCadenaFrio
         }
 
-        public static bool operator + (Producto unProducto, List<Producto> listaProductos)
+        protected virtual string MostrarProductos()
         {
-            for (int i=0;i<listaProductos.Count;i++)
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"ID Producto: {this.id.ToString()}");
+            sb.AppendLine($"Nombre Producto: {this.nombre}");
+            sb.AppendLine($"Cantidad: {this.cantidad.ToString()}");
+            sb.AppendLine($"Precio: { this.precio}");
+
+            return sb.ToString();
+        }
+
+        public override string ToString()
+        {
+            return this.MostrarProductos();
+        }
+
+        public bool Guardar()
+        {
+            return DB.AgregarProducto(this);
+        }
+
+        public bool Borrar()
+        {
+            return DB.EliminarProducto(this);
+        }
+
+        public bool Modificar()
+        {
+            return DB.ModificarProducto(this);
+        }
+
+        public static bool operator ==(Producto unProducto,List<Producto> listaProductos)
+        {
+            foreach (Producto prod in listaProductos)
             {
-                if(unProducto.Nombre != listaProductos[i].Nombre)
+                if(prod.Id == unProducto.Id)
                 {
-                    listaProductos.Add(unProducto);
                     return true;
                 }
+            }
 
+            return false;
+        }
+        public static bool operator !=(Producto unProducto, List<Producto> listaProductos)
+        {
+            return !(unProducto == listaProductos);
+        }
+
+        public static bool operator + (Producto unProducto,List<Producto> listaProductos)
+        {
+            if(unProducto != listaProductos)
+            {
+                unProducto.Guardar();
+                return true;
+            }
+            return false;
+        }
+
+        public static bool operator -(Producto unProducto, List<Producto> listaProductos)
+        {
+            if (unProducto == listaProductos)
+            {
+                unProducto.Borrar();
+                return true;
             }
             return false;
         }

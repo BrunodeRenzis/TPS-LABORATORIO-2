@@ -24,7 +24,7 @@ namespace Archivos
             catch (Exception e)
             {
                 retorno = false;
-                throw new ArchivosException(e);
+                throw new ArchivoException(e);
             }
 
             return retorno;
@@ -46,7 +46,7 @@ namespace Archivos
             {
                 datos = default(string);
                 retorno = false;
-                throw new ArchivosException(e);
+                throw new ArchivoException(e);
             }
 
             return retorno;

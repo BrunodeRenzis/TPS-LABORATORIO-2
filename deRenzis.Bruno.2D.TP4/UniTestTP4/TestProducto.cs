@@ -9,7 +9,7 @@ namespace UniTestTP4
         [TestMethod]
         public void TestMethod1()
         {
-            Producto testProducto = new Producto("Jabón", 25.5, Producto.ETipoProducto.NoPerecedero, 25);
+            Producto testProducto = new ProductoSinCadenaFrio("Jabón", 25.5, Producto.ETipoProducto.SinCadenaFrio, 25);
         }
     }
 }

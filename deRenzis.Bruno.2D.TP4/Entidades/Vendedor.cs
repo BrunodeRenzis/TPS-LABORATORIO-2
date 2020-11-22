@@ -12,8 +12,11 @@ namespace Entidades
         bool empleadoActivo;
         public Vendedor(string nombre, string apellido, int dni, int edad, string sexo, int idEmpleado) : base(nombre, apellido, dni, edad, sexo)
         {
-            this.idEmpleado = idEmpleado;
-            this.empleadoActivo = false;
+            this.IdEmpleado = idEmpleado;
+            this.EmpleadoActivo = false;
         }
+
+        public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
+        public bool EmpleadoActivo { get => empleadoActivo; set => empleadoActivo = value; }
     }
 }
