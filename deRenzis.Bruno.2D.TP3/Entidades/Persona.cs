@@ -114,7 +114,7 @@ namespace Clases_Abstractas
         private int ValidarDni(ENacionalidad nacionalidad, string dni)
         {
             int dniAux;
-            if (string.IsNullOrEmpty(dni) || !int.TryParse(dni, out dniAux))
+            if (!int.TryParse(dni, out dniAux))
             {
                 dniAux = 0;
                 throw new DniInvalidoException("El dni ingresado no es válido");

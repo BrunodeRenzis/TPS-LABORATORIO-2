@@ -96,13 +96,13 @@ namespace Entidades
 
         public static bool AgregarProducto(Producto unProducto)
         {
-            string sql = "Insert into Productos(idProducto,nombreProducto, precioProducto, cantidadProducto, tipoProducto) " +
-                "values(@auxDescripcion, @auxID, @auxPrecio, @auxCantidad, @auxTipo)";
+            string sql = "Insert into Productos(idProducto,nombreProducto,cantidadProducto, precioProducto, tipoProducto) " +
+                "values(@auxNombre, @auxID, @auxPrecio, @auxCantidad, @auxTipo)";
 
-            comando.Parameters.Add(new SqlParameter("@auxDescripcion", unProducto.Nombre));
             comando.Parameters.Add(new SqlParameter("@auxID", unProducto.Id));
-            comando.Parameters.Add(new SqlParameter("@auxPrecio", unProducto.Precio));
+            comando.Parameters.Add(new SqlParameter("@auxNombre", unProducto.Nombre));
             comando.Parameters.Add(new SqlParameter("@auxCantidad", unProducto.Cantidad));
+            comando.Parameters.Add(new SqlParameter("@auxPrecio", unProducto.Precio));
             comando.Parameters.Add(new SqlParameter("@auxTipo", unProducto.TipoProducto.ToString()));
 
             return EjecutarNonQuery(sql);
@@ -119,10 +119,10 @@ namespace Entidades
 
         public static bool ModificarProducto(Producto unProducto)
         {
-            string sql = "Update Productos Set nombreProducto = @auxDescripcion, idProducto = @auxID, " +
+            string sql = "Update Productos Set nombreProducto = @auxNombre, idProducto = @auxID, " +
                 "precioProducto = @auxPrecio, cantidadProducto = @auxCantidad, tipoProducto = @auxTipo where idProducto = @auxID";
 
-            comando.Parameters.Add(new SqlParameter("@auxDescripcion", unProducto.Nombre));
+            comando.Parameters.Add(new SqlParameter("@auxNombre", unProducto.Nombre));
             comando.Parameters.Add(new SqlParameter("@auxID", unProducto.Id));
             comando.Parameters.Add(new SqlParameter("@auxPrecio", unProducto.Precio));
             comando.Parameters.Add(new SqlParameter("@auxCantidad", unProducto.Cantidad));

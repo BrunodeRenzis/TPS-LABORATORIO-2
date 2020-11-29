@@ -10,7 +10,7 @@ namespace Clases_Instansiables
     public class Profesor:Universitario
     {
         Queue<Universidad.EClases> clasesDelDia= new Queue <Universidad.EClases>();
-        static Random random = new Random();
+        static Random random;
 
         #region Constructores
         public Profesor():base()
@@ -31,6 +31,17 @@ namespace Clases_Instansiables
         #endregion
 
         #region Métodos
+        protected override string ParticiparEnClase()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"CLASES DEL DIA: ");
+            foreach (Universidad.EClases clase in this.clasesDelDia)
+            {
+                sb.AppendLine(clase.ToString());
+            }
+            return sb.ToString();
+        }
+
         private void _randomClases()
         {
             int clase = random.Next(0,3);
@@ -56,16 +67,6 @@ namespace Clases_Instansiables
             }
         }
 
-        protected override string ParticiparEnClase()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"CLASES DEL DIA: ");
-            foreach (Universidad.EClases clase in this.clasesDelDia)
-            {
-                sb.AppendLine(clase.ToString());
-            }
-            return sb.ToString();
-        }
 
         protected override string MostrarDatos()
         {

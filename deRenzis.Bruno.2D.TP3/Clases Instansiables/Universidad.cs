@@ -104,8 +104,11 @@ namespace Clases_Instansiables
 
         public static Universidad Leer ()
         {
-            Universidad universitario = new Universidad();
-            return universitario;
+            Universidad datosALeer = new Universidad();
+            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "universidad.xml");
+            Xml<Universidad> datosUniversidad = new Xml<Universidad>();
+            datosUniversidad.Leer(path, out datosALeer);
+            return datosALeer;
         }
 
         private string MostrarDatos(Universidad uni)

@@ -7,7 +7,7 @@ using Excepciones;
 namespace TestsUnitarios
 {
     [TestClass]
-    public class UnitTest1
+    public class TestDNIExcep
     {
         [TestMethod]
         [ExpectedException(typeof(DniInvalidoException))]

@@ -16,5 +16,11 @@ namespace FormVentas
         {
             InitializeComponent();
         }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarProducto formProd = new AgregarProducto();
+            formProd.Show();
+        }
     }
 }

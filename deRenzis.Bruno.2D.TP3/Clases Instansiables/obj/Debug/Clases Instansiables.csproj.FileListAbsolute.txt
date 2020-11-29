@@ -24,3 +24,16 @@ C:\Users\Bruno\source\repos\TPS2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\
 C:\Users\Bruno\source\repos\TPS2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\Debug\Clases Instansiables.csproj.CopyComplete
 C:\Users\Bruno\source\repos\TPS2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\Debug\Clases Instansiables.dll
 C:\Users\Bruno\source\repos\TPS2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\Debug\Clases Instansiables.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\bin\Debug\Clases Instansiables.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\bin\Debug\Clases Instansiables.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\bin\Debug\Archivos.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\bin\Debug\Entidades.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\bin\Debug\Excepciones.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\bin\Debug\Archivos.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\bin\Debug\Entidades.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\bin\Debug\Excepciones.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\Debug\Clases Instansiables.csprojAssemblyReference.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\Debug\Clases Instansiables.csproj.CoreCompileInputs.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\Debug\Clases Instansiables.csproj.CopyComplete
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\Debug\Clases Instansiables.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Clases Instansiables\obj\Debug\Clases Instansiables.pdb

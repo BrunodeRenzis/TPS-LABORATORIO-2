@@ -153,8 +153,7 @@ namespace Entidades
                 segundaVenta += 4;
                 if (Comercio.ListaVentas + segundaVenta)
                 {
-                    Thread.Sleep(2000);
-                    Console.ForegroundColor = ConsoleColor.Green;
+                    Thread.Sleep(3000);
                     Console.WriteLine($"Se genero una nueva venta en {Thread.CurrentThread.Name}");
                 }
 
@@ -202,6 +201,7 @@ namespace Entidades
             return sb.ToString();
         }
 
+        
 
     }
 }

@@ -6,12 +6,12 @@ using Clases_Abstractas;
 namespace TestsUnitarios
 {
     [TestClass]
-    public class AlumnoExistente
+    public class TestNuevoAlumno
     {
         [TestMethod]
         public void TestMethod1()
         {
-            Alumno alumno = new Alumno(3, "Bruno", "de Renzis", "39104689", Persona.ENacionalidad.Extranjero, Universidad.EClases.Programacion, Alumno.EEstadoCuenta.AlDia);
+            Alumno alumno = new Alumno(3, "Bruno", "de Renzis", "39104689", Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion, Alumno.EEstadoCuenta.AlDia);
         }
     }
 }

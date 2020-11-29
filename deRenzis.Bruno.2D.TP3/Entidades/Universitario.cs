@@ -21,6 +21,21 @@ namespace Clases_Abstractas
             this.legajo = legajo;
         }
         #endregion
+        #region Sobrecarga de operadores
+        public static bool operator ==(Universitario pg1, Universitario pg2)
+        {
+            if (pg1.Equals(pg2) && (pg1.Dni == pg2.Dni || pg1.legajo == pg2.legajo))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool operator !=(Universitario pg1, Universitario pg2)
+        {
+            return !(pg1 == pg2);
+        }
+        #endregion
         #region Métodos
         protected virtual string MostrarDatos()
         {
@@ -42,20 +57,5 @@ namespace Clases_Abstractas
         protected abstract string ParticiparEnClase();
         #endregion
 
-        #region Sobrecarga de operadores
-        public static bool operator == (Universitario pg1, Universitario pg2)
-        {
-            if(pg1.Equals(pg2) && (pg1.Dni == pg2.Dni || pg1.legajo == pg2.legajo))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public static bool operator != (Universitario pg1, Universitario pg2)
-        {
-            return !(pg1 == pg2);
-        }
-        #endregion
     }
 }

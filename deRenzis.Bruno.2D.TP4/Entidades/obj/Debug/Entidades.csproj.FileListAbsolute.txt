@@ -7,3 +7,5 @@ C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP4\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP4\Entidades\obj\Debug\Entidades.dll
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP4\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP4\Entidades\bin\Debug\Archivos.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP4\Entidades\bin\Debug\Archivos.pdb
