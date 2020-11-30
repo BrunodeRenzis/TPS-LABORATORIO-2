@@ -9,6 +9,9 @@ namespace TestsUnitarios
     [TestClass]
     public class TestDNIExcep
     {
+        /// <summary>
+        /// Test que evalua la excepción dniInvalido
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(DniInvalidoException))]
         public void TestMethod1()

@@ -8,6 +8,9 @@ namespace TestsUnitarios
     [TestClass]
     public class TestNuevoAlumno
     {
+        /// <summary>
+        /// Evalua la correcta instanciación de un alumno
+        /// </summary>
         [TestMethod]
         public void TestMethod1()
         {

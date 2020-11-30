@@ -10,12 +10,16 @@ namespace Clases_Instansiables
 {
     public class Universidad
     {
+        #region Campos
         List<Alumno> alumnos;
         List<Jornada> jornada;
         List<Profesor> profesores;
-
+        #endregion
 
         #region Constructores
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public Universidad()
         {
             this.alumnos = new List<Alumno>();
@@ -94,6 +98,11 @@ namespace Clases_Instansiables
         #endregion
 
         #region Métodos
+        /// <summary>
+        /// Guarda los datos obtenidos como un Xml
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <returns>Datos guardados</returns>
         public static bool Guardar(Universidad uni)
         {
             string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "universidad.xml");
@@ -101,6 +110,11 @@ namespace Clases_Instansiables
 
             return universidad.Guardar(path, uni);
         }
+
+        /// <summary>
+        /// Lee los datos obtenidos y los desserializa
+        /// </summary>
+        /// <returns>Datos a leer</returns>
 
         public static Universidad Leer ()
         {
@@ -111,6 +125,11 @@ namespace Clases_Instansiables
             return datosALeer;
         }
 
+        /// <summary>
+        /// Muestra datos de la universidad
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <returns>Datos jornadas alumnos y profesores</returns>
         private string MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
@@ -134,6 +153,10 @@ namespace Clases_Instansiables
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Convierte a string datos
+        /// </summary>
+        /// <returns>Datos convertidos a string</returns>
         public override string ToString()
         {
             return MostrarDatos(this);
@@ -143,6 +166,12 @@ namespace Clases_Instansiables
         #endregion
 
         #region Sobrecarga Operadores
+        /// <summary>
+        /// Sobrecarga del operador ==
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="a"></param>
+        /// <returns>true si se encuentra el alumno en la universidad, false si no</returns>
         public static bool operator ==(Universidad g, Alumno a)
         {
             foreach (Alumno alu in g.alumnos)
@@ -155,11 +184,23 @@ namespace Clases_Instansiables
                return false;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador !=
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="a"></param>
+        /// <returns>retorna el == negado</returns>
         public static bool operator !=(Universidad g,Alumno a)
         {
             return !(g==a);
         }
 
+        /// <summary>
+        /// Sobrecarga del operador ==
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="i"></param>
+        /// <returns>true si se encuentra la clase del profesor en la universidad, false si no se encuentra</returns>
         public static bool operator ==(Universidad g, Profesor i)
         {
             foreach (var clase in g.jornada)
@@ -172,11 +213,23 @@ namespace Clases_Instansiables
             return false;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador !=
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="i"></param>
+        /// <returns>Retorna el == negado</returns>
         public static bool operator !=(Universidad g,Profesor i)
         {
             return !(g == i);
         }
 
+        /// <summary>
+        /// Sobrecarga del operador ==
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="clase"></param>
+        /// <returns> unProfesor si el profesor coincide con la clase de la universidad, excepción SinProfesorException si no se ha encontrado</returns>
         public static Profesor operator ==(Universidad u, EClases clase)
         {
             foreach (Profesor unProfesor in u.Instructores)
@@ -189,6 +242,12 @@ namespace Clases_Instansiables
             throw new SinProfesorException("No hay profesor para la materia solicitada!");
         }
 
+        /// <summary>
+        /// Sobrecarga del operador !=
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="clase"></param>
+        /// <returns>unProfesor si no se ha encontrado el profesor en la clase, mensaje SinProfesorException</returns>
         public static Profesor operator !=(Universidad u, EClases clase)
         {
             foreach (Profesor unProfesor in u.profesores)
@@ -204,7 +263,12 @@ namespace Clases_Instansiables
 
 
 
-
+        /// <summary>
+        /// Sobrecarga del operador +
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="clase"></param>
+        /// <returns>Retorna una instancia de Universidad con todos los alumnos que coincidan con una clase seleccionada.</returns>
         public static Universidad operator +(Universidad g, EClases clase)
         {
             Profesor profesorDisponible = (g == clase);
@@ -222,6 +286,12 @@ namespace Clases_Instansiables
             return g;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador +
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="a"></param>
+        /// <returns>Lista de alumnos que fueron agregados a la universidad, excepción en el caso de queel alumno ya exista.</returns>
         public static Universidad operator +(Universidad u,Alumno a)
         {
             if (u != a)
@@ -237,6 +307,12 @@ namespace Clases_Instansiables
             return u;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador +
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="i"></param>
+        /// <returns>Retorna todos los profesores cargados en la universidad</returns>
         public static Universidad operator +(Universidad u, Profesor i)
         {
             if (u != i)
