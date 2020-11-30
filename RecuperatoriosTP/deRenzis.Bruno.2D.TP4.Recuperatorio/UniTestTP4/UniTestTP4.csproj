@@ -51,8 +51,7 @@
   <ItemGroup>
     <Compile Include="TestProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestExcepcion.cs" />
-    <Compile Include="UnitTest2.cs" />
+    <Compile Include="TestProdCadena.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
