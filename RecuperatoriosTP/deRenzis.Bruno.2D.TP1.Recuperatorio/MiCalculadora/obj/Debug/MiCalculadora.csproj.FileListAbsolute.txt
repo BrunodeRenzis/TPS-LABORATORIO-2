@@ -1,0 +1,13 @@
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\bin\Debug\Entidades.dll
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\bin\Debug\Entidades.pdb
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\MiCalculadora\obj\Debug\MiCalculadora.pdb

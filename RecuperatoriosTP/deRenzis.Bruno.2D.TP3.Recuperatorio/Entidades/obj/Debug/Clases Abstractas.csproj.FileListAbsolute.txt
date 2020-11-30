@@ -1,0 +1,18 @@
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\bin\Debug\Entidades.dll
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\bin\Debug\Excepciones.dll
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Clases Abstractas.csprojAssemblyReference.cache
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Clases Abstractas.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Clases Abstractas.csproj.CopyComplete
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Entidades.dll
+C:\Users\Bruno\source\repos\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\bin\Debug\Entidades.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\bin\Debug\Excepciones.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Clases Abstractas.csprojAssemblyReference.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Clases Abstractas.csproj.CoreCompileInputs.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Clases Abstractas.csproj.CopyComplete
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Entidades.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzis.Bruno.2D.TP3\Entidades\obj\Debug\Entidades.pdb

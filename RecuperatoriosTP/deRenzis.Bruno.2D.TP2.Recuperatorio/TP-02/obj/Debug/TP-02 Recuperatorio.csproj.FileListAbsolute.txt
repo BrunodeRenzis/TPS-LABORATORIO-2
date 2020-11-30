@@ -1,0 +1,10 @@
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\bin\Debug\TP-02.exe.config
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\bin\Debug\TP-02.exe
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\bin\Debug\TP-02.pdb
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\bin\Debug\Entidades.dll
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\bin\Debug\Entidades.pdb
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\obj\Debug\TP-02 Recuperatorio.csprojAssemblyReference.cache
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\obj\Debug\TP-02 Recuperatorio.csproj.CoreCompileInputs.cache
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\obj\Debug\TP-02 Recuperatorio.csproj.CopyComplete
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\obj\Debug\TP-02.exe
+C:\Users\Bruno de Renzis\Desktop\RecuperatoriosTP\deRenzis.Bruno.2D.TP2.Recuperatorio\TP-02\obj\Debug\TP-02.pdb
