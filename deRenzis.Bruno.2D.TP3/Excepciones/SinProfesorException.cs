@@ -8,11 +8,16 @@ namespace Excepciones
 {
     public class SinProfesorException:Exception
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public SinProfesorException():base("No hay profesor disponible")
         {
 
         }
-
+        /// <summary>
+        /// Constructor con parámetros
+        /// </summary>
         public SinProfesorException(string mensaje):base(mensaje)
         {
 

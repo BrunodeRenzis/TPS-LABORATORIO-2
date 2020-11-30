@@ -8,6 +8,9 @@ namespace TestsUnitarios
     [TestClass]
     public class TestNacExcep
     {
+        /// <summary>
+        /// Evalua la excepción de un alumno repetido
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AlumnoRepetidoException))]
         public void TestMethod1()
