@@ -9,15 +9,27 @@ namespace System.Collections.Generic
 {
     public static class Extensiones
     {
+
+        public static int StockProductosTotal(this List<Producto> listaProductos)
+        {
+            int totalProd = 0;
+
+            foreach (Producto unProducto in listaProductos)
+            {
+                totalProd += unProducto.Cantidad;
+            }
+
+            return totalProd;
+        }
+
         public static string ExtensionMostrar(this List<Producto> listaProductos)
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("LISTA DE PRODUCTOS CADENA FRIO");
+            sb.AppendLine("LISTA DE PRODUCTOS");
 
             foreach (Producto unProducto in Comercio.ListaProductos)
             {
-                if(unProducto.TipoProducto == Producto.ETipoProducto.CadenaFrio)
                 sb.AppendLine(unProducto.ToString());
             }
 

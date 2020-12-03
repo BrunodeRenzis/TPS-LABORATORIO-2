@@ -105,8 +105,8 @@ namespace Test
             
             try
             {
-                Console.WriteLine("\nMÉTODOS DE EXTENSIÓN PARA MOSTRAR PRODUCTOS CON CADENA DE FRIO");
-                Console.WriteLine(Comercio.ListaProductos.ExtensionMostrar()); 
+                Console.WriteLine("\nMÉTODOS DE EXTENSIÓN PARA MOSTRAR STOCK PRODUCTOS");
+                Console.WriteLine($"Stock total de productos {Comercio.ListaProductos.StockProductosTotal()}"); 
 
             }
             catch (Exception e)
