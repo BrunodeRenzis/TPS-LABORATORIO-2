@@ -102,25 +102,11 @@ namespace Test
             Console.WriteLine("Presione una tecla para continuar...");
             Console.ReadKey();
             Console.Clear();
-
-            try
-            {
-                Console.WriteLine("\nSE IMPRIME EL LISTADO DE PRODUCTOS PARA VERIFICAR QUE BAJO EL STOCK DE LOS PRODUCTOS VENDIDOS: ");
-                Console.WriteLine();
-
-                Console.WriteLine(Comercio.Mostrar());
-            }
-            catch (ArchivoException e)
-            {
-                Console.WriteLine(e.Message);
-                Console.WriteLine(e.InnerException.Message);
-            }
-
             
             try
             {
                 Console.WriteLine("\nMÉTODOS DE EXTENSIÓN PARA MOSTRAR PRODUCTOS CON CADENA DE FRIO");
-                Console.WriteLine($"Productos con cadena de frio: ${Comercio.ListaProductos.ProductosCadenaFrio()}");
+                Console.WriteLine(Comercio.ListaProductos.ExtensionMostrar()); 
 
             }
             catch (Exception e)

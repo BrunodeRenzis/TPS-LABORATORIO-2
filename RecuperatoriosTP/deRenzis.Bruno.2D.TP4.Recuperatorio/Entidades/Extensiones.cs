@@ -9,18 +9,20 @@ namespace System.Collections.Generic
 {
     public static class Extensiones
     {
-        public static List<Producto> ProductosCadenaFrio(this List<Producto> listaProductos)
+        public static string ExtensionMostrar(this List<Producto> listaProductos)
         {
+            StringBuilder sb = new StringBuilder();
 
-            foreach (Producto unProducto in listaProductos)
+            sb.AppendLine("LISTA DE PRODUCTOS CADENA FRIO");
+
+            foreach (Producto unProducto in Comercio.ListaProductos)
             {
-               if(unProducto.TipoProducto == Producto.ETipoProducto.CadenaFrio)
-                {
-                    listaProductos.Add(unProducto);
-                }
+                if(unProducto.TipoProducto == Producto.ETipoProducto.CadenaFrio)
+                sb.AppendLine(unProducto.ToString());
             }
 
-            return listaProductos;
+
+            return sb.ToString();
         }
     }
 }
