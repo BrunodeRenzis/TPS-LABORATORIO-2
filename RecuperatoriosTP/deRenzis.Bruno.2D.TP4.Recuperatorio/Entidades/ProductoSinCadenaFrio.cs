@@ -8,6 +8,10 @@ namespace Entidades
 {
     public class ProductoSinCadenaFrio:Producto
     {
+        public ProductoSinCadenaFrio()
+        {
+
+        }
         public ProductoSinCadenaFrio(string nombre, double precio, Producto.ETipoProducto tipoProducto, int cantidad, int id):base(nombre,precio,tipoProducto,cantidad,id)
         {
 

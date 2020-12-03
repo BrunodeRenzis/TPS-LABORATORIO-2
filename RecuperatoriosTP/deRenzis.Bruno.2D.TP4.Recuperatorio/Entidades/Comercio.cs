@@ -33,23 +33,23 @@ namespace Entidades
 
 
 
-        public static bool Guardar(List<Venta> ventas)
+        public static bool Guardar(List<Producto> productos)
         {
-            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Comercio.xml");
-            Xml<List<Venta>> auxUni = new Xml<List<Venta>>();
+            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Producto.xml");
+            Xml<List<Producto>> auxProd = new Xml<List<Producto>>();
 
-            return auxUni.Guardar(path, ventas);
+            return auxProd.Guardar(path, productos);
         }
 
-        public static List<Venta> Leer()
+        public static List<Producto> Leer()
         {
-            List<Venta> datosVenta = new List<Venta>();
-            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Comercio.xml");
-            Xml<List<Venta>> comercio = new Xml<List<Venta>>();
+            List<Producto> datosProducto = new List<Producto>();
+            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Producto.xml");
+            Xml<List<Producto>> comercio = new Xml<List<Producto>>();
 
-            comercio.Leer(path, out datosVenta);
+            comercio.Leer(path, out datosProducto);
 
-            return datosVenta;
+            return datosProducto;
 
         }
 
@@ -141,7 +141,7 @@ namespace Entidades
                 if (Comercio.ListaVentas + segundaVenta)
                 {
                     Thread.Sleep(3000);
-                    Console.WriteLine($"Se genero una nueva venta en {Thread.CurrentThread.Name}");
+                    Console.WriteLine($"Nueva venta en {Thread.CurrentThread.Name}");
                 }
 
             }

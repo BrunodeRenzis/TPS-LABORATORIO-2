@@ -73,7 +73,7 @@ namespace Test
             {
  
                 if (Comercio.ListaVentas + unaVenta)
-                    Console.WriteLine($"Venta guardada");
+                    Console.WriteLine($"Venta realizada");
 
             }
             catch (Exception e)
@@ -119,8 +119,8 @@ namespace Test
             
             try
             {
-                Console.WriteLine("\nMÉTODOS DE EXTENSIÓN PARA CALCULAR EL MONTO TOTAL DE VENTAS");
-                Console.WriteLine($"Acumulado de ventas: ${Comercio.ListaVentas.TotalVentas()}");
+                Console.WriteLine("\nMÉTODOS DE EXTENSIÓN PARA MOSTRAR PRODUCTOS CON CADENA DE FRIO");
+                Console.WriteLine($"Productos con cadena de frio: ${Comercio.ListaProductos.ProductosCadenaFrio()}");
 
             }
             catch (Exception e)
@@ -134,7 +134,7 @@ namespace Test
             {
                 Console.WriteLine("\nSE GUARDA EL LISTADO DE VENTAS EN UN ARCHIVO XML");
                 Console.WriteLine();
-                if (Comercio.Guardar(Comercio.ListaVentas))
+                if (Comercio.Guardar(Comercio.ListaProductos))
                     Console.WriteLine("Guardado con exito");
 
             }

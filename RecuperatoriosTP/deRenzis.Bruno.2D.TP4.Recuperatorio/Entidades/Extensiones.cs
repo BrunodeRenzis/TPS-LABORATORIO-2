@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
-namespace Entidades
+namespace System.Collections.Generic
 {
     public static class Extensiones
     {
-        public static double TotalVentas(this List<Venta> listaVentas)
+        public static List<Producto> ProductosCadenaFrio(this List<Producto> listaProductos)
         {
-            double montoTotal = 0;
 
-            foreach (Venta unaVenta in listaVentas)
+            foreach (Producto unProducto in listaProductos)
             {
-                montoTotal += unaVenta.MontoTotal;
+               if(unProducto.TipoProducto == Producto.ETipoProducto.CadenaFrio)
+                {
+                    listaProductos.Add(unProducto);
+                }
             }
 
-            return montoTotal;
+            return listaProductos;
         }
     }
 }

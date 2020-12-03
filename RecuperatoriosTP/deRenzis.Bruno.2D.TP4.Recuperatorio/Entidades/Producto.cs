@@ -10,13 +10,14 @@ namespace Entidades
     [Serializable]
     [XmlInclude(typeof(ProductoCadenaFrio))]
     [XmlInclude(typeof(ProductoSinCadenaFrio))]
+    [XmlInclude(typeof(Producto))]
     public class Producto
     {
-        int id;
-        string nombre;
-        double precio;
-        int cantidad;
-        ETipoProducto tipoProducto;
+        public int id;
+        public string nombre;
+        public double precio;
+        public int cantidad;
+        public ETipoProducto tipoProducto;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public double Precio { get => precio; set => precio = value; }

@@ -8,7 +8,10 @@ namespace Entidades
 {
     public class ProductoCadenaFrio:Producto
     {
-        
+        public ProductoCadenaFrio()
+        {
+
+        }
         public ProductoCadenaFrio(string nombre, double precio, Producto.ETipoProducto tipoProducto, int cantidad) :base(nombre,precio,tipoProducto,cantidad)
         {
                
