@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FormVentas
 {
-    public partial class FormVentas : Form
+    public partial class FormPpal : Form
     {
-        public FormVentas()
+        public FormPpal()
         {
             InitializeComponent();
         }
@@ -21,6 +21,12 @@ namespace FormVentas
         {
             AgregarProducto formProd = new AgregarProducto();
             formProd.Show();
+        }
+
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevaVenta nuevaVenta = new NuevaVenta();
+            nuevaVenta.Show();
         }
     }
 }

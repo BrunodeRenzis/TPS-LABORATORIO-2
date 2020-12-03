@@ -47,6 +47,14 @@ namespace Entidades
         /// <param name="tipoProducto"></param>
         /// <param name="cantidad"></param>
         /// <param name="id"></param>
+        public Producto()
+        {
+
+        }
+        public Producto(string nombre)
+        {
+            this.Nombre = nombre;
+        }
         public Producto(string nombre, double precio, ETipoProducto tipoProducto, int cantidad, int id) : this(nombre, precio, tipoProducto, cantidad)
         {
             this.Id = id;
@@ -92,7 +100,7 @@ namespace Entidades
 
         public static bool operator ==(Producto unProducto,List<Producto> listaProductos)
         {
-            foreach (Producto prod in listaProductos)
+            foreach (Producto prod in Comercio.ListaProductos)
             {
                 if(prod.Id == unProducto.Id)
                 {

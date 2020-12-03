@@ -97,7 +97,6 @@ namespace Test
 
             }
 
-            Console.ResetColor();
             Console.WriteLine("Presione una tecla para continuar...");
             Console.ReadKey();
             Console.Clear();

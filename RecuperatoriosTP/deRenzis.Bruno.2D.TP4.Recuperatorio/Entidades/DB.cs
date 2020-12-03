@@ -101,6 +101,40 @@ namespace Entidades
             return listaProductos;
         }
 
+        public static List<string> LeerNombreProductos()
+        {
+            List<string> nombreProductos = new List<string>();
+
+            try
+            {
+                comando.CommandText = "Select nombreProducto from Productos";
+
+                conexion.Open();
+
+                SqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string tipo = reader["nombreProducto"].ToString();
+                    nombreProductos.Add((reader["nombreProducto"].ToString()));
+                }
+
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+
+                throw new ArchivoException("No se puede leer la base de datos", e);
+
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return nombreProductos;
+        }
+
         public static bool AgregarProducto(Producto unProducto)
         {
             string sql = "Insert into Productos(nombreProducto,cantidadProducto, precioProducto, tipoProducto) " +
