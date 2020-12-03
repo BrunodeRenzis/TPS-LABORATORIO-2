@@ -33,24 +33,7 @@ namespace Entidades
         public double MontoTotal { get => montoTotal; set => montoTotal = value; }
         public int IdVenta { get => idVenta; set => idVenta = value; }
 
-        public static Venta operator +(Venta unaVenta, int idProducto)
-        {
-            Producto unProducto = (unaVenta == idProducto);
-
-            if (unProducto != null && unProducto.Cantidad > 0)
-            {
-                unProducto.Cantidad = 1;
-                unaVenta.ListaProductos.Add(unProducto);
-
-            }
-            else
-            {
-                throw new VentaException("No se pudo cargar el producto a la lista.");
-            }
-
-            return unaVenta;
-
-        }
+        
 
         public static Producto operator ==(Venta unaVenta, int idProducto)
         {

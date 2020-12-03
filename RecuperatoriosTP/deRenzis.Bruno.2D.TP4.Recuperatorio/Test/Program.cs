@@ -56,9 +56,11 @@ namespace Test
             try
             {
 
-                unaVenta += 1;
-                unaVenta += 2;
-                unaVenta += 3;
+                if(Comercio.ListaVentas+unaVenta)
+                {
+                    Console.WriteLine("Venta realizada");
+                }
+                
 
             }
             catch (VentaException e)

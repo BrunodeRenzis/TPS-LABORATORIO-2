@@ -59,8 +59,6 @@ namespace Entidades
             {
 
                 Venta primerVenta = new Venta();
-                primerVenta += 1;
-                primerVenta += 2;
 
                 if (Comercio.ListaVentas + primerVenta)
                 {
@@ -79,9 +77,7 @@ namespace Entidades
             {
 
                 Venta segundaVenta = new Venta();
-                segundaVenta += 1;
-                segundaVenta += 2;
-                segundaVenta += 3;
+           
                 if (Comercio.ListaVentas + segundaVenta)
                 {
                     Thread.Sleep(3000);
@@ -99,10 +95,7 @@ namespace Entidades
             {
 
                 Venta tercerVenta = new Venta();
-                tercerVenta += 1;
-                tercerVenta += 2;
-                tercerVenta += 3;
-                tercerVenta += 4;
+          
                 if (Comercio.ListaVentas + tercerVenta)
                 {
                     Thread.Sleep(3000);
@@ -126,10 +119,7 @@ namespace Entidades
             try
             {
                 Venta primerVenta = new Venta();
-                primerVenta += 1;
-                primerVenta += 2;
-                primerVenta += 3;
-                primerVenta += 4;
+         
                 if (Comercio.ListaVentas + primerVenta)
                 {
                     Thread.Sleep(3000);
@@ -147,10 +137,7 @@ namespace Entidades
             {
 
                 Venta segundaVenta = new Venta();
-                segundaVenta += 1;
-                segundaVenta += 2;
-                segundaVenta += 3;
-                segundaVenta += 4;
+          
                 if (Comercio.ListaVentas + segundaVenta)
                 {
                     Thread.Sleep(3000);
@@ -168,10 +155,7 @@ namespace Entidades
             {
 
                 Venta tercerVenta = new Venta();
-                tercerVenta += 1;
-                tercerVenta += 2;
-                tercerVenta += 3;
-                tercerVenta += 4;
+         
                 if (Comercio.ListaVentas + tercerVenta)
                 {
                     Thread.Sleep(3000);
