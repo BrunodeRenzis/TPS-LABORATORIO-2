@@ -1,6 +1,0 @@
-C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
-C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\Entidades\bin\Debug\Entidades.dll
-C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\Entidades\bin\Debug\Entidades.pdb
-C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\Entidades\obj\Debug\Entidades.dll
-C:\Users\Bruno de Renzis\source\repos\deRenzis.Bruno.2D.TP1.Recuperatorio\Entidades\obj\Debug\Entidades.pdb
