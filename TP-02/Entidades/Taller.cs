@@ -15,7 +15,7 @@ namespace Entidades
         int espacioDisponible;
         public enum ETipo
         {
-            Moto, Automovil, Camioneta, Todos
+            Ciclomotor, Sedan, SUV, Todos
         }
 
         #region "Constructores"
@@ -34,7 +34,7 @@ namespace Entidades
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
         /// <returns></returns>
-        public string ToString()
+        public override string ToString()
         {
             return this.Listar(this, ETipo.Todos);
         }
@@ -52,31 +52,33 @@ namespace Entidades
         public string Listar(Taller taller, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
-
-            sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", taller.vehiculos.Count, taller.espacioDisponible);
-            sb.AppendLine("");
-            foreach (Vehiculo v in taller.vehiculos)
+            if(taller.vehiculos!=null)
             {
-                switch (tipo)
+                sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", taller.vehiculos.Count, taller.espacioDisponible);
+                sb.AppendLine("");
+                foreach (Vehiculo v in taller.vehiculos)
                 {
-                    case ETipo.Camioneta:
-                        if(v is Suv)
-                        sb.AppendLine(v.Mostrar());
-                        break;
-                    case ETipo.Moto:
-                        if(v is Ciclomotor)
-                        sb.AppendLine(v.Mostrar());
-                        break;
-                    case ETipo.Automovil:
-                        if(v is Sedan)
-                        sb.AppendLine(v.Mostrar());
-                        break;
-                    default:
-                        sb.AppendLine(v.Mostrar());
-                        break;
+                    switch (tipo)
+                    {
+                        case ETipo.Ciclomotor:
+                            if (v is Ciclomotor)
+                                sb.AppendLine(v.Mostrar());
+                            break;
+                        case ETipo.Sedan:
+                            if (v is Sedan)
+                                sb.AppendLine(v.Mostrar());
+                            break;
+                        case ETipo.SUV:
+                            if (v is Suv)
+                                sb.AppendLine(v.Mostrar());
+                            break;
+                        default:
+                            sb.AppendLine(v.Mostrar());
+                            break;
+                    }
                 }
+                
             }
-
             return sb.ToString();
         }
         #endregion
@@ -90,13 +92,10 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            if (taller.vehiculos == null)
-                Console.WriteLine("Null papa");
-            
+            if(taller.vehiculos!=null)
+            {
                 if (taller.vehiculos.Count < taller.espacioDisponible)
                 {
-
-
                     foreach (Vehiculo v in taller.vehiculos)
                     {
                         if (v == vehiculo)
@@ -104,14 +103,11 @@ namespace Entidades
                     }
 
                     taller.vehiculos.Add(vehiculo);
-
-                    return taller;
                 }
-
-            
+               
+            }
 
             return taller;
-
         }
         /// <summary>
         /// Quitará un elemento de la lista
@@ -121,7 +117,7 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
-            if(taller.vehiculos.Count>0)
+            if (taller.vehiculos!=null)
             {
                 foreach (Vehiculo v in taller.vehiculos)
                 {

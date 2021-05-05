@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Suv: Vehiculo
+    public class Suv:Vehiculo
     {
-        public Suv(EMarca marca, string chasis, ConsoleColor color)
-            : base(chasis, marca, color)
+        public Suv(EMarca marca, string chasis, ConsoleColor color): base(chasis, marca, color)
         {
         }
         /// <summary>
@@ -29,7 +28,7 @@ namespace Entidades
 
             sb.AppendLine("SUV");
             sb.AppendLine(base.Mostrar());
-            sb.AppendLine(string.Format("TAMAÑO : {0}", this.Tamanio));
+            sb.AppendLine(string.Format("TAMAÑO : "+ this.Tamanio));
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 
