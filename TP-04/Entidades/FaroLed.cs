@@ -26,7 +26,7 @@ namespace Entidades
         /// <param name="medida"></param>
         /// <param name="stock"></param>
         /// <param name="tipoLed"></param>
-        public FaroLed(string nombre, EMedida medida,double stock, ETipoLed tipoLed):base(nombre,medida,stock)
+        public FaroLed(int id,string nombre, EMedida medida,double stock, ETipoLed tipoLed):base(id,nombre,medida,stock)
         {
             this.TipoLed = tipoLed;
             this.Leds = leds;

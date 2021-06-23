@@ -16,12 +16,12 @@ namespace Entidades
         protected int id;
         protected string nombre;
         protected EMedida medida;
+        protected double stock;
         protected double tornillos;
         protected double bulones;
         protected double arandelas;
         protected double tuercas;
         protected double lentes;
-        protected double stock;
 
         /// <summary>
         /// Constructor por defecto de un faro
@@ -43,6 +43,14 @@ namespace Entidades
             DeterminarMaterialesFaro(medida);
             this.Nombre = nombre;
             this.Stock = stock;
+        }
+
+        protected Faro(int id, string nombre, EMedida medida, double stock)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            DeterminarMaterialesFaro(medida);
+            this.stock = stock;
         }
 
         public string Nombre { get => nombre; set => nombre = value; }

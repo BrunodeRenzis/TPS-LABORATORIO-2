@@ -54,7 +54,7 @@ namespace FormProducto
 
                 Validaciones.InicializarFaroLampara(unFaro);
 
-                unFaro = new FaroLampara(nombre, medida, stockInicial);
+                unFaro = new FaroLampara(1,nombre, medida, stockInicial);
 
                 if (Validaciones.ValidarProducto(unFaro) && unFaro!=nombre)
                 {

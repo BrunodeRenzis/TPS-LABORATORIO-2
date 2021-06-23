@@ -13,7 +13,7 @@ namespace Entidades
         private SqlConnection conexion;
         private SqlCommand comando;
 
-        #region Constructor
+       
         /// <summary>
         /// Constructor
         /// </summary>
@@ -25,9 +25,7 @@ namespace Entidades
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
         }
-        #endregion
-
-        #region Metodos
+      
         /// <summary>
         /// Ejecuta ExecuteNonQuery() en una conexion SQL
         /// </summary>
@@ -72,7 +70,7 @@ namespace Entidades
             comando.Parameters.Add(new SqlParameter("@auxID", faro.Id));
             comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida));
             comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
-            comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
+            //comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
 
             return EjecutarNonQuery(sql);
         }
@@ -83,14 +81,14 @@ namespace Entidades
         /// <returns>True si se modifico, false caso contrario</returns>
         public bool ModificarProducto(Faro faro)
         {
-            string sql = "Update Productos Set descripcion = @auxDescripcion, idProducto = @auxID, " +
-                "precio = @auxPrecio, cantidad = @auxCantidad, tipoProducto = @auxTipo where idProducto = @auxID";
+            string sql = "Insert into FaroStock(nombre, idFaro, medida, tipo, stock) " +
+               "values(@auxNombre, @auxID, @auxMedida, @auxTipo, @auxStock)";
 
-            comando.Parameters.Add(new SqlParameter("@auxDescripcion", faro.Descripcion));
+            comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
             comando.Parameters.Add(new SqlParameter("@auxID", faro.Id));
-            comando.Parameters.Add(new SqlParameter("@auxPrecio", faro.Precio));
-            comando.Parameters.Add(new SqlParameter("@auxCantidad", faro.Cantidad));
-            comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
+            comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida));
+            comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
+            //comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
 
             return EjecutarNonQuery(sql);
         }
@@ -127,18 +125,18 @@ namespace Entidades
 
                 while (reader.Read())
                 {
-                    string tipo = reader["tipoProducto"].ToString();
+                    string tipo = reader["tipo"].ToString();
 
-                    if (tipo == "perecedero")
+                    if (tipo == "lámpara")
                     {
-                        productos.Add(new ProductoPerecedero(reader["descripcion"].ToString(), int.Parse(reader["idProducto"].ToString()),
-                        double.Parse(reader["Precio"].ToString()), int.Parse(reader["cantidad"].ToString()), Producto.ETipo.perecedero));
+                        productos.Add(new FaroLampara(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
+                        (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString())));
 
                     }
                     else
                     {
-                        productos.Add(new ProductoNoPerecedero(reader["descripcion"].ToString(), int.Parse(reader["idProducto"].ToString()),
-                        double.Parse(reader["Precio"].ToString()), int.Parse(reader["cantidad"].ToString()), Producto.ETipo.noPerecedero));
+                        productos.Add(new FaroLed(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
+                        (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()), (FaroLed.ETipoLed)(reader["tipoLed"])));
                     }
 
 
@@ -179,23 +177,23 @@ namespace Entidades
 
                 while (reader.Read())
                 {
-                    string tipo = reader["tipoProducto"].ToString();
+                    string tipo = reader["tipo"].ToString();
 
-                    if (tipo == "perecedero")
+                    if (tipo == "lámpara")
                     {
-                        faro = new ProductoPerecedero(reader["descripcion"].ToString(), id,
-                        double.Parse(reader["Precio"].ToString()), int.Parse(reader["cantidad"].ToString()), Producto.ETipo.perecedero);
+                        faro = new FaroLampara(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
+                        (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()));
 
                     }
                     else
                     {
-                        faro = new ProductoNoPerecedero(reader["descripcion"].ToString(), id,
-                        double.Parse(reader["Precio"].ToString()), int.Parse(reader["cantidad"].ToString()), Producto.ETipo.noPerecedero);
+                        faro = new FaroLed(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
+                        (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()), (FaroLed.ETipoLed)(reader["tipoLed"]));
                     }
+
+
+                    reader.Close();
                 }
-
-
-                reader.Close();
             }
             catch (Exception e)
             {

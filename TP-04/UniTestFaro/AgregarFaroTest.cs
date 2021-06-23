@@ -13,7 +13,7 @@ namespace UniTestFaro
         [TestMethod]
         public void AgregarFaro()
         {
-            FaroLed faroLed = new FaroLed("faroNuevo",Faro.EMedida.Mediano,2,FaroLed.ETipoLed.Micro);
+            FaroLed faroLed = new FaroLed(1,"faroNuevo",Faro.EMedida.Mediano,2,FaroLed.ETipoLed.Micro);
             Fabrica.FarosLed.Add(faroLed);
             Assert.IsNotNull(Fabrica.FarosLed);
         }

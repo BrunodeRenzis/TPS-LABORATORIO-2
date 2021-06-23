@@ -28,7 +28,7 @@ namespace Entidades
         /// <param name="medida"></param>
         /// <param name="stock"></param>
         
-        public FaroLampara(string nombre, EMedida medida, double stock):base(nombre,medida,stock)
+        public FaroLampara(int id,string nombre, EMedida medida, double stock):base(id,nombre,medida,stock)
         {
             this.Portalamparas = portalamparas;
         }

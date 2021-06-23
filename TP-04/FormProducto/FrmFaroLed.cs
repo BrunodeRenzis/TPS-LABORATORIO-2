@@ -58,7 +58,7 @@ namespace FormProducto
                 Enum.TryParse<FaroLed.ETipoLed>(cmbBoxTipoLed.SelectedValue.ToString(), out tipoLed);
                 Enum.TryParse<Faro.EMedida>(cmbBoxMedida.SelectedValue.ToString(), out medida);
                 Validaciones.InicializarFaroLed(unFaroLed);
-                unFaroLed = new FaroLed(nombre,medida,stockInicial,tipoLed);
+                unFaroLed = new FaroLed(1,nombre,medida,stockInicial,tipoLed);
 
                 if (Validaciones.ValidarProducto(unFaroLed) && unFaroLed != nombre)
                 {
