@@ -152,6 +152,33 @@ namespace Entidades
 
             return faros;
         }
+
+        public bool Guardar()
+        {
+            FaroDAO faro = new FaroDAO();
+            return faro.InsertarFaro(this);
+        }
+
+        /// <summary>
+        /// Modificar el objeto Producto en la base de datos
+        /// </summary>
+        /// <returns>True si se modifico, false caso contrario</returns>
+        public bool Modificar()
+        {
+            FaroDAO faro = new FaroDAO();
+            return faro.ModificarFaro(this);
+        }
+
+
+        /// <summary>
+        /// Eliminar el objeto Producto de la base de datos
+        /// </summary>
+        /// <returns>True si se elimino, false caso contrario</returns>
+        public bool Eliminar()
+        {
+            FaroDAO faro = new FaroDAO();
+            return faro.EliminarFaro(this);
+        }
     }
 
      

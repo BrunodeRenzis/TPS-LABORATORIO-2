@@ -116,7 +116,7 @@ namespace FormProducto
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

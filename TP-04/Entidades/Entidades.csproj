@@ -50,8 +50,8 @@
     <Compile Include="Faro.cs" />
     <Compile Include="IArchivo.cs" />
     <Compile Include="FaroRepetidoException.cs" />
+    <Compile Include="MetodoExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sql.cs" />
     <Compile Include="Validaciones.cs" />
     <Compile Include="Xml.cs" />
   </ItemGroup>

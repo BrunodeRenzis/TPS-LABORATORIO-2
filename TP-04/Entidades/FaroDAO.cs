@@ -46,7 +46,7 @@ namespace Entidades
             catch (Exception e)
             {
                 ejecuto = false;
-                throw new ArchivoException("Falla al intentar trabajar sobre la base de datos", e);
+                throw new ArchivoException("Fallo al intentar conectar a base de datos", e);
             }
             finally
             {
@@ -63,7 +63,7 @@ namespace Entidades
         /// <returns>True si se guardo, false caso contrario</returns>
         public bool InsertarFaro(Faro faro)
         {
-            string sql = "Insert into FaroStock(nombre, idFaro, medida, tipo, stock) " +
+            string sql = "Insert into FarDetalles(nombre, idFaro, medida, tipo, stock) " +
                 "values(@auxNombre, @auxID, @auxMedida, @auxTipo, @auxStock)";
 
             comando.Parameters.Add(new SqlParameter("@auxDescripcion", faro.Nombre));
@@ -79,9 +79,9 @@ namespace Entidades
         /// </summary>
         /// <param name="prod"></param>
         /// <returns>True si se modifico, false caso contrario</returns>
-        public bool ModificarProducto(Faro faro)
+        public bool ModificarFaro(Faro faro)
         {
-            string sql = "Insert into FaroStock(nombre, idFaro, medida, tipo, stock) " +
+            string sql = "Insert into FaroDetalles(nombre, idFaro, medida, tipo, stock) " +
                "values(@auxNombre, @auxID, @auxMedida, @auxTipo, @auxStock)";
 
             comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
@@ -98,9 +98,9 @@ namespace Entidades
         /// </summary>
         /// <param name="prod"></param>
         /// <returns>true si se elimino, false caso contrario</returns>
-        public bool EliminarProducto(Faro faro)
+        public bool EliminarFaro(Faro faro)
         {
-            string sql = "Delete Productos where id = @auxID";
+            string sql = "Delete FaroDetalles where id = @auxID";
 
             comando.Parameters.Add(new SqlParameter("@auxID", faro.Id));
 
@@ -117,7 +117,7 @@ namespace Entidades
 
             try
             {
-                comando.CommandText = "Select * from Productos";
+                comando.CommandText = "Select * from FaroDetalles";
 
                 conexion.Open();
 
@@ -169,7 +169,7 @@ namespace Entidades
 
             try
             {
-                comando.CommandText = "Select * from Productos where id = " + id.ToString();
+                comando.CommandText = "Select * from FaroDetalles where id = " + id.ToString();
 
                 conexion.Open();
 
