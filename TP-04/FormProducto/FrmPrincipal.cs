@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,9 @@ namespace FormProducto
 {
     public partial class FrmPrincipal : Form
     {
-        
+        SqlConnection conexion;
+
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -31,6 +34,32 @@ namespace FormProducto
             }
 
             return sb.ToString();
+        }
+
+        private void VerificarConexion()
+        {
+            try
+            {
+                conexion.Open();
+                MessageBox.Show("Se abrió la conexión con el servidor SQL Server y se seleccionó la base de datos");
+                
+            }
+
+            catch (ConexionException ex)
+            {
+                throw new Exception("No se pudo conectar", ex);
+            }
+        }
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
+            VerificarConexion();
+        }
+
+        private void CerrarConexion()
+        {
+            conexion.Close();
+            MessageBox.Show("Se cerró la conexión.");
         }
         
         /// <summary>
@@ -112,11 +141,8 @@ namespace FormProducto
             Fabrica.GuardarLeds(Fabrica.FarosLed);
             Fabrica.LeerLampara();
             Fabrica.LeerLeds();
+            CerrarConexion();
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
