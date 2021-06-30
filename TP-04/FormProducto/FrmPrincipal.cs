@@ -35,14 +35,17 @@ namespace FormProducto
 
             return sb.ToString();
         }
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
+            VerificarConexion();
+        }
 
         private void VerificarConexion()
         {
             try
             {
-                conexion.Open();
-                MessageBox.Show("Se abrió la conexión con el servidor SQL Server y se seleccionó la base de datos");
-                
+                conexion.Open();                
             }
 
             catch (ConexionException ex)
@@ -50,16 +53,10 @@ namespace FormProducto
                 throw new Exception("No se pudo conectar", ex);
             }
         }
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
-            VerificarConexion();
-        }
 
         private void CerrarConexion()
         {
             conexion.Close();
-            MessageBox.Show("Se cerró la conexión.");
         }
         
         /// <summary>
@@ -144,5 +141,6 @@ namespace FormProducto
             CerrarConexion();
         }
 
+        
     }
 }

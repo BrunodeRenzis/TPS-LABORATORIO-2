@@ -14,33 +14,15 @@ namespace Test
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            List<Faro> faros = new List<Faro>();
-            FaroLampara fLamp = new FaroLampara("Faro prueba",Faro.EMedida.Grande,20);
-            FaroLed fLed = new FaroLed("Faro Prueba led",Faro.EMedida.Chico,20,FaroLed.ETipoLed.Micro);
+
+            List<FaroLed> farosLed = new List<FaroLed>();
+            List<FaroLampara> farosLampara = new List<FaroLampara>();
+            FaroLampara fLamp = new FaroLampara(1,"Faro prueba",Faro.EMedida.Grande,20);
+            FaroLed fLed = new FaroLed(1,"Faro Prueba led",Faro.EMedida.Chico,20,FaroLed.ETipoLed.Micro);
 
 
-            try
-            {
-                faros.Add(fLamp);
-                if (faros != fLamp)
-                {
-                    faros.Add(fLamp);
-                }
-
-                faros.Add(fLed);
-                if(faros!=fLed)
-                {
-                    faros.Add(fLed);
-
-                }
-                Console.Write($"Faros Agregados: \n{MostrarFaros(faros)}");
-            }
-
-            catch(Exception e)
-            {
-                Console.WriteLine(new FaroException("No se ha podido mostrar la lista", e));
-            }
-                Console.ReadKey();
+            
+            Console.ReadKey();
         }
 
         public static string MostrarFaros(List<Faro> faros)
@@ -53,6 +35,44 @@ namespace Test
 
             return sb.ToString();
 
+        }
+
+        public static void MostrarLeds(List<FaroLed> farosLed,FaroLed fLed)
+        {
+            try
+            {
+                farosLed.Add(fLed);
+                if (fLed != fLed.Nombre)
+                {
+                    farosLed.Add(fLed);
+
+                }
+
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine(new FaroException("No se ha podido mostrar la lista", e));
+            }
+        }
+
+        public static void MostrarLampara(List<FaroLampara> farosLampara, FaroLampara fLamp)
+        {
+            try
+            {
+                farosLampara.Add(fLamp);
+                if (fLamp != fLamp.Nombre)
+                {
+                    farosLampara.Add(fLamp);
+
+                }
+
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine(new FaroException("No se ha podido mostrar la lista", e));
+            }
         }
 
     }

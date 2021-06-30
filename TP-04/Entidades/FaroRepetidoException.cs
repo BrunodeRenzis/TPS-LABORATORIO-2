@@ -31,6 +31,7 @@ namespace Entidades
         /// <param name="innerException"></param>
         public FaroRepetidoException(string message, Exception innerException) : base(message, innerException)
         {
+
         }
     }
 }

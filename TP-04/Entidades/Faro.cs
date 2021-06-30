@@ -16,6 +16,7 @@ namespace Entidades
         protected int id;
         protected string nombre;
         protected EMedida medida;
+        private ETipo tipo;
         protected double stock;
         protected double tornillos;
         protected double bulones;
@@ -62,6 +63,7 @@ namespace Entidades
         public double Lentes { get => lentes; set => lentes = value; }
         public double Stock { get => stock; set => stock = value; }
         public int Id { get => id; set => id = value; }
+        public ETipo Tipo { get => tipo; set => tipo = value; }
 
         /// <summary>
         /// Método que sobreescribe la información a ser casteada a string
@@ -88,29 +90,29 @@ namespace Entidades
 
                 if (medida == EMedida.Chico)
                 {
-                    Arandelas = 2;
-                    Bulones = 2;
-                    lentes = 2;
-                    Tornillos = 2;
-                    Tuercas = 2;
-                }
-
-                else if (Medida == EMedida.Mediano)
-                {
                     Arandelas = 4;
                     Bulones = 4;
-                    lentes = 4;
+                    lentes = 2;
                     Tornillos = 4;
                     Tuercas = 4;
                 }
 
-                else if (Medida == EMedida.Grande)
+                else if (Medida == EMedida.Mediano)
                 {
                     Arandelas = 6;
                     Bulones = 6;
-                    lentes = 6;
+                    lentes = 3;
                     Tornillos = 6;
                     Tuercas = 6;
+                }
+
+                else if (Medida == EMedida.Grande)
+                {
+                    Arandelas = 8;
+                    Bulones = 8;
+                    lentes = 4;
+                    Tornillos = 8;
+                    Tuercas = 8;
                 }
                 
             }
@@ -126,6 +128,12 @@ namespace Entidades
             Chico,
             Mediano,
             Grande
+        }
+
+        public enum ETipo
+        {
+            Lampara,
+            Led
         }
 
         
@@ -178,6 +186,43 @@ namespace Entidades
         {
             FaroDAO faro = new FaroDAO();
             return faro.EliminarFaro(this);
+        }
+
+        public static bool operator == (Faro faro, string nombre)
+        {
+            if(faro.Tipo==Faro.ETipo.Lampara)
+            {
+                foreach (Faro faroAux in Fabrica.FarosLampara)
+                {
+                    if (faroAux.Nombre == nombre)
+                        return true;
+                }
+
+            }
+
+            else if (faro.Tipo == Faro.ETipo.Led)
+            {
+                foreach (Faro faroAux in Fabrica.FarosLed)
+                {
+                    if (faroAux.Nombre == nombre)
+                        return true;
+                }
+
+            }
+
+            return false;
+        }
+
+
+        /// <summary>
+        /// Operador que define si un faro es igual a otro o distinto
+        /// </summary>
+        /// <param name="faro"></param>
+        /// <param name="nombre"></param>
+        /// <returns>true si no son idénticos, false si lo son</returns>
+        public static bool operator !=(Faro faro, string nombre)
+        {
+            return !(faro == nombre);
         }
     }
 

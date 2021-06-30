@@ -63,33 +63,6 @@ namespace Entidades
                 portalamparas = 6;
         }
 
-        /// <summary>
-        /// Operador que define si un faro es igual a otro o distinto
-        /// </summary>
-        /// <param name="faro"></param>
-        /// <param name="nombre"></param>
-        /// <returns>true si son idénticos, false si no lo son</returns>
-        public static bool operator ==(FaroLampara faro, string nombre)
-        {
-            foreach (FaroLampara faroAux in Fabrica.FarosLampara)
-            {
-                if (faroAux.Nombre == nombre)
-                    return true;
-            }
-
-            return false;
-        }
-
-
-        /// <summary>
-        /// Operador que define si un faro es igual a otro o distinto
-        /// </summary>
-        /// <param name="faro"></param>
-        /// <param name="nombre"></param>
-        /// <returns>true si no son idénticos, false si lo son</returns>
-        public static bool operator !=(FaroLampara faro, string nombre)
-        {
-            return !(faro == nombre);
-        }
+        
     }
 }

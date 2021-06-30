@@ -6,6 +6,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
+//Consultas andando en la base
+/*
+   SELECT * FROM Stock;
+
+  UPDATE Stock SET arandelas = 100; 
+
+  UPDATE Stock SET arandelas = (arandelas - 10) WHERE arandelas>0;
+  
+  SELECT SUM (stock) FROM FaroDetalles WHERE tipo='Led';
+
+  SELECT SUM (stock) FROM FaroDetalles WHERE tipo='Lámpara';
+ */
+
+
+
+
+
 namespace Entidades
 {
     public class FaroDAO
@@ -13,6 +32,7 @@ namespace Entidades
         private SqlConnection conexion;
         private SqlCommand comando;
 
+       
        
         /// <summary>
         /// Constructor
@@ -56,6 +76,8 @@ namespace Entidades
             return ejecuto;
         }
 
+        
+
         /// <summary>
         /// Inserta un producto a la base de datos
         /// </summary>
@@ -88,10 +110,57 @@ namespace Entidades
             comando.Parameters.Add(new SqlParameter("@auxID", faro.Id));
             comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida));
             comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
-            //comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
+            comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo));
 
             return EjecutarNonQuery(sql);
         }
+
+        public bool DescontarArandelas(Faro faro)
+        {
+            string sql = $" UPDATE Stock SET arandelas = (arandelas - @auxArandelas) WHERE arandelas>0";
+
+            comando.Parameters.Add(new SqlParameter("@auxArandelas", faro.Arandelas));
+            
+            return EjecutarNonQuery(sql);
+        }
+        public bool DescontarBulones(Faro faro)
+        {
+            string sql = $" UPDATE Stock SET bulones = (bulones - @auxBulones) WHERE bulones>0";
+
+            comando.Parameters.Add(new SqlParameter("@auxBulones", faro.Bulones));
+
+            return EjecutarNonQuery(sql);
+        }
+
+        public bool DescontarLentes(Faro faro)
+        {
+            string sql = $" UPDATE Stock SET lentes = (lentes - @auxLentes) WHERE lentes>0";
+
+            comando.Parameters.Add(new SqlParameter("@auxLentes", faro.Lentes));
+
+            return EjecutarNonQuery(sql);
+        }
+
+        public bool DescontarTornillos(Faro faro)
+        {
+            string sql = $" UPDATE Stock SET tornillos = (tornillos - @auxTornillos) WHERE tornillos>0";
+
+            comando.Parameters.Add(new SqlParameter("@auxTornillos", faro.Tornillos));
+
+            return EjecutarNonQuery(sql);
+        }
+
+        public bool DescontarTuercas(Faro faro)
+        {
+            string sql = $" UPDATE Stock SET tuercas = (tuercas - @auxTuercas) WHERE tuercas>0";
+
+            comando.Parameters.Add(new SqlParameter("@auxTuercas", faro.Tuercas));
+
+            return EjecutarNonQuery(sql);
+        }
+
+
+
 
         /// <summary>
         /// Elimina un producto de la base de datos

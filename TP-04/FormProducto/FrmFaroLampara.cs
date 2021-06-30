@@ -62,9 +62,15 @@ namespace FormProducto
                     this.Close();
                 }
 
-                else
+                else if (Validaciones.ValidarProducto(unFaro) && unFaro == nombre)
                 {
-                    MessageBox.Show("El producto ya existe");
+                    MessageBox.Show("El producto ya existe.");
+                    
+                }
+
+                else if (unFaro.Nombre == String.Empty)
+                {
+                    MessageBox.Show("No se ha ingresado un nombre");
                 }
             }
 

@@ -75,34 +75,7 @@ namespace Entidades
             else if (medida == EMedida.Grande)
                 leds = 6;
         }
-
-        /// <summary>
-        /// Operador que define si un faro es igual a otro o distinto
-        /// </summary>
-        /// <param name="faro"></param>
-        /// <param name="nombre"></param>
-        /// <returns>true si son idénticos, false si no lo son</returns>
-        public static bool operator == (FaroLed faro,string nombre)
-        {
-            foreach (FaroLed faroAux in Fabrica.FarosLed)
-            {
-                if (faroAux.Nombre == nombre)
-                    return true;
-            }
-
-            return false;
-        }
-
-        /// <summary>
-        /// Operador que define si un faro es igual a otro o distinto
-        /// </summary>
-        /// <param name="faro"></param>
-        /// <param name="nombre"></param>
-        /// <returns>true si no son idénticos, false si lo son</returns>
-        public static bool operator !=(FaroLed faro, string nombre)
-        {
-            return !(faro == nombre);
-        }
+       
 
 
 
