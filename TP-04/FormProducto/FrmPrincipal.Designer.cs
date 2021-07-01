@@ -31,14 +31,14 @@ namespace FormProducto
         {
             this.btnAgregarFaroLed = new System.Windows.Forms.Button();
             this.btnAgregarFaroLampara = new System.Windows.Forms.Button();
-            this.richTxtBoxProductos = new System.Windows.Forms.RichTextBox();
-            this.richTxtBoxClientes = new System.Windows.Forms.RichTextBox();
+            this.richTxtBoxLed = new System.Windows.Forms.RichTextBox();
+            this.richTxtBoxLampara = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btnAgregarFaroLed
             // 
             this.btnAgregarFaroLed.Location = new System.Drawing.Point(19, 35);
-            this.btnAgregarFaroLed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarFaroLed.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarFaroLed.Name = "btnAgregarFaroLed";
             this.btnAgregarFaroLed.Size = new System.Drawing.Size(135, 37);
             this.btnAgregarFaroLed.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace FormProducto
             // btnAgregarFaroLampara
             // 
             this.btnAgregarFaroLampara.Location = new System.Drawing.Point(188, 35);
-            this.btnAgregarFaroLampara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarFaroLampara.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarFaroLampara.Name = "btnAgregarFaroLampara";
             this.btnAgregarFaroLampara.Size = new System.Drawing.Size(135, 37);
             this.btnAgregarFaroLampara.TabIndex = 1;
@@ -57,36 +57,36 @@ namespace FormProducto
             this.btnAgregarFaroLampara.UseVisualStyleBackColor = true;
             this.btnAgregarFaroLampara.Click += new System.EventHandler(this.btnAgregarFaroLampara_Click);
             // 
-            // richTxtBoxProductos
+            // richTxtBoxLed
             // 
-            this.richTxtBoxProductos.Location = new System.Drawing.Point(16, 76);
-            this.richTxtBoxProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTxtBoxProductos.Name = "richTxtBoxProductos";
-            this.richTxtBoxProductos.ReadOnly = true;
-            this.richTxtBoxProductos.Size = new System.Drawing.Size(138, 276);
-            this.richTxtBoxProductos.TabIndex = 2;
-            this.richTxtBoxProductos.Text = "";
+            this.richTxtBoxLed.Location = new System.Drawing.Point(16, 76);
+            this.richTxtBoxLed.Margin = new System.Windows.Forms.Padding(2);
+            this.richTxtBoxLed.Name = "richTxtBoxLed";
+            this.richTxtBoxLed.ReadOnly = true;
+            this.richTxtBoxLed.Size = new System.Drawing.Size(138, 276);
+            this.richTxtBoxLed.TabIndex = 2;
+            this.richTxtBoxLed.Text = "";
             // 
-            // richTxtBoxClientes
+            // richTxtBoxLampara
             // 
-            this.richTxtBoxClientes.Location = new System.Drawing.Point(188, 76);
-            this.richTxtBoxClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTxtBoxClientes.Name = "richTxtBoxClientes";
-            this.richTxtBoxClientes.ReadOnly = true;
-            this.richTxtBoxClientes.Size = new System.Drawing.Size(138, 276);
-            this.richTxtBoxClientes.TabIndex = 3;
-            this.richTxtBoxClientes.Text = "";
+            this.richTxtBoxLampara.Location = new System.Drawing.Point(188, 76);
+            this.richTxtBoxLampara.Margin = new System.Windows.Forms.Padding(2);
+            this.richTxtBoxLampara.Name = "richTxtBoxLampara";
+            this.richTxtBoxLampara.ReadOnly = true;
+            this.richTxtBoxLampara.Size = new System.Drawing.Size(138, 276);
+            this.richTxtBoxLampara.TabIndex = 3;
+            this.richTxtBoxLampara.Text = "";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 377);
-            this.Controls.Add(this.richTxtBoxClientes);
-            this.Controls.Add(this.richTxtBoxProductos);
+            this.Controls.Add(this.richTxtBoxLampara);
+            this.Controls.Add(this.richTxtBoxLed);
             this.Controls.Add(this.btnAgregarFaroLampara);
             this.Controls.Add(this.btnAgregarFaroLed);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPrincipal";
             this.Text = "Form Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
@@ -98,8 +98,8 @@ namespace FormProducto
         #endregion
         private System.Windows.Forms.Button btnAgregarFaroLed;
         private System.Windows.Forms.Button btnAgregarFaroLampara;
-        private System.Windows.Forms.RichTextBox richTxtBoxProductos;
-        private System.Windows.Forms.RichTextBox richTxtBoxClientes;
+        private System.Windows.Forms.RichTextBox richTxtBoxLed;
+        private System.Windows.Forms.RichTextBox richTxtBoxLampara;
     }
 }
 

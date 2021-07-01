@@ -32,6 +32,12 @@ namespace Entidades
             this.Leds = leds;
         }
 
+        public FaroLed(string nombre, EMedida medida, double stock, ETipoLed tipoLed) : base(nombre, medida, stock)
+        {
+            this.TipoLed = tipoLed;
+            this.Leds = leds;
+        }
+
         public double Leds { get => leds; set => leds = value; }
         public ETipoLed TipoLed { get => tipoLed; set => tipoLed = value; }
 
@@ -75,9 +81,39 @@ namespace Entidades
             else if (medida == EMedida.Grande)
                 leds = 6;
         }
-       
 
+        public static bool operator ==(FaroLed faro, string nombre)
+        {
+            foreach (FaroLed faroAux in Fabrica.FarosLed)
+            {
+                if (faroAux.Nombre == nombre)
+                    return true;
+            }
 
+            return false;
+        }
 
+        public static bool operator !=(FaroLed faro, string nombre)
+        {
+            return !(faro == nombre);
+        }
+
+        public static List<FaroLed> operator +(List<FaroLed> faros, FaroLed faro)
+        {
+            foreach (FaroLed faroAux in faros)
+            {
+                if (faro.Nombre == faroAux.Nombre)
+                {
+                    return faros;
+                }
+
+                else
+                {
+                    faros.Add(faro);
+                }
+            }
+
+            return faros;
+        }
     }
 }

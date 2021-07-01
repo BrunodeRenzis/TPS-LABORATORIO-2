@@ -32,6 +32,10 @@ namespace Entidades
         {
             this.Portalamparas = portalamparas;
         }
+        public FaroLampara(string nombre, EMedida medida, double stock) : base(nombre, medida, stock)
+        {
+            this.Portalamparas = portalamparas;
+        }
 
         public double Portalamparas { get => portalamparas; set => portalamparas = value; }
 
@@ -63,6 +67,38 @@ namespace Entidades
                 portalamparas = 6;
         }
 
-        
+        public static bool operator ==(FaroLampara faro, string nombre)
+        {
+            foreach (FaroLampara faroAux in Fabrica.FarosLampara)
+            {
+                if (faroAux.Nombre == nombre)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public static bool operator !=(FaroLampara faro, string nombre)
+        {
+            return !(faro == nombre);
+        }
+
+        public static List<FaroLampara> operator +(List<FaroLampara> faros, FaroLampara faro)
+        {
+            foreach (FaroLampara faroAux in faros)
+            {
+                if (faro.Nombre == faroAux.Nombre)
+                {
+                    return faros;
+                }
+
+                else
+                {
+                    faros.Add(faro);
+                }
+            }
+
+            return faros;
+        }
     }
 }

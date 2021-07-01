@@ -17,11 +17,23 @@ namespace Test
 
             List<FaroLed> farosLed = new List<FaroLed>();
             List<FaroLampara> farosLampara = new List<FaroLampara>();
-            FaroLampara fLamp = new FaroLampara(1,"Faro prueba",Faro.EMedida.Grande,20);
-            FaroLed fLed = new FaroLed(1,"Faro Prueba led",Faro.EMedida.Chico,20,FaroLed.ETipoLed.Micro);
+            FaroLampara fLamp = new FaroLampara("Faro prueba",Faro.EMedida.Grande,20);
+            FaroLed fLed = new FaroLed("Faro Prueba led",Faro.EMedida.Chico,20,FaroLed.ETipoLed.Micro);
+            FaroLampara fLamp2 = new FaroLampara("Faro prueba 2", Faro.EMedida.Grande, 20);
+            FaroLed fLed2 = new FaroLed("Faro Prueba led 2", Faro.EMedida.Chico, 20, FaroLed.ETipoLed.Micro);
+            FaroLampara fLamp3 = new FaroLampara("Faro prueba 3", Faro.EMedida.Grande, 20);
+            FaroLed fLed3 = new FaroLed("Faro Prueba led 3", Faro.EMedida.Chico, 20, FaroLed.ETipoLed.Micro);
 
+            farosLampara += fLamp;
+            farosLampara += fLamp2;
+            farosLampara += fLamp;
+            farosLampara += fLamp3;
 
-            
+            farosLed += fLed;
+            farosLed += fLed2;
+            farosLed += fLed3;
+            farosLed += fLed2;
+
             Console.ReadKey();
         }
 

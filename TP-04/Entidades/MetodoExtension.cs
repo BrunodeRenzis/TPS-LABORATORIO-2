@@ -8,25 +8,15 @@ namespace Entidades
 {
     public static class MetodoExtension
     {
-        public static long CantidadDigitos(this long cant)
+        public static bool AveriguarStockLed(this bool sql)
         {
-            return cant.ToString().Length;
+            return false;
         }
 
 
-        public static string CantidadPuntos(this string cad)
+        public static bool AveriguarStockLampara(this bool sql)
         {
-            int counter = 0;
-            for (int i = 0; i < cad.Length; i++)
-            {
-                if (cad[i] == ',' || cad[i] == '.' || cad[i] == ';')
-                {
-                    counter++;
-                }
-
-            }
-
-            return counter.ToString();
+            return false;
         }
     }
 }

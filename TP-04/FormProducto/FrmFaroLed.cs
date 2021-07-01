@@ -55,10 +55,12 @@ namespace FormProducto
             {
                 nombre = txtBoxNombre.Text;
                 double.TryParse(txtBoxStockInicial.Text, out stockInicial);
-                Enum.TryParse<FaroLed.ETipoLed>(cmbBoxTipoLed.SelectedValue.ToString(), out tipoLed);
                 Enum.TryParse<Faro.EMedida>(cmbBoxMedida.SelectedValue.ToString(), out medida);
+                Enum.TryParse<FaroLed.ETipoLed>(cmbBoxMedida.SelectedValue.ToString(), out tipoLed);
+
                 Validaciones.InicializarFaroLed(unFaroLed);
-                unFaroLed = new FaroLed(1,nombre,medida,stockInicial,tipoLed);
+
+                unFaroLed = new FaroLed(nombre, medida, stockInicial,tipoLed);
 
                 if (Validaciones.ValidarProducto(unFaroLed) && unFaroLed != nombre)
                 {
@@ -66,30 +68,31 @@ namespace FormProducto
                     this.Close();
                 }
 
-                else if (Validaciones.ValidarProducto(unFaroLed) && unFaroLed == nombre )
+                else if (Validaciones.ValidarProducto(unFaroLed) && unFaroLed == nombre)
                 {
                     MessageBox.Show("El producto ya existe.");
-                    ResetearLabels();
+
                 }
 
-                else if(unFaroLed.Nombre == String.Empty)
+                else if (unFaroLed.Nombre == String.Empty)
                 {
                     MessageBox.Show("No se ha ingresado un nombre");
                 }
             }
 
-            catch(NullReferenceException nEx)
+            catch (NullReferenceException nEx)
             {
                 MessageBox.Show(nEx.Message);
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                throw new FaroException("No se han completado los campos para agregar el faro",ex);
+                throw new FaroException("No se han completado los campos para agregar el faro", ex);
             }
-
-
-            
         }
+
+
+
     }
 }
+

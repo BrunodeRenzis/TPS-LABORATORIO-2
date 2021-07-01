@@ -35,10 +35,21 @@ namespace FormProducto
 
             return sb.ToString();
         }
+
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
-            VerificarConexion();
+            try
+            {
+                conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
+                VerificarConexion();
+                this.richTxtBoxLampara.Text=Fabrica.LeerLampara().ToString();
+                this.richTxtBoxLed.Text=Fabrica.LeerLeds().ToString();
+            }
+
+            catch(Exception ex)
+            {
+                throw new ConexionException("No se pudo establecer la conexión.",ex);
+            }
         }
 
         private void VerificarConexion()
@@ -89,7 +100,7 @@ namespace FormProducto
                 {
                     MessageBox.Show($"Producto cargado con exito {formFaroLed.unFaroLed.Nombre}");
                     Fabrica.FarosLed.Add(formFaroLed.unFaroLed);
-                    this.richTxtBoxProductos.Text = MostrarListaLeds();
+                    this.richTxtBoxLed.Text = MostrarListaLeds();
                 }          
             }
 
@@ -115,7 +126,7 @@ namespace FormProducto
                 {
                     MessageBox.Show($"Faro cargado con exito {formFaroLampara.unFaro.Nombre}");
                     Fabrica.FarosLampara.Add(formFaroLampara.unFaro);
-                    this.richTxtBoxClientes.Text = MostrarListaLampara();
+                    this.richTxtBoxLampara.Text = MostrarListaLampara();
                 }
 
                
@@ -136,10 +147,9 @@ namespace FormProducto
         {
             Fabrica.GuardarLampara(Fabrica.FarosLampara);
             Fabrica.GuardarLeds(Fabrica.FarosLed);
-            Fabrica.LeerLampara();
-            Fabrica.LeerLeds();
             CerrarConexion();
         }
+
 
         
     }

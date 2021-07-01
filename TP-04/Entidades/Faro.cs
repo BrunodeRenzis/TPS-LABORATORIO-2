@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace Entidades
 {
-    
+
     [Serializable]
     [XmlInclude(typeof(FaroLed))]
     [XmlInclude(typeof(FaroLampara))]
@@ -38,7 +38,7 @@ namespace Entidades
         /// <param name="nombre"></param>
         /// <param name="medida"></param>
         /// <param name="stock"></param>
-        protected Faro(string nombre,EMedida medida, double stock)
+        protected Faro(string nombre, EMedida medida, double stock)
         {
             this.Medida = medida;
             DeterminarMaterialesFaro(medida);
@@ -114,10 +114,10 @@ namespace Entidades
                     Tornillos = 8;
                     Tuercas = 8;
                 }
-                
+
             }
 
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw new FaroException("No se ha determinado la medida del faro", e);
             }
@@ -136,7 +136,7 @@ namespace Entidades
             Led
         }
 
-        
+
         /// <summary>
         /// Método que agrega un faro a la lista si es que este no se encuentra en ella.
         /// </summary>
@@ -188,45 +188,9 @@ namespace Entidades
             return faro.EliminarFaro(this);
         }
 
-        public static bool operator == (Faro faro, string nombre)
-        {
-            if(faro.Tipo==Faro.ETipo.Lampara)
-            {
-                foreach (Faro faroAux in Fabrica.FarosLampara)
-                {
-                    if (faroAux.Nombre == nombre)
-                        return true;
-                }
-
-            }
-
-            else if (faro.Tipo == Faro.ETipo.Led)
-            {
-                foreach (Faro faroAux in Fabrica.FarosLed)
-                {
-                    if (faroAux.Nombre == nombre)
-                        return true;
-                }
-
-            }
-
-            return false;
-        }
 
 
-        /// <summary>
-        /// Operador que define si un faro es igual a otro o distinto
-        /// </summary>
-        /// <param name="faro"></param>
-        /// <param name="nombre"></param>
-        /// <returns>true si no son idénticos, false si lo son</returns>
-        public static bool operator !=(Faro faro, string nombre)
-        {
-            return !(faro == nombre);
-        }
+
     }
-
-     
-
         
 }
