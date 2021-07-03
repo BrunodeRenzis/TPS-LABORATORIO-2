@@ -53,7 +53,7 @@ namespace FormProducto
         {
             try
             {
-                nombre = txtBoxNombre.Text;
+                nombre = this.txtBoxNombre.Text;
                 double.TryParse(txtBoxStockInicial.Text, out stockInicial);
                 Enum.TryParse<Faro.EMedida>(cmbBoxMedida.SelectedValue.ToString(), out medida);
                 Enum.TryParse<FaroLed.ETipoLed>(cmbBoxMedida.SelectedValue.ToString(), out tipoLed);
@@ -61,6 +61,7 @@ namespace FormProducto
                 Validaciones.InicializarFaroLed(unFaroLed);
 
                 unFaroLed = new FaroLed(nombre, medida, stockInicial,tipoLed);
+                unFaroLed.Guardar();
 
                 if (Validaciones.ValidarProducto(unFaroLed) && unFaroLed != nombre)
                 {

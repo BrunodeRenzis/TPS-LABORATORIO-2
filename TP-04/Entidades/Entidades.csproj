@@ -53,6 +53,8 @@
     <Compile Include="FaroRepetidoException.cs" />
     <Compile Include="MetodoExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="StockDAO.cs" />
     <Compile Include="Validaciones.cs" />
     <Compile Include="Xml.cs" />
   </ItemGroup>

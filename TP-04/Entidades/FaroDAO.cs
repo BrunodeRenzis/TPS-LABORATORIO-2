@@ -31,7 +31,7 @@ namespace Entidades
     {
         private SqlConnection conexion;
         private SqlCommand comando;
-
+        private delegate bool DescontarMateriales(Faro faro);
        
        
         /// <summary>
@@ -85,14 +85,14 @@ namespace Entidades
         /// <returns>True si se guardo, false caso contrario</returns>
         public bool InsertarFaro(Faro faro)
         {
-            string sql = "Insert into FarDetalles(nombre, idFaro, medida, tipo, stock) " +
-                "values(@auxNombre, @auxID, @auxMedida, @auxTipo, @auxStock)";
+            string sql = "Insert into FaroDetalles(nombre, medida, tipo, stock) " +
+                "values(@auxNombre, @auxMedida, @auxTipo, @auxStock)";
 
-            comando.Parameters.Add(new SqlParameter("@auxDescripcion", faro.Nombre));
-            comando.Parameters.Add(new SqlParameter("@auxID", faro.Id));
-            comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida));
+            
+            comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
+            comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
             comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
-            //comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
+            comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
 
             return EjecutarNonQuery(sql);
         }
@@ -103,14 +103,13 @@ namespace Entidades
         /// <returns>True si se modifico, false caso contrario</returns>
         public bool ModificarFaro(Faro faro)
         {
-            string sql = "Insert into FaroDetalles(nombre, idFaro, medida, tipo, stock) " +
-               "values(@auxNombre, @auxID, @auxMedida, @auxTipo, @auxStock)";
+            string sql = "Insert into FaroDetalles(nombre, medida, tipo, stock) " +
+               "values(@auxNombre, @auxMedida, @auxTipo, @auxStock)";
 
             comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
-            comando.Parameters.Add(new SqlParameter("@auxID", faro.Id));
-            comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida));
+            comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
             comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
-            comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo));
+            comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
 
             return EjecutarNonQuery(sql);
         }
@@ -158,6 +157,7 @@ namespace Entidades
 
             return EjecutarNonQuery(sql);
         }
+        
 
 
 
@@ -175,6 +175,7 @@ namespace Entidades
 
             return EjecutarNonQuery(sql);
         }
+
 
         /// <summary>
         /// Trae el listado de todos los productos guardados en la base de datos
@@ -202,7 +203,7 @@ namespace Entidades
                         (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString())));
 
                     }
-                    else
+                    else if (tipo== "led")
                     {
                         productos.Add(new FaroLed(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
                         (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()), (FaroLed.ETipoLed)(reader["tipoLed"])));
@@ -232,13 +233,12 @@ namespace Entidades
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Objeto de tipo producto</returns>
-        public Faro LeerPorID(int id)
+        public string GetStock()
         {
-            Faro faro = null;
-
+            string total=String.Empty;
             try
             {
-                comando.CommandText = "Select * from FaroDetalles where id = " + id.ToString();
+                comando.CommandText = "SELECT SUM (stock) FROM FaroDetalles AS suma";
 
                 conexion.Open();
 
@@ -246,21 +246,7 @@ namespace Entidades
 
                 while (reader.Read())
                 {
-                    string tipo = reader["tipo"].ToString();
-
-                    if (tipo == "lámpara")
-                    {
-                        faro = new FaroLampara(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
-                        (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()));
-
-                    }
-                    else
-                    {
-                        faro = new FaroLed(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
-                        (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()), (FaroLed.ETipoLed)(reader["tipoLed"]));
-                    }
-
-
+                    total = reader["suma"].ToString();
                     reader.Close();
                 }
             }
@@ -273,7 +259,7 @@ namespace Entidades
                 conexion.Close();
             }
 
-            return faro;
+              return $"El stock total es de {total}";
         }
     }
 }

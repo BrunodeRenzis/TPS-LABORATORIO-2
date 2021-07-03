@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Entidades
@@ -79,6 +80,25 @@ namespace Entidades
 
             return datos;
 
+        }
+
+        public static void AgregandoFarosLed()
+        {
+            foreach (Faro unFaro in FarosLed)
+            {
+                Console.WriteLine($"Agregando faro {unFaro.Nombre} desde hilo leds");
+                Thread.Sleep(2000);
+
+            }
+        }
+
+        public static void AgregandoFarosLampara()
+        {
+            foreach (Faro unFaro in FarosLampara)
+            {
+                Console.WriteLine($"Agregando faro {unFaro.Nombre} desde hilo lampara");
+                Thread.Sleep(1500);
+            }
         }
 
     }

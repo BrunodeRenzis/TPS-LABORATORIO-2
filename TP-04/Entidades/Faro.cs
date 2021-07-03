@@ -16,7 +16,7 @@ namespace Entidades
         protected int id;
         protected string nombre;
         protected EMedida medida;
-        private ETipo tipo;
+        protected ETipo tipo;
         protected double stock;
         protected double tornillos;
         protected double bulones;

@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
-namespace Entidades
+namespace System
 {
     public static class MetodoExtension
     {
-        public static bool AveriguarStockLed(this bool sql)
+        public static string AveriguarStockTotal(this string total)
         {
-            return false;
+            FaroDAO faro = new FaroDAO();
+            total=faro.GetStock();
+            return total; 
         }
 
-
-        public static bool AveriguarStockLampara(this bool sql)
-        {
-            return false;
-        }
     }
 }
