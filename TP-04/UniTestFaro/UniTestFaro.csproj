@@ -47,10 +47,12 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgregarFaroTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ConexionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -59,6 +61,10 @@
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{ace7a422-4dd1-4ec6-9a62-b4b4887f306a}</Project>
       <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FormProducto\FrmAdmin.csproj">
+      <Project>{ba40ce5a-eb0e-4b71-91dc-317d0ffaad50}</Project>
+      <Name>FrmAdmin</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

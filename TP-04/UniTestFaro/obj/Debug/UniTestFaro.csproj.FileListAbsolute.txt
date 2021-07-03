@@ -36,3 +36,6 @@ C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\UniTestFaro\ob
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\UniTestFaro\obj\Debug\UniTestFaro.csproj.CopyComplete
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\UniTestFaro\obj\Debug\UniTestFaro.dll
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\UniTestFaro\obj\Debug\UniTestFaro.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\UniTestFaro\bin\Debug\FormProducto.exe
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\UniTestFaro\bin\Debug\FormProducto.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\UniTestFaro\bin\Debug\FormProducto.exe.config

@@ -149,6 +149,7 @@ namespace FormProducto
         {
             Fabrica.GuardarLampara(Fabrica.FarosLampara);
             Fabrica.GuardarLeds(Fabrica.FarosLed);
+            Inventario.GuardarStock(Fabrica.Stock);
             CerrarConexion();
         }
 

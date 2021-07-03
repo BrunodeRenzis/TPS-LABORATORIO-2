@@ -17,15 +17,16 @@ namespace Test
         {
             Thread hiloLed = new Thread(Fabrica.AgregandoFarosLed);
             Thread hiloLampara = new Thread(Fabrica.AgregandoFarosLampara);
-            List<FaroLed> farosLed = new List<FaroLed>();
             string stockTotal=String.Empty;
-            List<FaroLampara> farosLampara = new List<FaroLampara>();
             FaroLampara fLamp = new FaroLampara("Faro prueba",Faro.EMedida.Grande,20);
             FaroLed fLed = new FaroLed("Faro Prueba led",Faro.EMedida.Chico,20,FaroLed.ETipoLed.Micro);
             FaroLampara fLamp2 = new FaroLampara("Faro prueba 2", Faro.EMedida.Grande, 20);
             FaroLed fLed2 = new FaroLed("Faro Prueba led 2", Faro.EMedida.Chico, 20, FaroLed.ETipoLed.Micro);
             FaroLampara fLamp3 = new FaroLampara("Faro prueba 3", Faro.EMedida.Grande, 20);
             FaroLed fLed3 = new FaroLed("Faro Prueba led 3", Faro.EMedida.Chico, 20, FaroLed.ETipoLed.Micro);
+
+            hiloLampara.Start();
+            hiloLed.Start();
 
             Fabrica.FarosLampara.Add(fLamp);
             Fabrica.FarosLampara.Add(fLamp2);
@@ -37,8 +38,6 @@ namespace Test
             Fabrica.FarosLed.Add(fLed3);
             Fabrica.FarosLed.Add(fLed2);
 
-            hiloLampara.Start();
-            hiloLed.Start();
             Console.ReadKey();
         }
 

@@ -18,11 +18,7 @@ namespace Entidades
         protected EMedida medida;
         protected ETipo tipo;
         protected double stock;
-        protected double tornillos;
-        protected double bulones;
-        protected double arandelas;
-        protected double tuercas;
-        protected double lentes;
+        
 
         /// <summary>
         /// Constructor por defecto de un faro
@@ -56,11 +52,6 @@ namespace Entidades
 
         public string Nombre { get => nombre; set => nombre = value; }
         public EMedida Medida { get => medida; set => medida = value; }
-        public double Tornillos { get => tornillos; set => tornillos = value; }
-        public double Bulones { get => bulones; set => bulones = value; }
-        public double Arandelas { get => arandelas; set => arandelas = value; }
-        public double Tuercas { get => tuercas; set => tuercas = value; }
-        public double Lentes { get => lentes; set => lentes = value; }
         public double Stock { get => stock; set => stock = value; }
         public int Id { get => id; set => id = value; }
         public ETipo Tipo { get => tipo; set => tipo = value; }
@@ -90,29 +81,29 @@ namespace Entidades
 
                 if (medida == EMedida.Chico)
                 {
-                    Arandelas = 4;
-                    Bulones = 4;
-                    lentes = 2;
-                    Tornillos = 4;
-                    Tuercas = 4;
+                    Inventario.Arandelas = 4;
+                    Inventario.Bulones = 4;
+                    Inventario.Lentes = 2;
+                    Inventario.Tornillos = 4;
+                    Inventario.Tuercas = 4;
                 }
 
                 else if (Medida == EMedida.Mediano)
                 {
-                    Arandelas = 6;
-                    Bulones = 6;
-                    lentes = 3;
-                    Tornillos = 6;
-                    Tuercas = 6;
+                    Inventario.Arandelas = 6;
+                    Inventario.Bulones = 6;
+                    Inventario.Lentes = 3;
+                    Inventario.Tornillos = 6;
+                    Inventario.Tuercas = 6;
                 }
 
                 else if (Medida == EMedida.Grande)
                 {
-                    Arandelas = 8;
-                    Bulones = 8;
-                    lentes = 4;
-                    Tornillos = 8;
-                    Tuercas = 8;
+                    Inventario.Arandelas = 8;
+                    Inventario.Bulones = 8;
+                    Inventario.Lentes = 4;
+                    Inventario.Tornillos = 8;
+                    Inventario.Tuercas = 8;
                 }
 
             }

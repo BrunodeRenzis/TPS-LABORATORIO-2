@@ -11,6 +11,7 @@ namespace Entidades
     {
         static List<FaroLampara> farosLampara;
         static List<FaroLed> farosLed;
+        static List<Inventario> stock;
 
         /// <summary>
         /// Constructor estático que inicializa las listas.
@@ -19,11 +20,13 @@ namespace Entidades
         {
             farosLampara = new List<FaroLampara>();
             farosLed = new List<FaroLed>();
+            Stock = new List<Inventario>();
         }
 
         public static List<FaroLampara> FarosLampara { get => farosLampara; set => farosLampara = value; }
         public static List<FaroLed> FarosLed { get => farosLed; set => farosLed = value; }
-        
+        public static List<Inventario> Stock { get => stock; set => stock = value; }
+
         /// <summary>
         /// Método estático que guarda y serializa los leds.
         /// </summary>
@@ -87,7 +90,7 @@ namespace Entidades
             foreach (Faro unFaro in FarosLed)
             {
                 Console.WriteLine($"Agregando faro {unFaro.Nombre} desde hilo leds");
-                Thread.Sleep(2000);
+                Thread.Sleep(1500);
 
             }
         }
