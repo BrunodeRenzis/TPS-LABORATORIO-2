@@ -31,7 +31,6 @@ namespace Entidades
     {
         private SqlConnection conexion;
         private SqlCommand comando;
-        private delegate bool DescontarMateriales(Faro faro);
        
        
         /// <summary>
