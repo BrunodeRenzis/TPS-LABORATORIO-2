@@ -11,16 +11,10 @@ namespace UniTestFaro
         [TestMethod]
         public void TestMethod1()
         {
-            try
-            {
-                SqlConnection conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
-                conexion.Open();
-            }
+            SqlConnection conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
+            conexion.Open();
 
-            catch (ConexionException ex)
-            {
-                throw new Exception("No se pudo conectar", ex);
-            }
+            Assert.AreEqual(System.Data.ConnectionState.Open,conexion.State);
         }
     }
 }

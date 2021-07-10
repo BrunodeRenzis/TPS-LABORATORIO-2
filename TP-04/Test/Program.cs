@@ -30,13 +30,11 @@ namespace Test
 
             Fabrica.FarosLampara.Add(fLamp);
             Fabrica.FarosLampara.Add(fLamp2);
-            Fabrica.FarosLampara.Add(fLamp);
             Fabrica.FarosLampara.Add(fLamp3);
 
             Fabrica.FarosLed.Add(fLed);
             Fabrica.FarosLed.Add(fLed2);
             Fabrica.FarosLed.Add(fLed3);
-            Fabrica.FarosLed.Add(fLed2);
 
             Console.ReadKey();
         }
