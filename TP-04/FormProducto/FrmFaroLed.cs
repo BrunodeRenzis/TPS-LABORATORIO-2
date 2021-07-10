@@ -61,7 +61,7 @@ namespace FormProducto
                 Validaciones.InicializarFaroLed(unFaroLed);
 
                 unFaroLed = new FaroLed(nombre, medida, stockInicial,tipoLed);
-                unFaroLed.Guardar();
+                
 
                 if (Validaciones.ValidarProducto(unFaroLed) && unFaroLed != nombre)
                 {
