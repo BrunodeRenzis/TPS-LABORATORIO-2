@@ -115,5 +115,11 @@ namespace Entidades
 
             return faros;
         }
+
+        public bool GuardarLed()
+        {
+            FaroDAO faro = new FaroDAO();
+            return faro.InsertarFaroLed(this);
+        }
     }
 }

@@ -60,7 +60,7 @@ namespace FormProducto
                 {
                     this.DialogResult = DialogResult.OK;
                     FaroDAO faroDAO = new FaroDAO();
-                    faroDAO.InsertarFaro(unFaro);
+                    faroDAO.InsertarFaroLampara(unFaro);
                     Inventario.UpdateInventario();
                     this.Close();
                 }

@@ -7,24 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-
-//Consultas andando en la base
-/*
-   SELECT * FROM Stock;
-
-  UPDATE Stock SET arandelas = 100; 
-
-  UPDATE Stock SET arandelas = (arandelas - 10) WHERE arandelas>0;
-  
-  SELECT SUM (stock) FROM FaroDetalles WHERE tipo='Led';
-
-  SELECT SUM (stock) FROM FaroDetalles WHERE tipo='Lámpara';
- */
-
-
-
-
-
 namespace Entidades
 {
     public class FaroDAO:BaseDAO
@@ -32,30 +14,45 @@ namespace Entidades
         public FaroDAO():base()
         {
 
-        }
-      
-
-
-        
+        }      
 
         /// <summary>
         /// Inserta un producto a la base de datos
         /// </summary>
         /// <param name="prod"></param>
         /// <returns>True si se guardo, false caso contrario</returns>
-        public bool InsertarFaro(Faro faro)
+        public bool InsertarFaroLed(FaroLed faro)
         {
-            string sql = "Insert into FaroDetalles(nombre, medida, tipo, stock) " +
-                "values(@auxNombre, @auxMedida, @auxTipo, @auxStock)";
+            string sql = "Insert into FaroLedDetalles(nombre, medida, tipoLed, stock) " +
+                "values(@auxNombre, @auxMedida, @auxTipoLed, @auxStock)";
 
             
             Comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
             Comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
             Comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
-            Comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
+            Comando.Parameters.Add(new SqlParameter("@auxTipoLed", faro.TipoLed.ToString()));
 
             return EjecutarNonQuery(sql);
         }
+
+        /// <summary>
+        /// Inserta un producto a la base de datos
+        /// </summary>
+        /// <param name="prod"></param>
+        /// <returns>True si se guardo, false caso contrario</returns>
+        public bool InsertarFaroLampara(FaroLampara faro)
+        {
+            string sql = "Insert into FaroDetalles(nombre, medida, stock) " +
+                "values(@auxNombre, @auxMedida, @auxStock)";
+
+
+            Comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
+            Comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
+            Comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
+
+            return EjecutarNonQuery(sql);
+        }
+
         /// <summary>
         /// Modifica un producto de la base de datos
         /// </summary>
@@ -64,12 +61,11 @@ namespace Entidades
         public bool ModificarFaro(Faro faro)
         {
             string sql = "Insert into FaroDetalles(nombre, medida, tipo, stock) " +
-               "values(@auxNombre, @auxMedida, @auxTipo, @auxStock)";
+               "values(@auxNombre, @auxMedida, @auxStock)";
 
             Comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
             Comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
             Comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
-            Comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
 
             return EjecutarNonQuery(sql);
         }
@@ -94,6 +90,43 @@ namespace Entidades
             return EjecutarNonQuery(sql);
         }
 
+
+        public List<FaroLampara> LeerLampara()
+        {
+            List<FaroLampara> productos = new List<FaroLampara>();
+
+            try
+            {
+                Comando.CommandText = "Select * from FaroDetalles";
+
+                Conexion.Open();
+
+                SqlDataReader reader = Comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string tipo = reader["tipo"].ToString();
+
+                    productos.Add(new FaroLampara(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
+                    (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString())));
+
+                }
+
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+
+                throw new ArchivoException("Falla al intentar leer la base de datos", e);
+
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return productos;
+        }
 
         /// <summary>
         /// Trae el listado de todos los productos guardados en la base de datos
@@ -146,6 +179,43 @@ namespace Entidades
             return productos;
         }
 
+        public List<FaroLed> LeerLeds()
+        {
+            List<FaroLed> productos = new List<FaroLed>();
+
+            try
+            {
+                Comando.CommandText = "Select * from FaroLedDetalles";
+
+                Conexion.Open();
+
+                SqlDataReader reader = Comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string tipo = reader["tipo"].ToString();
+
+                    productos.Add(new FaroLed(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
+                    (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()), (FaroLed.ETipoLed)(reader["tipoLed"])));
+
+                }
+
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+
+                throw new ArchivoException("Falla al intentar leer la base de datos", e);
+
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return productos;
+        }
+
         /// <summary>
         /// Trae un producto de la base de datos identificado con el ID
         /// </summary>
@@ -179,5 +249,7 @@ namespace Entidades
 
               return $"El stock total es de {total}";
         }
+
+
     }
 }

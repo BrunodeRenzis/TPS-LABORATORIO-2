@@ -35,7 +35,7 @@ namespace Entidades
 
             catch(Exception ex)
             {
-                Console.WriteLine("No se puede generar los elementos");
+                Console.WriteLine("No se puede generar los elementos",ex);
             }
 
             finally

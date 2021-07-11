@@ -14,12 +14,13 @@ namespace FormProducto
     public partial class FrmPrincipal : Form
     {
         SqlConnection conexion;
-
+        FaroDAO faroDAO;
 
         public FrmPrincipal()
         {
             InitializeComponent();
             Inventario.CargarInventario();
+            faroDAO = new FaroDAO();
         }
 
         /// <summary>
@@ -43,8 +44,6 @@ namespace FormProducto
             {
                 conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
                 VerificarConexion();
-                //this.richTxtBoxLampara.Text=Fabrica.LeerLampara().ToString();
-                //this.richTxtBoxLed.Text=Fabrica.LeerLeds().ToString();
             }
 
             catch(Exception ex)
@@ -101,7 +100,7 @@ namespace FormProducto
                 {
                     MessageBox.Show($"Producto cargado con exito {formFaroLed.unFaroLed.Nombre}");
                     Fabrica.FarosLed.Add(formFaroLed.unFaroLed);
-                    formFaroLed.unFaroLed.Guardar();
+                    formFaroLed.unFaroLed.GuardarLed();
                     this.richTxtBoxLed.Text = MostrarListaLeds();
                 }          
             }
@@ -128,7 +127,7 @@ namespace FormProducto
                 {
                     MessageBox.Show($"Faro cargado con exito {formFaroLampara.unFaro.Nombre}");
                     Fabrica.FarosLampara.Add(formFaroLampara.unFaro);
-                    formFaroLampara.unFaro.Guardar();
+                    formFaroLampara.unFaro.GuardarLampara();
                     this.richTxtBoxLampara.Text = MostrarListaLampara();
                 }
 

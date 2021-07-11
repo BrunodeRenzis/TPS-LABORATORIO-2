@@ -66,6 +66,9 @@ namespace FormProducto
                 if (Validaciones.ValidarProducto(unFaroLed) && unFaroLed != nombre)
                 {
                     this.DialogResult = DialogResult.OK;
+                    FaroDAO faroDAO = new FaroDAO();
+                    faroDAO.InsertarFaroLed(unFaroLed);
+                    Inventario.UpdateInventario();
                     this.Close();
                 }
 

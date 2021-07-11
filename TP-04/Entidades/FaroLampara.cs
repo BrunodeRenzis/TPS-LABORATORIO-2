@@ -100,5 +100,11 @@ namespace Entidades
 
             return faros;
         }
+
+        public bool GuardarLampara()
+        {
+            FaroDAO faro = new FaroDAO();
+            return faro.InsertarFaroLampara(this);
+        }
     }
 }

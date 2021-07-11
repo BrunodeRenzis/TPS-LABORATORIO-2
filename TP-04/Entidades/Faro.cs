@@ -169,11 +169,11 @@ namespace Entidades
             return faros;
         }
 
-        public bool Guardar()
+        /*public bool Guardar()
         {
             FaroDAO faro = new FaroDAO();
             return faro.InsertarFaro(this);
-        }
+        }*/
 
         /// <summary>
         /// Modificar el objeto Producto en la base de datos
