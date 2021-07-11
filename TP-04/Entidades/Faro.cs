@@ -75,37 +75,54 @@ namespace Entidades
         /// <param name="medida"></param>
         protected virtual void DeterminarMaterialesFaro(EMedida medida)
         {
+            int arandelas=0, bulones=0, lentes=0, tornillos=0, tuercas=0;
             try
             {
 
-
+                
                 if (medida == EMedida.Chico)
                 {
-                    Inventario.Arandelas = 4;
-                    Inventario.Bulones = 4;
-                    Inventario.Lentes = 2;
-                    Inventario.Tornillos = 4;
-                    Inventario.Tuercas = 4;
+                    arandelas = 4;
+                    bulones = 4;
+                    lentes = 2;
+                    tornillos = 4;
+                    tuercas = 4;
                 }
 
                 else if (Medida == EMedida.Mediano)
                 {
-                    Inventario.Arandelas = 6;
-                    Inventario.Bulones = 6;
-                    Inventario.Lentes = 3;
-                    Inventario.Tornillos = 6;
-                    Inventario.Tuercas = 6;
+                    arandelas = 6;
+                    bulones = 6;
+                    lentes = 3;
+                    tornillos = 6;
+                    tuercas = 6;
                 }
 
                 else if (Medida == EMedida.Grande)
                 {
-                    Inventario.Arandelas = 8;
-                    Inventario.Bulones = 8;
-                    Inventario.Lentes = 4;
-                    Inventario.Tornillos = 8;
-                    Inventario.Tuercas = 8;
+                    arandelas = 8;
+                    bulones = 8;
+                    lentes = 4;
+                    tornillos = 8;
+                    tuercas = 8;
                 }
 
+                string [] materiales = new string[] { "arandelas", "bulones", "lentes", "tornillos", "tuercas" };
+                int [] materialesCant = new int[] { arandelas,bulones,lentes,tornillos,tuercas };
+                
+                for(int i=0;i<materialesCant.Length;i++)
+                {
+                    if(!(Inventario.VerificarStock(materialesCant[i], materiales[i])))
+                    {
+                        throw new Exception("No hay más materiales para construir");
+                    }
+                    
+                }
+                Inventario.Arandelas -= arandelas;
+                Inventario.Bulones -= bulones;
+                Inventario.Lentes -= lentes;
+                Inventario.Tornillos -= tornillos;
+                Inventario.Tuercas -= tuercas;
             }
 
             catch (Exception e)

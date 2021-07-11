@@ -29,53 +29,42 @@ namespace Entidades
             return inv.Guardar(path, lista);
         }
 
-        /*
-         
-                 public bool DescontarArandelas(Faro faro)
+        public static bool VerificarStock(int cantidad, string material)
         {
-            string sql = $" UPDATE Stock SET arandelas = (arandelas - @auxArandelas) WHERE arandelas>0";
+            switch(material)
+            {
+                case "tornillos":
+                    return Tornillos >= cantidad;
 
-            comando.Parameters.Add(new SqlParameter("@auxArandelas", faro.Arandelas));
-            
-            return EjecutarNonQuery(sql);
-        }
-        public bool DescontarBulones(Faro faro)
-        {
-            string sql = $" UPDATE Stock SET bulones = (bulones - @auxBulones) WHERE bulones>0";
+                case "tuercas":
+                    return Tuercas >= cantidad;
 
-            comando.Parameters.Add(new SqlParameter("@auxBulones", faro.Bulones));
+                case "bulones":
+                    return Bulones >= cantidad;
 
-            return EjecutarNonQuery(sql);
-        }
+                case "arandelas":
+                    return Arandelas >= cantidad;
 
-        public bool DescontarLentes(Faro faro)
-        {
-            string sql = $" UPDATE Stock SET lentes = (lentes - @auxLentes) WHERE lentes>0";
+                case "lentes":
+                    return Lentes >= cantidad;
 
-            comando.Parameters.Add(new SqlParameter("@auxLentes", faro.Lentes));
-
-            return EjecutarNonQuery(sql);
+                default:
+                    return false;
+            }
         }
 
-        public bool DescontarTornillos(Faro faro)
+        public static void UpdateInventario()
         {
-            string sql = $" UPDATE Stock SET tornillos = (tornillos - @auxTornillos) WHERE tornillos>0";
-
-            comando.Parameters.Add(new SqlParameter("@auxTornillos", faro.Tornillos));
-
-            return EjecutarNonQuery(sql);
+            StockDAO stock = new StockDAO();
+            stock.DescontarMateriales();
         }
 
-        public bool DescontarTuercas(Faro faro)
+        public static void CargarInventario()
         {
-            string sql = $" UPDATE Stock SET tuercas = (tuercas - @auxTuercas) WHERE tuercas>0";
+            StockDAO stock = new StockDAO();
 
-            comando.Parameters.Add(new SqlParameter("@auxTuercas", faro.Tuercas));
-
-            return EjecutarNonQuery(sql);
+            stock.SelectMateriales();
         }
-         
-         
-         */
+
     }
 }

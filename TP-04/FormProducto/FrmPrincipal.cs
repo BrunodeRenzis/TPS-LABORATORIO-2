@@ -19,6 +19,7 @@ namespace FormProducto
         public FrmPrincipal()
         {
             InitializeComponent();
+            Inventario.CargarInventario();
         }
 
         /// <summary>
@@ -153,7 +154,10 @@ namespace FormProducto
             CerrarConexion();
         }
 
-
-        
+        private void verStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string algo=String.Empty;
+            MessageBox.Show(algo.AveriguarStockTotal());
+        }
     }
 }

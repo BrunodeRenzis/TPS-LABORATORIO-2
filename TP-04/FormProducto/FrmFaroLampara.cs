@@ -26,7 +26,7 @@ namespace FormProducto
         public FrmFaroLampara()
         {
             InitializeComponent();
-            this.unFaro = new FaroLampara();
+            //this.unFaro = new FaroLampara();
         }
 
         /// <summary>
@@ -54,11 +54,14 @@ namespace FormProducto
 
                 Validaciones.InicializarFaroLampara(unFaro);
 
-                unFaro = new FaroLampara(1,nombre, medida, stockInicial);
+                unFaro = new FaroLampara(nombre, medida, stockInicial);
 
                 if (Validaciones.ValidarProducto(unFaro) && unFaro!=nombre)
                 {
                     this.DialogResult = DialogResult.OK;
+                    FaroDAO faroDAO = new FaroDAO();
+                    faroDAO.InsertarFaro(unFaro);
+                    Inventario.UpdateInventario();
                     this.Close();
                 }
 

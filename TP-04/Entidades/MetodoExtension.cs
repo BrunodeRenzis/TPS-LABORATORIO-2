@@ -5,16 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 
-namespace System
+namespace Entidades
 {
     public static class MetodoExtension
     {
-        public static string AveriguarStockTotal(this string total)
+        public static string AveriguarStockTotal(this string t)
         {
             FaroDAO faro = new FaroDAO();
-            total=faro.GetStock();
-            return total; 
+            t=faro.GetStock();
+            return t; 
         }
+
+        
 
     }
 }

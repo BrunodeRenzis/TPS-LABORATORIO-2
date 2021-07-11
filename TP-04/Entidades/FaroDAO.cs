@@ -27,53 +27,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class FaroDAO
+    public class FaroDAO:BaseDAO
     {
-        private SqlConnection conexion;
-        private SqlCommand comando;
-       
-       
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public FaroDAO()
+        public FaroDAO():base()
         {
-            conexion = new SqlConnection();
-            conexion.ConnectionString = "Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;";
-            comando = new SqlCommand();
-            comando.Connection = conexion;
-            comando.CommandType = CommandType.Text;
+
         }
       
-        /// <summary>
-        /// Ejecuta ExecuteNonQuery() en una conexion SQL
-        /// </summary>
-        /// <param name="sql"></param>
-        /// <returns>True si se ejecuto, false caso contrario</returns>
-        public bool EjecutarNonQuery(string sql)
-        {
-            bool ejecuto = false;
-            try
-            {
-                comando.CommandText = sql;
 
-                conexion.Open();
-
-                comando.ExecuteNonQuery();
-                ejecuto = true;
-            }
-            catch (Exception e)
-            {
-                ejecuto = false;
-                throw new ArchivoException("Fallo al intentar conectar a base de datos", e);
-            }
-            finally
-            {
-                conexion.Close();
-            }
-
-            return ejecuto;
-        }
 
         
 
@@ -88,10 +49,10 @@ namespace Entidades
                 "values(@auxNombre, @auxMedida, @auxTipo, @auxStock)";
 
             
-            comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
-            comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
-            comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
-            comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
+            Comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
+            Comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
+            Comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
+            Comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
 
             return EjecutarNonQuery(sql);
         }
@@ -105,10 +66,10 @@ namespace Entidades
             string sql = "Insert into FaroDetalles(nombre, medida, tipo, stock) " +
                "values(@auxNombre, @auxMedida, @auxTipo, @auxStock)";
 
-            comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
-            comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
-            comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
-            comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
+            Comando.Parameters.Add(new SqlParameter("@auxNombre", faro.Nombre));
+            Comando.Parameters.Add(new SqlParameter("@auxMedida", faro.Medida.ToString()));
+            Comando.Parameters.Add(new SqlParameter("@auxStock", faro.Stock));
+            Comando.Parameters.Add(new SqlParameter("@auxTipo", faro.Tipo.ToString()));
 
             return EjecutarNonQuery(sql);
         }
@@ -128,7 +89,7 @@ namespace Entidades
         {
             string sql = "Delete FaroDetalles where id = @auxID";
 
-            comando.Parameters.Add(new SqlParameter("@auxID", faro.Id));
+            Comando.Parameters.Add(new SqlParameter("@auxID", faro.Id));
 
             return EjecutarNonQuery(sql);
         }
@@ -144,11 +105,11 @@ namespace Entidades
 
             try
             {
-                comando.CommandText = "Select * from FaroDetalles";
+                Comando.CommandText = "Select * from FaroDetalles";
 
-                conexion.Open();
+                Conexion.Open();
 
-                SqlDataReader reader = comando.ExecuteReader();
+                SqlDataReader reader = Comando.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -179,7 +140,7 @@ namespace Entidades
             }
             finally
             {
-                conexion.Close();
+                Conexion.Close();
             }
 
             return productos;
@@ -195,11 +156,11 @@ namespace Entidades
             string total=String.Empty;
             try
             {
-                comando.CommandText = "SELECT SUM (stock) FROM FaroDetalles AS suma";
+                Comando.CommandText = "SELECT SUM (stock) FROM FaroDetalles AS suma";
 
-                conexion.Open();
+                Conexion.Open();
 
-                SqlDataReader reader = comando.ExecuteReader();
+                SqlDataReader reader = Comando.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -213,7 +174,7 @@ namespace Entidades
             }
             finally
             {
-                conexion.Close();
+                Conexion.Close();
             }
 
               return $"El stock total es de {total}";

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchivoException.cs" />
+    <Compile Include="BaseDAO.cs" />
     <Compile Include="ConexionException.cs" />
     <Compile Include="FaroDAO.cs" />
     <Compile Include="FaroException.cs" />

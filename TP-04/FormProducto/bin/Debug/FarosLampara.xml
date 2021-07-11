@@ -1,1 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfFaroLampara xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfFaroLampara xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><FaroLampara><Nombre>faro descontado</Nombre><Medida>Chico</Medida><Stock>2</Stock><Id>0</Id><Tipo>Lampara</Tipo><Portalamparas>2</Portalamparas></FaroLampara></ArrayOfFaroLampara>
