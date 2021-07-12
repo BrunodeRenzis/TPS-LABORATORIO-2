@@ -20,6 +20,7 @@ namespace FormProducto
         {
             InitializeComponent();
             Inventario.CargarInventario();
+
             faroDAO = new FaroDAO();
         }
 
@@ -44,6 +45,7 @@ namespace FormProducto
             {
                 conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
                 VerificarConexion();
+                
             }
 
             catch(Exception ex)
@@ -149,14 +151,26 @@ namespace FormProducto
         {
             Fabrica.GuardarLampara(Fabrica.FarosLampara);
             Fabrica.GuardarLeds(Fabrica.FarosLed);
-            Inventario.GuardarStock(Fabrica.Stock);
             CerrarConexion();
         }
 
-        private void verStockToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void btnStock_Click(object sender, EventArgs e)
         {
-            string algo=String.Empty;
-            MessageBox.Show(algo.AveriguarStockTotal());
+            
+        }
+
+        private void stockLámparaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string stockTotal = String.Empty;
+            MessageBox.Show($"El stock total es de :{stockTotal.AveriguarStockTotalLampara()}");
+        }
+
+        private void stockLedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string stockTotal = String.Empty;
+            MessageBox.Show($"El stock total es de :{stockTotal.AveriguarStockTotalLed()}");
         }
     }
 }

@@ -33,6 +33,11 @@ namespace FormProducto
             this.btnAgregarFaroLampara = new System.Windows.Forms.Button();
             this.richTxtBoxLed = new System.Windows.Forms.RichTextBox();
             this.richTxtBoxLampara = new System.Windows.Forms.RichTextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.verStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockLámparaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockLedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgregarFaroLed
@@ -77,6 +82,39 @@ namespace FormProducto
             this.richTxtBoxLampara.TabIndex = 3;
             this.richTxtBoxLampara.Text = "";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verStockToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(724, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // verStockToolStripMenuItem
+            // 
+            this.verStockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stockLámparaToolStripMenuItem,
+            this.stockLedToolStripMenuItem});
+            this.verStockToolStripMenuItem.Name = "verStockToolStripMenuItem";
+            this.verStockToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.verStockToolStripMenuItem.Text = "Ver Stock";
+            // 
+            // stockLámparaToolStripMenuItem
+            // 
+            this.stockLámparaToolStripMenuItem.Name = "stockLámparaToolStripMenuItem";
+            this.stockLámparaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockLámparaToolStripMenuItem.Text = "Stock Lámpara";
+            this.stockLámparaToolStripMenuItem.Click += new System.EventHandler(this.stockLámparaToolStripMenuItem_Click);
+            // 
+            // stockLedToolStripMenuItem
+            // 
+            this.stockLedToolStripMenuItem.Name = "stockLedToolStripMenuItem";
+            this.stockLedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockLedToolStripMenuItem.Text = "Stock Led";
+            this.stockLedToolStripMenuItem.Click += new System.EventHandler(this.stockLedToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,12 +124,17 @@ namespace FormProducto
             this.Controls.Add(this.richTxtBoxLed);
             this.Controls.Add(this.btnAgregarFaroLampara);
             this.Controls.Add(this.btnAgregarFaroLed);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPrincipal";
             this.Text = "Form Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -100,6 +143,10 @@ namespace FormProducto
         private System.Windows.Forms.Button btnAgregarFaroLampara;
         private System.Windows.Forms.RichTextBox richTxtBoxLed;
         private System.Windows.Forms.RichTextBox richTxtBoxLampara;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem verStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockLámparaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockLedToolStripMenuItem;
     }
 }
 

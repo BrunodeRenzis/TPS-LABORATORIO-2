@@ -38,6 +38,12 @@ namespace Entidades
             this.Leds = leds;
         }
 
+        public FaroLed(string nombre, double stock, ETipoLed tipoLed) : base(nombre, stock)
+        {
+            this.TipoLed = tipoLed;
+            this.Leds = leds;
+        }
+
         public double Leds { get => leds; set => leds = value; }
         public ETipoLed TipoLed { get => tipoLed; set => tipoLed = value; }
 

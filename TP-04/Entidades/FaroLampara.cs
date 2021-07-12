@@ -37,6 +37,10 @@ namespace Entidades
             this.Portalamparas = portalamparas;
         }
 
+        public FaroLampara(string nombre, double stock) : base(nombre, stock)
+        {
+            this.Portalamparas = portalamparas;
+        }
         public double Portalamparas { get => portalamparas; set => portalamparas = value; }
 
         /// <summary>

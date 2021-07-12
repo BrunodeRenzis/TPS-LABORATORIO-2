@@ -61,7 +61,7 @@ namespace FormProducto
                     this.DialogResult = DialogResult.OK;
                     FaroDAO faroDAO = new FaroDAO();
                     faroDAO.InsertarFaroLampara(unFaro);
-                    Inventario.UpdateInventario();
+                    Inventario.ActualizarDatos();
                     this.Close();
                 }
 

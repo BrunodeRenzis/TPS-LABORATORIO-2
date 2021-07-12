@@ -44,7 +44,7 @@ namespace Entidades
             }
         }
 
-        public bool InicializarStockArandelas()
+        /*public bool InicializarStockArandelas()
         {
             string sql = $" UPDATE Stock SET arandelas = (@auxArandelas)";
             
@@ -87,7 +87,7 @@ namespace Entidades
             Comando.Parameters.Add(new SqlParameter("@auxTuercas", 100));
 
             return EjecutarNonQuery(sql);
-        }
+        }*/
 
         public void DescontarMateriales()
         {
@@ -107,7 +107,7 @@ namespace Entidades
                 Comando.ExecuteNonQuery();
             }
 
-            catch(Exception ex)
+            catch(NoStockException ex)
             {
                 Console.WriteLine(ex.Message);
             }

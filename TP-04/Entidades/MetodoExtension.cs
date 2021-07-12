@@ -9,14 +9,19 @@ namespace Entidades
 {
     public static class MetodoExtension
     {
-        public static string AveriguarStockTotal(this string t)
+        public static string AveriguarStockTotalLampara(this string t)
         {
             FaroDAO faro = new FaroDAO();
-            t=faro.GetStock();
-            return t; 
+            t=faro.GetStockLampara();
+            return t;
         }
 
-        
+        public static string AveriguarStockTotalLed(this string t)
+        {
+            FaroDAO faro = new FaroDAO();
+            t = faro.GetStockLed();
+            return t;
+        }
 
     }
 }

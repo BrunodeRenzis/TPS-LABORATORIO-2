@@ -42,6 +42,12 @@ namespace Entidades
             this.Stock = stock;
         }
 
+        protected Faro(string nombre, double stock)
+        {
+            this.Nombre = nombre;
+            this.Stock = stock;
+        }
+
         protected Faro(int id, string nombre, EMedida medida, double stock)
         {
             this.id = id;
@@ -114,7 +120,7 @@ namespace Entidades
                 {
                     if(!(Inventario.VerificarStock(materialesCant[i], materiales[i])))
                     {
-                        throw new Exception("No hay más materiales para construir");
+                        throw new NoStockException("No hay más materiales para construir");
                     }
                     
                 }

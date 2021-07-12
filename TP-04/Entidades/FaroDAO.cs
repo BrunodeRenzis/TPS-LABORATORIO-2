@@ -107,7 +107,7 @@ namespace Entidades
                 {
                     string tipo = reader["tipo"].ToString();
 
-                    productos.Add(new FaroLampara(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
+                    productos.Add(new FaroLampara(int.Parse(reader["id"].ToString()), reader["nombre"].ToString(),
                     (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString())));
 
                 }
@@ -128,6 +128,40 @@ namespace Entidades
             return productos;
         }
 
+        public List<FaroLed> LeerLeds()
+        {
+            List<FaroLed> productos = new List<FaroLed>();
+
+            try
+            {
+                Comando.CommandText = "Select * from FaroLedDetalles";
+
+                Conexion.Open();
+
+                SqlDataReader reader = Comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    productos.Add(new FaroLed(int.Parse(reader["id"].ToString()), reader["nombre"].ToString(),
+                    (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()), (FaroLed.ETipoLed)(reader["tipoLed"])));
+
+                }
+
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+
+                throw new ArchivoException("Falla al intentar leer la base de datos", e);
+
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+
+            return productos;
+        }
         /// <summary>
         /// Trae el listado de todos los productos guardados en la base de datos
         /// </summary>
@@ -179,54 +213,19 @@ namespace Entidades
             return productos;
         }
 
-        public List<FaroLed> LeerLeds()
-        {
-            List<FaroLed> productos = new List<FaroLed>();
-
-            try
-            {
-                Comando.CommandText = "Select * from FaroLedDetalles";
-
-                Conexion.Open();
-
-                SqlDataReader reader = Comando.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    string tipo = reader["tipo"].ToString();
-
-                    productos.Add(new FaroLed(int.Parse(reader["idProducto"].ToString()), reader["descripcion"].ToString(),
-                    (Faro.EMedida)(reader["medida"]), int.Parse(reader["stock"].ToString()), (FaroLed.ETipoLed)(reader["tipoLed"])));
-
-                }
-
-                reader.Close();
-            }
-            catch (Exception e)
-            {
-
-                throw new ArchivoException("Falla al intentar leer la base de datos", e);
-
-            }
-            finally
-            {
-                Conexion.Close();
-            }
-
-            return productos;
-        }
+        
 
         /// <summary>
         /// Trae un producto de la base de datos identificado con el ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Objeto de tipo producto</returns>
-        public string GetStock()
+        public string GetStockLampara()
         {
             string total=String.Empty;
             try
             {
-                Comando.CommandText = "SELECT SUM (stock) FROM FaroDetalles AS suma";
+                Comando.CommandText = "SELECT SUM (stock) AS suma FROM FaroDetalles ";
 
                 Conexion.Open();
 
@@ -235,8 +234,45 @@ namespace Entidades
                 while (reader.Read())
                 {
                     total = reader["suma"].ToString();
-                    reader.Close();
                 }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                throw new ArchivoException("Falla al intentar leer la base de datos", e);
+            }
+            finally
+            {
+                Conexion.Close();
+            }
+            if (int.Parse(total) > 0)
+                return $"El stock total es de {total}";
+
+            else
+                return "No hay stock";
+        }
+
+        /// <summary>
+        /// Trae un producto de la base de datos identificado con el ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto de tipo producto</returns>
+        public string GetStockLed()
+        {
+            string total = String.Empty;
+            try
+            {
+                Comando.CommandText = "SELECT SUM (stock) AS suma FROM FaroLedDetalles ";
+
+                Conexion.Open();
+
+                SqlDataReader reader = Comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    total = reader["suma"].ToString();
+                }
+                reader.Close();
             }
             catch (Exception e)
             {
@@ -247,7 +283,11 @@ namespace Entidades
                 Conexion.Close();
             }
 
-              return $"El stock total es de {total}";
+            if (int.Parse(total) > 0)
+                return $"El stock total es de {total}";
+
+            else
+                return "No hay stock";
         }
 
 

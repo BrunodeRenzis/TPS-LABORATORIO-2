@@ -18,12 +18,12 @@ namespace Test
             Thread hiloLed = new Thread(Fabrica.AgregandoFarosLed);
             Thread hiloLampara = new Thread(Fabrica.AgregandoFarosLampara);
             string stockTotal=String.Empty;
-            FaroLampara fLamp = new FaroLampara("Faro prueba",Faro.EMedida.Grande,20);
-            FaroLed fLed = new FaroLed("Faro Prueba led",Faro.EMedida.Chico,20,FaroLed.ETipoLed.Micro);
-            FaroLampara fLamp2 = new FaroLampara("Faro prueba 2", Faro.EMedida.Grande, 20);
-            FaroLed fLed2 = new FaroLed("Faro Prueba led 2", Faro.EMedida.Chico, 20, FaroLed.ETipoLed.Micro);
-            FaroLampara fLamp3 = new FaroLampara("Faro prueba 3", Faro.EMedida.Grande, 20);
-            FaroLed fLed3 = new FaroLed("Faro Prueba led 3", Faro.EMedida.Chico, 20, FaroLed.ETipoLed.Micro);
+            FaroLampara fLamp = new FaroLampara("Faro prueba",20);
+            FaroLed fLed = new FaroLed("Faro Prueba led",20,FaroLed.ETipoLed.Micro);
+            FaroLampara fLamp2 = new FaroLampara("Faro prueba 2", 20);
+            FaroLed fLed2 = new FaroLed("Faro Prueba led 2",20, FaroLed.ETipoLed.Micro);
+            FaroLampara fLamp3 = new FaroLampara("Faro prueba 3", 20);
+            FaroLed fLed3 = new FaroLed("Faro Prueba led 3", 20, FaroLed.ETipoLed.Micro);
 
             hiloLampara.Start();
             hiloLed.Start();

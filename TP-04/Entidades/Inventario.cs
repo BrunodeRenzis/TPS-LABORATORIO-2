@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Entidades
 {
     [Serializable]
+    public delegate void DelegateStock();
     public class Inventario
     {
         static double tornillos;
@@ -14,6 +15,7 @@ namespace Entidades
         static double arandelas;
         static double tuercas;
         static double lentes;
+        public static event DelegateStock delStock;
 
         public static double Tornillos { get => tornillos; set => tornillos = value; }
         public static double Bulones { get => bulones; set => bulones = value; }
@@ -21,13 +23,12 @@ namespace Entidades
         public static double Tuercas { get => tuercas; set => tuercas = value; }
         public static double Lentes { get => lentes; set => lentes = value; }
 
-        public static bool GuardarStock(List<Inventario> lista)
+        static Inventario()
         {
-            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "stock.xml");
-            Xml<List<Inventario>> inv = new Xml<List<Inventario>>();
-
-            return inv.Guardar(path, lista);
+            delStock += CargarInventario;
+            delStock += UpdateInventario;
         }
+        
 
         public static bool VerificarStock(int cantidad, string material)
         {
@@ -53,6 +54,10 @@ namespace Entidades
             }
         }
 
+        public static void ActualizarDatos()
+        {
+            delStock.Invoke();
+        }
         public static void UpdateInventario()
         {
             StockDAO stock = new StockDAO();
