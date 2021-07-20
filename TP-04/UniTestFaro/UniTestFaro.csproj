@@ -53,6 +53,8 @@
     <Compile Include="AgregarFaroTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConexionTest.cs" />
+    <Compile Include="ArchivoTest.cs" />
+    <Compile Include="ArchivoExceptionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

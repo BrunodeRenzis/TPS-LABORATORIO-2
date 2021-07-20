@@ -74,5 +74,28 @@ namespace Entidades
 
             return false;
         }
+
+        public T Leer(string path)
+        {
+            T dato = default;
+
+            try
+            {
+                if (File.Exists(path))
+                {
+                    using (XmlTextReader lector = new XmlTextReader(path))
+                    {
+                        XmlSerializer serializador = new XmlSerializer(typeof(T));
+                        dato = (T)serializador.Deserialize(lector);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw new ArchivoException();
+            }
+            return dato;
+        }
     }
 }
