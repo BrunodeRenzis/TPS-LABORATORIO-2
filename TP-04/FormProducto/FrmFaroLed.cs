@@ -82,6 +82,11 @@ namespace FormProducto
                 {
                     MessageBox.Show("No se ha ingresado un nombre");
                 }
+
+                else if (unFaroLed.Stock<=0)
+                {
+                    MessageBox.Show("No se ha ingresado una cantidad");
+                }
             }
 
             catch (NullReferenceException nEx)

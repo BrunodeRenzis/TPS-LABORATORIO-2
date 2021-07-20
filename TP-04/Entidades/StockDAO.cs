@@ -94,12 +94,42 @@ namespace Entidades
             string sql = $" UPDATE Stock SET arandelas = @auxArandelas,bulones = @auxBulones,lentes = @auxLentes,tornillos = @auxTornillos,tuercas = @auxTuercas";
 
             Comando.CommandText=sql;
-
+            
             Comando.Parameters.AddWithValue("@auxArandelas", Inventario.Arandelas);
             Comando.Parameters.AddWithValue("@auxBulones", Inventario.Bulones);
             Comando.Parameters.AddWithValue("@auxLentes", Inventario.Lentes);
             Comando.Parameters.AddWithValue("@auxTornillos", Inventario.Tornillos);
             Comando.Parameters.AddWithValue("@auxTuercas", Inventario.Tuercas);
+
+            if(Inventario.Arandelas<=0)
+            {
+                Console.WriteLine("No hay más arandelas");
+                
+            }
+
+            else if (Inventario.Bulones <= 0)
+            {
+                Console.WriteLine("No hay más bulones");
+               
+            }
+
+            else if (Inventario.Lentes <= 0)
+            {
+                Console.WriteLine("No hay más lentes");
+
+            }
+
+            else if (Inventario.Tornillos <= 0)
+            {
+                Console.WriteLine("No hay más tornillos");
+               
+            }
+
+            else if (Inventario.Tuercas <= 0)
+            {
+                Console.WriteLine("No hay más tuercas");
+               
+            }
 
             try
             {
@@ -107,7 +137,7 @@ namespace Entidades
                 Comando.ExecuteNonQuery();
             }
 
-            catch(NoStockException ex)
+            catch(FaroException ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -116,6 +146,7 @@ namespace Entidades
             {
                 Conexion.Close();
             }
+
         }
         public bool DescontarBulones(int cantidad)
         {

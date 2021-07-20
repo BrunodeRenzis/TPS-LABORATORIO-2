@@ -44,8 +44,7 @@ namespace FormProducto
             try
             {
                 conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
-                VerificarConexion();
-                
+                VerificarConexion();          
             }
 
             catch(Exception ex)

@@ -162,6 +162,9 @@ namespace Entidades
 
             return productos;
         }
+
+        
+
         /// <summary>
         /// Trae el listado de todos los productos guardados en la base de datos
         /// </summary>
@@ -212,6 +215,8 @@ namespace Entidades
 
             return productos;
         }
+
+        
 
         
 

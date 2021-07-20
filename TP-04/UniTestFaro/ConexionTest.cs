@@ -9,7 +9,7 @@ namespace UniTestFaro
     public class ConexionTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Conexion()
         {
             SqlConnection conexion = new SqlConnection("Data Source=.\\sqlexpress; Initial Catalog=FaroStock; Integrated Security=True;");
             conexion.Open();
