@@ -88,7 +88,7 @@ namespace Entidades
                 leds = 6;
         }
 
-        public static bool operator ==(FaroLed faro, string nombre)
+        /*public static bool operator ==(FaroLed faro, string nombre)
         {
             foreach (FaroLed faroAux in Fabrica.FarosLed)
             {
@@ -102,6 +102,27 @@ namespace Entidades
         public static bool operator !=(FaroLed faro, string nombre)
         {
             return !(faro == nombre);
+        }*/
+
+        public static bool operator ==(List<FaroLed> lista, FaroLed faro)
+        {
+            if (lista.Count > 0)
+            {
+                foreach (FaroLed item in lista)
+                {
+                    if (item.GetType() == faro.GetType()
+                        && item.Nombre == faro.Nombre)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public static bool operator !=(List<FaroLed> lista, FaroLed faro)
+        {
+            return !(lista == faro);
         }
 
         public static List<FaroLed> operator +(List<FaroLed> faros, FaroLed faro)
@@ -121,6 +142,8 @@ namespace Entidades
 
             return faros;
         }
+
+        
 
         public bool GuardarLed()
         {

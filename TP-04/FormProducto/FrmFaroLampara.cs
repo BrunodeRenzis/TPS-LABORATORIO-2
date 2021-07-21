@@ -56,7 +56,7 @@ namespace FormProducto
 
                 unFaro = new FaroLampara(nombre, medida, stockInicial);
 
-                if (Validaciones.ValidarProducto(unFaro) && unFaro!=nombre)
+                if (Validaciones.ValidarProducto(unFaro) && Fabrica.FarosLampara != unFaro)
                 {
                     this.DialogResult = DialogResult.OK;
                     FaroDAO faroDAO = new FaroDAO();
@@ -65,7 +65,7 @@ namespace FormProducto
                     this.Close();
                 }
 
-                else if (Validaciones.ValidarProducto(unFaro) && unFaro == nombre)
+                else if (Validaciones.ValidarProducto(unFaro) && Fabrica.FarosLampara != unFaro)
                 {
                     MessageBox.Show("El producto ya existe.");
                     

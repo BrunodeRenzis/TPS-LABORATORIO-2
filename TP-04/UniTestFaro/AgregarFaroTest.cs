@@ -8,14 +8,17 @@ namespace UniTestFaro
     public class AgregarFaroTest
     {
         /// <summary>
-        /// Prueba unitaria de agregar elemento a la lista
+        /// Prueba unitaria verifica que un elemento existe en la lista y devuelve true.
         /// </summary>
         [TestMethod]
         public void AgregarFaro()
         {
             FaroLed faroLed = new FaroLed(1,"faroNuevo",Faro.EMedida.Mediano,2,FaroLed.ETipoLed.Micro);
+            FaroLed faroLed2 = new FaroLed(1,"faroNuevo",Faro.EMedida.Mediano,2,FaroLed.ETipoLed.Micro);
             Fabrica.FarosLed.Add(faroLed);
-            Assert.IsNotNull(Fabrica.FarosLed);
+            Fabrica.FarosLed.Add(faroLed2);
+            bool test = Fabrica.FarosLed == faroLed2;
+            Assert.IsTrue(test);
         }
     }
 }
