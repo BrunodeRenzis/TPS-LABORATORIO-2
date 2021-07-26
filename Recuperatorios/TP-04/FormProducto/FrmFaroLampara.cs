@@ -65,7 +65,7 @@ namespace FormProducto
                     this.Close();
                 }
 
-                else if (Validaciones.ValidarProducto(unFaro) && Fabrica.FarosLampara != unFaro)
+                else if (Validaciones.ValidarProducto(unFaro) && Fabrica.FarosLampara == unFaro)
                 {
                     MessageBox.Show("El producto ya existe.");
                     

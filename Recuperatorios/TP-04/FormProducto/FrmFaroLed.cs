@@ -72,7 +72,7 @@ namespace FormProducto
                     this.Close();
                 }
 
-                else if (Validaciones.ValidarProducto(unFaroLed) && Fabrica.FarosLed != unFaroLed)
+                else if (Validaciones.ValidarProducto(unFaroLed) && Fabrica.FarosLed == unFaroLed)
                 {
                     MessageBox.Show("El producto ya existe.");
 
