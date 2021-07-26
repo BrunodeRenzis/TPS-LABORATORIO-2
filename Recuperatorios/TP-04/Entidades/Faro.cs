@@ -36,10 +36,10 @@ namespace Entidades
         /// <param name="stock"></param>
         protected Faro(string nombre, EMedida medida, double stock)
         {
-            this.Medida = medida;
-            DeterminarMaterialesFaro(medida);
             this.Nombre = nombre;
+            this.Medida = medida;
             this.Stock = stock;
+            DeterminarMaterialesFaro(medida);
         }
 
         protected Faro(string nombre, double stock)
@@ -52,8 +52,8 @@ namespace Entidades
         {
             this.id = id;
             this.nombre = nombre;
-            DeterminarMaterialesFaro(medida);
             this.stock = stock;
+            DeterminarMaterialesFaro(medida);
         }
 
         public string Nombre { get => nombre; set => nombre = value; }
@@ -124,11 +124,11 @@ namespace Entidades
                     }
                     
                 }
-                Inventario.Arandelas -= arandelas;
-                Inventario.Bulones -= bulones;
-                Inventario.Lentes -= lentes;
-                Inventario.Tornillos -= tornillos;
-                Inventario.Tuercas -= tuercas;
+                Inventario.Arandelas -= arandelas*this.Stock;
+                Inventario.Bulones -= bulones * this.Stock;
+                Inventario.Lentes -= lentes * this.Stock;
+                Inventario.Tornillos -= tornillos * this.Stock;
+                Inventario.Tuercas -= tuercas * this.Stock;
             }
 
             catch (Exception e)
