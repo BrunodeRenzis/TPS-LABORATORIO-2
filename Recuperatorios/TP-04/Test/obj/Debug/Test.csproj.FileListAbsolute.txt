@@ -18,3 +18,13 @@ C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\Test\obj\Debug
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\Test\obj\Debug\Test.csproj.CopyComplete
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\Test\obj\Debug\Test.exe
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\TP-04\Test\obj\Debug\Test.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\obj\Debug\Test.exe
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\obj\Debug\Test.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\bin\Debug\Test.exe.config
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\bin\Debug\Test.exe
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\bin\Debug\Test.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\bin\Debug\Entidades.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\bin\Debug\Entidades.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\Recuperatorios\TP-04\Test\obj\Debug\Test.csproj.CopyComplete

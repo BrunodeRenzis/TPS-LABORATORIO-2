@@ -124,16 +124,24 @@ namespace Entidades
                     }
                     
                 }
-                Inventario.Arandelas -= arandelas*this.Stock;
-                Inventario.Bulones -= bulones * this.Stock;
-                Inventario.Lentes -= lentes * this.Stock;
-                Inventario.Tornillos -= tornillos * this.Stock;
-                Inventario.Tuercas -= tuercas * this.Stock;
+                if ((Inventario.Arandelas - (arandelas * this.Stock)>0) && (Inventario.Bulones - (bulones * this.Stock) > 0) && (Inventario.Lentes - (lentes * this.Stock) > 0) && (Inventario.Tornillos - (tornillos * this.Stock) > 0) && (Inventario.Tuercas - (tuercas * this.Stock) > 0))
+                {
+                    Inventario.Arandelas -= arandelas*this.Stock;
+                    Inventario.Bulones -= bulones * this.Stock;
+                    Inventario.Lentes -= lentes * this.Stock;
+                    Inventario.Tornillos -= tornillos * this.Stock;
+                    Inventario.Tuercas -= tuercas * this.Stock;
+                }
+
+                else
+                {
+                    throw new NoStockException("No hay más materiales para construir");
+                }
             }
 
             catch (Exception e)
             {
-                throw new FaroException("No se ha determinado la medida del faro", e);
+                throw new NoStockException("No se ha determinado la medida del faro", e);
             }
         }
 

@@ -14,7 +14,7 @@ namespace Test
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
-        {z
+        {
             Thread hiloLed = new Thread(Fabrica.AgregandoFarosLed);
             Thread hiloLampara = new Thread(Fabrica.AgregandoFarosLampara);
             string stockTotal=String.Empty;

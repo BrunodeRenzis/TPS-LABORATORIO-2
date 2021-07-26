@@ -106,9 +106,9 @@ namespace FormProducto
                 }          
             }
 
-            catch(Exception ex)
+            catch(NoStockException ex)
             {
-                throw new FaroException("No se pudo agregar el faro",ex);
+                MessageBox.Show("No hay materiales suficientes para agregar el faro");
             }
             
         }
@@ -135,9 +135,9 @@ namespace FormProducto
                
             }
 
-            catch (Exception ex)
+            catch (NoStockException ex)
             {
-                throw new FaroException("Hubo problemas con el faro", ex);
+                MessageBox.Show("No hay materiales suficientes para agregar el faro");
             }
         }
 
