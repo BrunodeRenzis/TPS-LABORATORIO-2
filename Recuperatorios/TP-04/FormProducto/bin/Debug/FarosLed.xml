@@ -1,1 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfFaroLed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><FaroLed><Nombre>Faro prueba</Nombre><Medida>Chico</Medida><Stock>1</Stock><Id>0</Id><Tipo>Lampara</Tipo><Leds>2</Leds><TipoLed>Micro</TipoLed></FaroLed></ArrayOfFaroLed>
+﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfFaroLed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
