@@ -87,9 +87,9 @@ namespace FormProducto
                 MessageBox.Show(nEx.Message);
             }
 
-            catch (Exception ex)
+            catch (NoStockException ex)
             {
-                throw new FaroException("No se han completado los campos para agregar el faro",ex);
+                throw new NoStockException("No se han completado los campos para agregar el faro",ex);
             }
         }
     }

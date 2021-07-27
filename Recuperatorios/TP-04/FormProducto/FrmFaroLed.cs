@@ -96,7 +96,7 @@ namespace FormProducto
 
             catch (NoStockException ex)
             {
-                throw new NoStockException("No se han completado los campos para agregar el faro", ex);
+                throw new NoStockException("No hay stock suficiente", ex);
             }
         }
 
