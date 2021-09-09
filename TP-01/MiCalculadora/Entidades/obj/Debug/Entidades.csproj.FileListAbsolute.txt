@@ -1,6 +1,0 @@
-C:\Users\Bruno de Renzis\Desktop\C-sharp-master\TPs de la materia\TP 1\MiCalculadora\Entidades\bin\Debug\Entidades.dll
-C:\Users\Bruno de Renzis\Desktop\C-sharp-master\TPs de la materia\TP 1\MiCalculadora\Entidades\bin\Debug\Entidades.pdb
-C:\Users\Bruno de Renzis\Desktop\C-sharp-master\TPs de la materia\TP 1\MiCalculadora\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
-C:\Users\Bruno de Renzis\Desktop\C-sharp-master\TPs de la materia\TP 1\MiCalculadora\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-C:\Users\Bruno de Renzis\Desktop\C-sharp-master\TPs de la materia\TP 1\MiCalculadora\Entidades\obj\Debug\Entidades.dll
-C:\Users\Bruno de Renzis\Desktop\C-sharp-master\TPs de la materia\TP 1\MiCalculadora\Entidades\obj\Debug\Entidades.pdb
