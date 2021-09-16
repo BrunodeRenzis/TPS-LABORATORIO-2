@@ -16,7 +16,6 @@ namespace TP1
         
 
         
-        //FALTA ACTUALIZAR LOS RESULTADOS DE OPERACIONES
         
         public FormCalculadora()
         {
