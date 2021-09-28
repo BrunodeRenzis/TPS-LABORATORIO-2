@@ -9,15 +9,21 @@ namespace Entidades
     /// <summary>
     /// La clase Vehiculo no deberá permitir que se instancien elementos de este tipo.
     /// </summary>
+    #pragma warning disable CS0661 // El tipo define operator == or operator !=, pero no reemplaza a Object.GetHashCode()
+    #pragma warning disable CS0660 // El tipo define operator == or operator !=, pero no reemplaza a override Object.Equals(object o)
     public abstract class Vehiculo
+    #pragma warning restore CS0660 // El tipo define operator == or operator !=, pero no reemplaza a override Object.Equals(object o)
+    #pragma warning restore CS0661 // El tipo define operator == or operator !=, pero no reemplaza a Object.GetHashCode()
     {
-        public Vehiculo(string chasis,EMarca marca, ConsoleColor color)
+        string chasis;
+        EMarca marca;
+        ConsoleColor color;
+        public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.chasis = chasis;
             this.marca = marca;
             this.color = color;
         }
-
         public enum EMarca
         {
             Chevrolet, Ford, Renault, Toyota, BMW, Honda, HarleyDavidson
@@ -26,14 +32,11 @@ namespace Entidades
         {
             Chico, Mediano, Grande
         }
-        EMarca marca;
-        string chasis;
-        ConsoleColor color;
 
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        public abstract ETamanio Tamanio { get; }
+        public abstract ETamanio Tamanio { get;}
 
         /// <summary>
         /// Publica todos los datos del Vehiculo.
@@ -48,9 +51,9 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"CHASIS: {p.chasis}\r\n");
-            sb.AppendLine($"MARCA : {p.marca.ToString()}\r\n");
-            sb.AppendLine($"COLOR : {p.color.ToString()}\r\n");
+            sb.AppendLine(string.Format("CHASIS: \r\n"+ p.chasis));
+            sb.AppendLine(string.Format("MARCA : \r\n" + p.marca.ToString()));
+            sb.AppendLine(string.Format("COLOR : \r\n"+ p.color.ToString()));
             sb.AppendLine("---------------------");
 
             return sb.ToString();
@@ -64,7 +67,10 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
-            return (v1.chasis == v2.chasis);
+            if (v1.chasis == v2.chasis)
+                return true;
+
+            return false;
         }
         /// <summary>
         /// Dos vehiculos son distintos si su chasis es distinto
@@ -74,7 +80,7 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
-            return (v1.chasis == v2.chasis);
+            return !(v1.chasis == v2.chasis);
         }
     }
 }

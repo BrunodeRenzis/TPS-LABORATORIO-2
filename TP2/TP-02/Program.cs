@@ -39,6 +39,8 @@ namespace TP_02_2018
             taller += a3;
             taller += a4;
 
+            Console.WriteLine("se muestran 6 vehículos");
+
             Console.WriteLine(taller.ToString());
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
@@ -47,7 +49,7 @@ namespace TP_02_2018
             // Quito 2 items y muestro
             taller -= c1;
             taller -= new Ciclomotor(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Red);
-
+            Console.WriteLine("se muestran 5 vehículos");
             Console.WriteLine(taller.ToString());
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
@@ -57,19 +59,25 @@ namespace TP_02_2018
             taller += c2;
 
             // Muestro solo Moto
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Moto));
+            Console.WriteLine("se muestran solo motos");
+
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Ciclomotor));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Muestro solo Automovil
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Automovil));
+            Console.WriteLine("se muestran solo autos");
+
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Sedan));
             Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
             Console.ReadKey();
             Console.Clear();
 
             // Muestro solo Camioneta
-            Console.WriteLine(taller.Listar(taller, Taller.ETipo.Camioneta));
+            Console.WriteLine("se muestran solo camionetas");
+
+            Console.WriteLine(taller.Listar(taller, Taller.ETipo.SUV));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();
         }
