@@ -18,12 +18,12 @@ namespace Entidades
             numero = 0;
         }
 
-        public Operando(double numero)
+        public Operando(double numero):this()
         {
             Numero = numero.ToString();
         }
 
-        public Operando(string numero)
+        public Operando(string numero):this()
         {
             Numero = numero;
         }
