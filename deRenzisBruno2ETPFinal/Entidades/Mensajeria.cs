@@ -1,21 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Mensajeria
+    public static class Mensajeria
     {
-        Empleado empleado;
+        static List<Pedido> pedidos;
+        static List<Cliente> clientes;
+        static List<Producto> productos;
+        static double facturacion;
 
-    }
+        static Mensajeria()
+        {
+            Pedidos = new List<Pedido>();
+            Clientes = new List<Cliente>();
+            Productos = new List<Producto>();
+            facturacion = 0;
+        }
 
-    public enum EEstado
-    {
-        EnViaje=0,
-        Entregado=1,
-        NoEntregado=-1
+        public static List<Pedido> Pedidos { get => pedidos; set => pedidos = value; }
+        public static List<Cliente> Clientes { get => clientes; set => clientes = value; }
+        public static double Facturacion { get => facturacion; set => facturacion = value; }
+        public static List<Producto> Productos { get => productos; set => productos = value; }
+
+        public static bool GuardarPedidos(List<Pedido> lista)
+        {
+            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Pedidos.xml");
+            Xml<List<Pedido>> lampara = new Xml<List<Pedido>>();
+
+            return lampara.Guardar(path, lista);
+        }
     }
 }
