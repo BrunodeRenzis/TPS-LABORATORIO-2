@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace deRenzisBruno2ETPFinal
 {
-    public partial class NuevoPedido : Form
+    public partial class FormPedidos : Form
     {
-        public NuevoPedido()
+        public FormPedidos()
         {
             InitializeComponent();
         }

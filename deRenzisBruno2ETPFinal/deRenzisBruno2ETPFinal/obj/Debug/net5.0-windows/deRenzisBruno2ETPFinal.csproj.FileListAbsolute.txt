@@ -19,4 +19,5 @@ C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFin
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\ref\deRenzisBruno2ETPFinal.dll
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.pdb
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.genruntimeconfig.cache
-C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.NuevoPedido.resources
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.FormNuevoPedido.resources
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.FormPedidos.resources

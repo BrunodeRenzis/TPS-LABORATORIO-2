@@ -9,6 +9,7 @@ namespace Entidades
     [Serializable]
     public class Pedido
     {
+        int idPedido;
         Cliente cliente;
         string descripcion;
         List<Producto> productos;
@@ -16,21 +17,23 @@ namespace Entidades
 
         public Pedido()
         {
-            
-            this.cliente = null;
-            this.descripcion = String.Empty;
+            this.IdPedido = 0;
+            this.Cliente = null;
+            this.Descripcion = String.Empty;
             this.Productos = new List<Producto>();
-            this.estado = EEstado.NoEntregado;
+            this.Estado = EEstado.NoEntregado;
         }
 
-        public Pedido(Cliente cliente, string descripcion, List<Producto> productos, EEstado estado)
+        public Pedido(int idPedido,Cliente cliente, string descripcion, List<Producto> productos, EEstado estado)
         {
-            this.cliente = cliente;
-            this.descripcion = descripcion;
+            this.IdPedido = idPedido;
+            this.Cliente = cliente;
+            this.Descripcion = descripcion;
             this.Productos = productos;
-            this.estado = estado;
+            this.Estado = estado;
         }
 
+        public int IdPedido { get => idPedido; set => idPedido = value; }
         public Cliente Cliente { get => cliente; set => cliente = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public EEstado Estado { get => estado; set => estado = value; }
@@ -38,12 +41,14 @@ namespace Entidades
 
         public static bool operator ==(List<Pedido> pedidos, Pedido pedido)
         {
-            foreach (Pedido pedidoComp in Mensajeria.Pedidos)
-            {
-                if (pedidoComp.Equals(pedido))
-                    return true;
-            }
-
+           
+                foreach (Pedido pedidoComp in Mensajeria.Pedidos)
+                {
+                    if (pedidoComp.IdPedido == pedido.IdPedido)
+                        throw new PedidoRepetidoException();
+                }
+            
+                        
             return false;
         }
 
@@ -53,29 +58,38 @@ namespace Entidades
         }
         public static List<Pedido> operator +(List<Pedido> pedidos, Pedido pedido)
         {
-            if(Mensajeria.Pedidos!=pedido)
+            try
             {
-                Mensajeria.Pedidos.Add(pedido);
-                return Mensajeria.Pedidos;
+                if(Mensajeria.Pedidos!=pedido)
+                {
+                    Mensajeria.Pedidos.Add(pedido);
+                    return Mensajeria.Pedidos;
+                }
             }
 
+            catch(Exception e)
+            {
+                throw new PedidoRepetidoException("No se pudo generar el pedido por que ya existe",e);
+            }
+            return Mensajeria.Pedidos;
+        }
+
+        public static List<Pedido> operator -(List<Pedido> pedidos, Pedido pedido)
+        {
+            if(Mensajeria.Pedidos==pedido)
+            {
+                Mensajeria.Pedidos.Remove(pedido);
+                return Mensajeria.Pedidos;
+            }
             return Mensajeria.Pedidos;
         }
     }
 
-    
+
 
     public enum EEstado
     {
         NoEntregado,
         Entregado
-    }
-
-    public enum ETipo
-    {
-        Indumentaria,
-        Perfumería,
-        Entretenimiento,
-        Cocina
     }
 }

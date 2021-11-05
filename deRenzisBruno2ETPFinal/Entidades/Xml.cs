@@ -36,7 +36,7 @@ namespace Entidades
             catch (ArchivoException e)
             {
 
-                throw new ArchivoException("Error al intentar guardar archivo xml");
+                throw new ArchivoException("Error al intentar guardar archivo xml",e);
             }
 
             return false;

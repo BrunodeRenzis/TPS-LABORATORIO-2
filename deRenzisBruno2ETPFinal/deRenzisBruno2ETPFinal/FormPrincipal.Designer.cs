@@ -44,8 +44,9 @@ namespace deRenzisBruno2ETPFinal
             this.cocinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónDelDíaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@ namespace deRenzisBruno2ETPFinal
             this.btnInformePerfumeria.TabIndex = 0;
             this.btnInformePerfumeria.Text = "Perfumería";
             this.btnInformePerfumeria.UseVisualStyleBackColor = true;
+            this.btnInformePerfumeria.Click += new System.EventHandler(this.btnInformePerfumeria_Click);
             // 
             // btnIndumentaria
             // 
@@ -118,7 +120,8 @@ namespace deRenzisBruno2ETPFinal
             // 
             this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.imprimirToolStripMenuItem,
-            this.nuevoPedidoToolStripMenuItem});
+            this.nuevoPedidoToolStripMenuItem,
+            this.verPedidosToolStripMenuItem});
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.inicioToolStripMenuItem.Text = "Inicio";
@@ -160,12 +163,14 @@ namespace deRenzisBruno2ETPFinal
             this.cocinaToolStripMenuItem.Name = "cocinaToolStripMenuItem";
             this.cocinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cocinaToolStripMenuItem.Text = "Cocina";
+            this.cocinaToolStripMenuItem.Click += new System.EventHandler(this.cocinaToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // todosToolStripMenuItem
             // 
@@ -174,6 +179,12 @@ namespace deRenzisBruno2ETPFinal
             this.todosToolStripMenuItem.Text = "Todos";
             this.todosToolStripMenuItem.Click += new System.EventHandler(this.todosToolStripMenuItem_Click);
             // 
+            // facturaciónDelDíaToolStripMenuItem
+            // 
+            this.facturaciónDelDíaToolStripMenuItem.Name = "facturaciónDelDíaToolStripMenuItem";
+            this.facturaciónDelDíaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturaciónDelDíaToolStripMenuItem.Text = "Facturación del día";
+            // 
             // nuevoPedidoToolStripMenuItem
             // 
             this.nuevoPedidoToolStripMenuItem.Name = "nuevoPedidoToolStripMenuItem";
@@ -181,11 +192,12 @@ namespace deRenzisBruno2ETPFinal
             this.nuevoPedidoToolStripMenuItem.Text = "Nuevo Pedido";
             this.nuevoPedidoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPedidoToolStripMenuItem_Click);
             // 
-            // facturaciónDelDíaToolStripMenuItem
+            // verPedidosToolStripMenuItem
             // 
-            this.facturaciónDelDíaToolStripMenuItem.Name = "facturaciónDelDíaToolStripMenuItem";
-            this.facturaciónDelDíaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.facturaciónDelDíaToolStripMenuItem.Text = "Facturación del día";
+            this.verPedidosToolStripMenuItem.Name = "verPedidosToolStripMenuItem";
+            this.verPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verPedidosToolStripMenuItem.Text = "Ver Pedidos";
+            this.verPedidosToolStripMenuItem.Click += new System.EventHandler(this.verPedidosToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -230,6 +242,7 @@ namespace deRenzisBruno2ETPFinal
         private System.Windows.Forms.ToolStripMenuItem todosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoPedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónDelDíaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verPedidosToolStripMenuItem;
     }
 }
 

@@ -1,1 +1,1 @@
-﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfPedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Pedido><Cliente><Nombre>Carlos</Nombre><Apellido>Carlin</Apellido><Dni>12121212</Dni><Cuil>20121212122</Cuil><Sexo>Hombre</Sexo><Id>1</Id></Cliente><Descripcion>Pedido</Descripcion><Estado>NoEntregado</Estado><Productos /></Pedido></ArrayOfPedido>
+﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfPedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

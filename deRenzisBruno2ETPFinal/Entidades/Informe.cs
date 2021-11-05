@@ -8,6 +8,6 @@ namespace Entidades
 {
     public static class Informe
     {
-
+       
     }
 }

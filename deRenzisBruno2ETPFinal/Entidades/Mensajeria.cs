@@ -25,10 +25,50 @@ namespace Entidades
 
         public static bool GuardarPedidos(List<Pedido> lista)
         {
-            string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Pedidos.xml");
-            Xml<List<Pedido>> lampara = new Xml<List<Pedido>>();
+            try
+            {
+                string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Pedidos.xml");
+                Xml<List<Pedido>> pedido = new Xml<List<Pedido>>();
 
-            return lampara.Guardar(path, lista);
+                return pedido.Guardar(path, lista);
+            }
+
+            catch(ArchivoException e)
+            {
+                throw new ArchivoException("Archivo no generado correctamente",e.InnerException);
+            }
+        }
+
+        public static bool GuardarClientes(List<Cliente> lista)
+        {
+            try
+            {
+                string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Clientes.xml");
+                Xml<List<Cliente>> clientes = new Xml<List<Cliente>>();
+
+                return clientes.Guardar(path, lista);
+            }
+
+            catch (ArchivoException e)
+            {
+                throw new ArchivoException("Archivo no generado correctamente", e.InnerException);
+            }
+        }
+
+        public static bool GuardarProductos(List<Producto> lista)
+        {
+            try
+            {
+                string path = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Productos.xml");
+                Xml<List<Producto>> productos = new Xml<List<Producto>>();
+
+                return productos.Guardar(path, lista);
+            }
+
+            catch (ArchivoException e)
+            {
+                throw new ArchivoException("Archivo no generado correctamente", e.InnerException);
+            }
         }
     }
 }

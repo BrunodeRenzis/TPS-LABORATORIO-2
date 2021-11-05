@@ -16,14 +16,12 @@ namespace Entidades
         string dni;
         string cuil;
         ESexo sexo;
-        int id;
         public Persona()
         {
 
         }
         public Persona(int id,string nombre, string apellido, string dni, string cuil, ESexo sexo):this()
         {
-            this.Id = id;
             this.Nombre = nombre;
             this.Apellido = apellido;
             this.Dni = dni;
@@ -36,13 +34,11 @@ namespace Entidades
         public string Dni { get => dni; set => dni = value; }
         public string Cuil { get => cuil; set => cuil = value; }
         public ESexo Sexo { get => sexo; set => sexo = value; }
-        public int Id { get => id; set => id = value; }
 
         public enum ESexo
         {
             Hombre,
             Mujer,
-            Trans,
             Binario,
             NoBinario
         }
