@@ -10,32 +10,28 @@ namespace Entidades
     public class Pedido
     {
         int idPedido;
+        static int id=0;
         Cliente cliente;
-        string descripcion;
         List<Producto> productos;
         EEstado estado;
 
         public Pedido()
         {
-            this.IdPedido = 0;
-            this.Cliente = null;
-            this.Descripcion = String.Empty;
             this.Productos = new List<Producto>();
-            this.Estado = EEstado.NoEntregado;
+            this.Estado = EEstado.Generado;
+            id++;
         }
 
-        public Pedido(int idPedido,Cliente cliente, string descripcion, List<Producto> productos, EEstado estado)
+        public Pedido(Cliente cliente, List<Producto> productos, EEstado estado):this()
         {
-            this.IdPedido = idPedido;
+            this.IdPedido = id;
             this.Cliente = cliente;
-            this.Descripcion = descripcion;
             this.Productos = productos;
             this.Estado = estado;
         }
 
         public int IdPedido { get => idPedido; set => idPedido = value; }
         public Cliente Cliente { get => cliente; set => cliente = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
         public EEstado Estado { get => estado; set => estado = value; }
         public List<Producto> Productos { get => productos; set => productos = value; }
 
@@ -83,12 +79,21 @@ namespace Entidades
             }
             return Mensajeria.Pedidos;
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Producto item in Productos)
+            {
+                sb.AppendLine(item.NombreProducto);
+            }
+            return sb.ToString();
+        }
     }
-
-
 
     public enum EEstado
     {
+        Generado,
         NoEntregado,
         Entregado
     }

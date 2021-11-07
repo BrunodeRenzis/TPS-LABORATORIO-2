@@ -19,21 +19,25 @@ namespace deRenzisBruno2ETPFinal
 
         static FormPrincipal()
         {
-            Producto.HardcodearXmlProductos();
-            Cliente.HardcodearXmlClientes();
             try
             {
                 List<Cliente> clientesLeer = new List<Cliente>();
-                List<Producto> productosSerializar = new List<Producto>();
+                List<Producto> productosLeer = new List<Producto>();
+                List<Pedido> pedidosLeer = new List<Pedido>();
 
                 Xml<List<Cliente>> clientes = new Xml<List<Cliente>>();
                 Xml<List<Producto>> productos = new Xml<List<Producto>>();
+                Xml<List<Pedido>> pedidos = new Xml<List<Pedido>>();
 
                 string pathClientes = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Clientes.xml");
                 string pathProductos = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Productos.xml");
-
+                string pathPedidos = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Pedidos.xml");
                 clientes.Leer(pathClientes, out clientesLeer);
-                productos.Leer(pathProductos, out productosSerializar);
+                productos.Leer(pathProductos, out productosLeer);
+                pedidos.Leer(pathPedidos, out pedidosLeer);
+                Mensajeria.Clientes = clientesLeer;
+                Mensajeria.Productos = productosLeer;
+                Mensajeria.Pedidos = pedidosLeer;
 
 
             }
@@ -44,15 +48,6 @@ namespace deRenzisBruno2ETPFinal
             }
         }
 
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPedidos_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void todosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -74,24 +69,48 @@ namespace deRenzisBruno2ETPFinal
             nuevoPedidoForm.ShowDialog();
         }
 
-        private void cocinaToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void verPedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FormPedidos frmPedidos = new FormPedidos();
+            frmPedidos.ShowDialog();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                Mensajeria.GuardarClientes(Mensajeria.Clientes);
+                MessageBox.Show("Lista de Pedidos impreso exitosamente");
+            }
+
+            catch (ArchivoException ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al serializar", ex.InnerException.ToString());
+            }
         }
 
-        private void btnInformePerfumeria_Click(object sender, EventArgs e)
+        private void btnPedidos_Click(object sender, EventArgs e)
         {
-           
+            MessageBox.Show(Informe.ProductoMasPedido());
         }
 
-        private void verPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCliente_Click(object sender, EventArgs e)
         {
+            if (Mensajeria.Pedidos.Count > 0)
+                MessageBox.Show(Informe.SexoMasPedidos(Mensajeria.Pedidos));
+            else
+                MessageBox.Show("No hay pedidos para mostrar");
+        }
 
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            this.lblEstadisticaEnvios.Text = Informe.EstadisticaEnvios();
+        }
+
+        private void FormPrincipal_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.lblEstadisticaEnvios.Text = Informe.EstadisticaEnvios();
         }
     }
 }

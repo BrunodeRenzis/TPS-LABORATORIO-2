@@ -69,7 +69,7 @@ namespace Entidades
             catch (Exception e)
             {
 
-                throw new ArchivoException("Error al intentar leer archivo xml");
+                throw new ArchivoException("Error al intentar leer archivo xml",e);
             }
 
             return false;

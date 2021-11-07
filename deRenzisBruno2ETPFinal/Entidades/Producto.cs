@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,45 +11,38 @@ namespace Entidades
     {
         int idProducto;
         string nombreProducto;
-        float precio;
-        double stock;
         ETipo tipo;
 
         public Producto()
         {
             this.NombreProducto = String.Empty;
-            this.Precio = 0;
         }
-        public Producto(int idProducto,string nombreProducto, float precio, ETipo tipo, double stock)
+        public Producto(int idProducto,string nombreProducto, ETipo tipo)
         {
             this.IdProducto = idProducto;
             this.NombreProducto = nombreProducto;
-            this.Precio = precio;
             this.Tipo = tipo;
-            this.Stock = stock;
         }
 
         public int IdProducto { get => idProducto; set => idProducto = value; }
         public string NombreProducto { get => nombreProducto; set => nombreProducto = value; }
         public ETipo Tipo { get => tipo; set => tipo = value; }
-        public float Precio { get => precio; set => precio = value; }
-        public double Stock { get => stock; set => stock = value; }
 
         public static void HardcodearXmlProductos()
         {
 
             try
             {
-                Mensajeria.Productos.Add(new Producto(1, "Perfume avon", 500, ETipo.Perfumería, 20));
-                Mensajeria.Productos.Add(new Producto(2, "Cuchillo chef Tramontia", 2500, ETipo.Cocina, 10));
-                Mensajeria.Productos.Add(new Producto(3, "Uno", 1500, ETipo.Entretenimiento, 20));
-                Mensajeria.Productos.Add(new Producto(4, "Ajedrez", 500, ETipo.Entretenimiento, 20));
-                Mensajeria.Productos.Add(new Producto(5, "Pantalón Chupín", 2500, ETipo.Indumentaria, 14));
-                Mensajeria.Productos.Add(new Producto(6, "Sauvage Dior", 3500, ETipo.Perfumería, 20));
-                Mensajeria.Productos.Add(new Producto(7, "Wok Tramontina", 2500, ETipo.Cocina, 20));
-                Mensajeria.Productos.Add(new Producto(8, "Vestido Summer Limited Edition", 3500, ETipo.Indumentaria, 10));
-                Mensajeria.Productos.Add(new Producto(9, "Mesa Pool-PingPong", 15000, ETipo.Entretenimiento, 20));
-                Mensajeria.Productos.Add(new Producto(10, "Kit vasos", 1500, ETipo.Cocina, 8));
+                Mensajeria.Productos.Add(new Producto(1, "Perfume avon", ETipo.Perfumería));
+                Mensajeria.Productos.Add(new Producto(2, "Cuchillo chef Tramontia", ETipo.Cocina));
+                Mensajeria.Productos.Add(new Producto(3, "Uno", ETipo.Entretenimiento));
+                Mensajeria.Productos.Add(new Producto(4, "Ajedrez", ETipo.Entretenimiento));
+                Mensajeria.Productos.Add(new Producto(5, "Pantalón Chupín", ETipo.Indumentaria));
+                Mensajeria.Productos.Add(new Producto(6, "Sauvage Dior", ETipo.Perfumería));
+                Mensajeria.Productos.Add(new Producto(7, "Wok Tramontina", ETipo.Cocina));
+                Mensajeria.Productos.Add(new Producto(8, "Vestido Summer Limited Edition", ETipo.Indumentaria));
+                Mensajeria.Productos.Add(new Producto(9, "Mesa Pool-PingPong", ETipo.Entretenimiento));
+                Mensajeria.Productos.Add(new Producto(10, "Kit vasos", ETipo.Cocina));
                 Mensajeria.GuardarProductos(Mensajeria.Productos);
             }
 
@@ -58,7 +52,75 @@ namespace Entidades
             }
         }
 
-        
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Producto item in Mensajeria.Productos)
+            {
+                sb.AppendLine($"{NombreProducto}");
+                break;
+            }
+            return sb.ToString();
+        }
+
+        public static bool operator ==(List<Producto> productos, Producto producto)
+        {
+
+            foreach (Producto productoComp in Mensajeria.Productos)
+            {
+                if (productoComp.IdProducto == producto.IdProducto)
+                    return true;
+            }
+
+
+            return false;
+        }
+
+        public static bool operator !=(List<Producto> productos, Producto producto)
+        {
+            return !(productos == producto);
+        }
+        public static List<Producto> operator +(List<Producto> productos, Producto producto)
+        {
+            try
+            {
+                if (Mensajeria.Productos != producto)
+                {
+                    Mensajeria.Productos.Add(producto);
+                    return Mensajeria.Productos;
+                }
+            }
+
+            catch (Exception e)
+            {
+                throw new ProductoRepetidoException("No se pudo agregar el producto por que ya existe", e);
+            }
+           
+            return Mensajeria.Productos;
+
+        }
+
+
+    }
+
+    [Serializable]
+    internal class ProductoRepetidoException : Exception
+    {
+        public ProductoRepetidoException()
+        {
+        }
+
+        public ProductoRepetidoException(string message) : base(message)
+        {
+        }
+
+        public ProductoRepetidoException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected ProductoRepetidoException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+        }
     }
 
     public enum ETipo

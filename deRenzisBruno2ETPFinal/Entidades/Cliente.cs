@@ -15,7 +15,7 @@ namespace Entidades
         {
         }
 
-        public Cliente(string nombre, string apellido, string dni, string cuil, ESexo sexo, string direccion,int idCliente):base(idCliente,nombre, apellido, dni, cuil, sexo)
+        public Cliente(string nombre, string apellido, ESexo sexo, string direccion,int idCliente):base(idCliente,nombre, apellido, sexo)
         {
             this.IdCliente = idCliente;
             this.Direccion = direccion;
@@ -64,13 +64,13 @@ namespace Entidades
         {
             try
             {
-                Mensajeria.Clientes.Add(new Cliente("Bruno", "de Renzis", "39104689", "20391046892", Persona.ESexo.Hombre, "Olleros 943", 1));
-                Mensajeria.Clientes.Add(new Cliente("Sergio", "Rodilan", "39104689", "20391046892", Persona.ESexo.Hombre, "Combate de juncal 924", 2));
-                Mensajeria.Clientes.Add(new Cliente("Elpana", "Dero", "39104689", "20391046892", Persona.ESexo.Hombre, "Alsina 940", 3));
-                Mensajeria.Clientes.Add(new Cliente("Silvia", "Acturi", "39104689", "20391046892", Persona.ESexo.Mujer, "Juncal 947", 4));
-                Mensajeria.Clientes.Add(new Cliente("Elsof", "Ware", "39104689", "20391046892", Persona.ESexo.Binario, "Ottawa 945", 5));
-                Mensajeria.Clientes.Add(new Cliente("Sueños", "Ramico", "39104689", "20391046892", Persona.ESexo.NoBinario, "Leandro N Alem 944", 6));
-                Mensajeria.Clientes.Add(new Cliente("Jose", "Caballo", "39104689", "20391046892", Persona.ESexo.Hombre, "Italia 946", 7));
+                Mensajeria.Clientes.Add(new Cliente("Bruno", "de Renzis", Persona.ESexo.Hombre, "Olleros 943", 1));
+                Mensajeria.Clientes.Add(new Cliente("Sergio", "Rodilan", Persona.ESexo.Hombre, "Combate de juncal 924", 2));
+                Mensajeria.Clientes.Add(new Cliente("Elpana", "Dero", Persona.ESexo.Hombre, "Alsina 940", 3));
+                Mensajeria.Clientes.Add(new Cliente("Silvia", "Acturi", Persona.ESexo.Mujer, "Juncal 947", 4));
+                Mensajeria.Clientes.Add(new Cliente("Elsof", "Ware", Persona.ESexo.Binario, "Ottawa 945", 5));
+                Mensajeria.Clientes.Add(new Cliente("Sueños", "Ramico", Persona.ESexo.Binario, "Leandro N Alem 944", 6));
+                Mensajeria.Clientes.Add(new Cliente("Jose", "Caballo", Persona.ESexo.Hombre, "Italia 946", 7));
                 Mensajeria.GuardarClientes(Mensajeria.Clientes);
             }
 
@@ -78,6 +78,17 @@ namespace Entidades
             {
                 throw new ArchivoException("Ha ocurrido un error al serializar", ex.InnerException);
             }
+        }
+
+        /// <summary>
+        /// Sobrecarga del método Mostrar para la clase cliente.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.ToString());
+            return sb.ToString();
         }
     }
 }

@@ -10,3 +10,15 @@ C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFin
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.dll
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\ref\Entidades.dll
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\bin\Debug\net5.0\ref\Entidades.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\Entidades\obj\Debug\net5.0\Entidades.pdb

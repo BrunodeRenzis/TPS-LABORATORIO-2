@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\TestUnitario.csproj": {}
+    "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\TestUnitario.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\Bruno de Renzis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\bderenzis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruno de Renzis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bderenzis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,17 +58,17 @@
         }
       }
     },
-    "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\TestUnitario.csproj": {
+    "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\TestUnitario.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\TestUnitario.csproj",
+        "projectUniqueName": "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\TestUnitario.csproj",
         "projectName": "TestUnitario",
-        "projectPath": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\TestUnitario.csproj",
-        "packagesPath": "C:\\Users\\Bruno de Renzis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\obj\\",
+        "projectPath": "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\TestUnitario.csproj",
+        "packagesPath": "C:\\Users\\bderenzis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\TestUnitario\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruno de Renzis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bderenzis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj"
+              "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\bderenzis\\Desktop\\Tps Labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\Entidades\\Entidades.csproj"
               }
             }
           }
