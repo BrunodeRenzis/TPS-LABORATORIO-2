@@ -32,6 +32,7 @@ namespace deRenzisBruno2ETPFinal
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnNoEntregado = new System.Windows.Forms.Button();
+            this.lsProductosPedido = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@ namespace deRenzisBruno2ETPFinal
             this.dgvPedidos.RowTemplate.Height = 25;
             this.dgvPedidos.Size = new System.Drawing.Size(524, 368);
             this.dgvPedidos.TabIndex = 0;
+            this.dgvPedidos.Click += new System.EventHandler(this.dgvPedidos_Click);
             // 
             // btnConfirmar
             // 
@@ -67,11 +69,21 @@ namespace deRenzisBruno2ETPFinal
             this.btnNoEntregado.UseVisualStyleBackColor = false;
             this.btnNoEntregado.Click += new System.EventHandler(this.btnNoEntregado_Click);
             // 
+            // lsProductosPedido
+            // 
+            this.lsProductosPedido.FormattingEnabled = true;
+            this.lsProductosPedido.ItemHeight = 15;
+            this.lsProductosPedido.Location = new System.Drawing.Point(12, 500);
+            this.lsProductosPedido.Name = "lsProductosPedido";
+            this.lsProductosPedido.Size = new System.Drawing.Size(524, 169);
+            this.lsProductosPedido.TabIndex = 8;
+            // 
             // FormPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 535);
+            this.ClientSize = new System.Drawing.Size(571, 677);
+            this.Controls.Add(this.lsProductosPedido);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.btnNoEntregado);
             this.Controls.Add(this.dgvPedidos);
@@ -91,5 +103,6 @@ namespace deRenzisBruno2ETPFinal
         private System.Windows.Forms.DataGridView dgvPedidos;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Button btnNoEntregado;
+        private System.Windows.Forms.ListBox lsProductosPedido;
     }
 }

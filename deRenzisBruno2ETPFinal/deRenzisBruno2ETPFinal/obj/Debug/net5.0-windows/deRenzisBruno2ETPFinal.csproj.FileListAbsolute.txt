@@ -50,4 +50,3 @@ C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deR
 C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.dll
 C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
 C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\TeeChart.dll
-C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.csproj.CopyComplete

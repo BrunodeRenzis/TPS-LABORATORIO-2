@@ -47,5 +47,14 @@ namespace deRenzisBruno2ETPFinal
             }
             ActualizarDataGrid();
         }
+
+        private void dgvPedidos_Click(object sender, EventArgs e)
+        {
+            foreach (Pedido pedido in Mensajeria.Pedidos)
+            {
+                if (pedido.IdPedido == (int)this.dgvPedidos.CurrentRow.Cells["idPedido"].Value)
+                    lsProductosPedido.DataSource = pedido.Productos;
+            }
+        }
     }
 }
