@@ -22,10 +22,10 @@ namespace Test
             productos+=productoTres;
             productos+=productoTres;
             productos+=productoCuatro;
-            Pedido nuevoPedido = new Pedido(unCliente,productos,EEstado.Entregado);
-            Pedido nuevoPedidoDos = new Pedido(unaClienta,productos,EEstado.Entregado);
-            Pedido nuevoPedidoTres = new Pedido(uneCliente,productos,EEstado.Entregado);
-            Pedido nuevoPedidoCuatro = new Pedido(uneCliente,productos,EEstado.Entregado);
+            Pedido nuevoPedido = new Pedido(unCliente,productos);
+            Pedido nuevoPedidoDos = new Pedido(unaClienta,productos);
+            Pedido nuevoPedidoTres = new Pedido(uneCliente,productos);
+            Pedido nuevoPedidoCuatro = new Pedido(uneCliente,productos);
             pedidos.Add(nuevoPedido);
             pedidos.Add(nuevoPedidoDos);
             pedidos.Add(nuevoPedidoTres);

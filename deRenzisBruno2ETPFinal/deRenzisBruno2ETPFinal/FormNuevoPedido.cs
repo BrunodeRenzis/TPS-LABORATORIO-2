@@ -66,7 +66,7 @@ namespace deRenzisBruno2ETPFinal
                     unCliente.Apellido = this.dgvClientes.CurrentRow.Cells["Apellido"].Value.ToString();
                     unCliente.Sexo = (Persona.ESexo)this.dgvClientes.CurrentRow.Cells["Sexo"].Value;
                     unCliente.Direccion = this.dgvClientes.CurrentRow.Cells["Direccion"].Value.ToString();
-                    Pedido nuevoPedido = new Pedido(unCliente, productosPedido, EEstado.Generado);
+                    Pedido nuevoPedido = new Pedido(unCliente, productosPedido);
                     Mensajeria.Pedidos.Add(nuevoPedido);
                     LimpiarListaProductos();
                     unCliente = new Cliente();

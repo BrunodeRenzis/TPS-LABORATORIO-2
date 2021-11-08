@@ -9,6 +9,9 @@ namespace Entidades
         static List<Cliente> clientes;
         static List<Producto> productos;
 
+        /// <summary>
+        /// Constructor estático de la clase Mensajería, se ejecutará solo una vez para dar inicialización a las listas.
+        /// </summary>
         static Mensajeria()
         {
             Pedidos = new List<Pedido>();
@@ -20,6 +23,11 @@ namespace Entidades
         public static List<Cliente> Clientes { get => clientes; set => clientes = value; }
         public static List<Producto> Productos { get => productos; set => productos = value; }
 
+        /// <summary>
+        /// Método estático que guardará pedidos generados en el programa.
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <returns>Retorna true si se ha podido guardar la lista, caso contrarió arrojará excepción</returns>
         public static bool GuardarPedidos(List<Pedido> lista)
         {
             try
@@ -35,7 +43,11 @@ namespace Entidades
                 throw new ArchivoException("Archivo no generado correctamente",e.InnerException);
             }
         }
-
+        /// <summary>
+        /// Método estático que guardará clientes generados en el programa.
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <returns>Retorna true si se ha podido leer la lista, caso contrarió arrojará excepción</returns>
         public static bool GuardarClientes(List<Cliente> lista)
         {
             try
@@ -52,6 +64,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Método estático que guardará productos generados en el programa.
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <returns>Retorna true si se ha podido guardar la lista, caso contrarió arrojará excepción</returns>
         public static bool GuardarProductos(List<Producto> lista)
         {
             try
@@ -67,5 +84,6 @@ namespace Entidades
                 throw new ArchivoException("Archivo no generado correctamente", e.InnerException);
             }
         }
+
     }
 }

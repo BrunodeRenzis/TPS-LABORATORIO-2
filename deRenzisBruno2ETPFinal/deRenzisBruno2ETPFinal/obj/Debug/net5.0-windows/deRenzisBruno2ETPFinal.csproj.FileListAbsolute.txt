@@ -50,3 +50,10 @@ C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deR
 C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.dll
 C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
 C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\TeeChart.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\ChartJSCore.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Web.DataVisualization.Design.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Web.DataVisualization.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.Design.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\TeeChart.dll

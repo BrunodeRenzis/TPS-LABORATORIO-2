@@ -14,10 +14,22 @@ namespace Entidades
         string nombre;
         string apellido;
         ESexo sexo;
+        
+        /// <summary>
+        /// Constructor por defecto de la clase Persona
+        /// </summary>
         public Persona()
         {
 
         }
+
+        /// <summary>
+        /// Constructor con parámetros de la clase Persona
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="sexo"></param>
         public Persona(int id,string nombre, string apellido, ESexo sexo):this()
         {
             this.Nombre = nombre;
@@ -29,24 +41,15 @@ namespace Entidades
         public string Apellido { get => apellido; set => apellido = value; }
         public ESexo Sexo { get => sexo; set => sexo = value; }
 
+        /// <summary>
+        /// Enumerado de sexo de personas
+        /// </summary>
         public enum ESexo
         {
             Hombre,
             Mujer,
             Binario
         }
-
-        /// <summary>
-        /// Creación del método virtual Mostrar, mostrará datos básicos de cualquier persona para que luego se complete la descripción con las diferencias entre cliente o empleado.
-        /// </summary>
-        /// <returns></returns>
-        /*public virtual string Mostrar()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{this.Nombre}");
-            sb.AppendLine($"{this.Apellido}");
-            return sb.ToString();
-        }*/
 
         /// <summary>
         /// sobrecarga del método ToString

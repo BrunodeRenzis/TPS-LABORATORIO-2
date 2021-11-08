@@ -40,7 +40,6 @@ namespace deRenzisBruno2ETPFinal
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblEstadisticaEnvios = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@ namespace deRenzisBruno2ETPFinal
             this.btnInformePerfumeria.TabIndex = 0;
             this.btnInformePerfumeria.Text = "Perfumería";
             this.btnInformePerfumeria.UseVisualStyleBackColor = true;
+            this.btnInformePerfumeria.Click += new System.EventHandler(this.btnInformePerfumeria_Click);
             // 
             // btnIndumentaria
             // 
@@ -64,6 +64,7 @@ namespace deRenzisBruno2ETPFinal
             this.btnIndumentaria.TabIndex = 1;
             this.btnIndumentaria.Text = "Indumentaria";
             this.btnIndumentaria.UseVisualStyleBackColor = true;
+            this.btnIndumentaria.Click += new System.EventHandler(this.btnIndumentaria_Click);
             // 
             // btnEntretenimiento
             // 
@@ -73,6 +74,7 @@ namespace deRenzisBruno2ETPFinal
             this.btnEntretenimiento.TabIndex = 2;
             this.btnEntretenimiento.Text = "Entretenimiento";
             this.btnEntretenimiento.UseVisualStyleBackColor = true;
+            this.btnEntretenimiento.Click += new System.EventHandler(this.btnEntretenimiento_Click);
             // 
             // btnCliente
             // 
@@ -102,6 +104,7 @@ namespace deRenzisBruno2ETPFinal
             this.btnCocina.TabIndex = 3;
             this.btnCocina.Text = "Cocina";
             this.btnCocina.UseVisualStyleBackColor = true;
+            this.btnCocina.Click += new System.EventHandler(this.btnCocina_Click);
             // 
             // menuStrip1
             // 
@@ -127,43 +130,36 @@ namespace deRenzisBruno2ETPFinal
             // 
             this.imprimirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
-            this.todosToolStripMenuItem,
-            this.informesToolStripMenuItem});
+            this.todosToolStripMenuItem});
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // todosToolStripMenuItem
             // 
             this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.todosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.todosToolStripMenuItem.Text = "Pedidos";
             this.todosToolStripMenuItem.Click += new System.EventHandler(this.todosToolStripMenuItem_Click);
-            // 
-            // informesToolStripMenuItem
-            // 
-            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.informesToolStripMenuItem.Text = "Informes";
             // 
             // nuevoPedidoToolStripMenuItem
             // 
             this.nuevoPedidoToolStripMenuItem.Name = "nuevoPedidoToolStripMenuItem";
-            this.nuevoPedidoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.nuevoPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoPedidoToolStripMenuItem.Text = "Nuevo Pedido";
             this.nuevoPedidoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPedidoToolStripMenuItem_Click);
             // 
             // verPedidosToolStripMenuItem
             // 
             this.verPedidosToolStripMenuItem.Name = "verPedidosToolStripMenuItem";
-            this.verPedidosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.verPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verPedidosToolStripMenuItem.Text = "Ver Pedidos";
             this.verPedidosToolStripMenuItem.Click += new System.EventHandler(this.verPedidosToolStripMenuItem_Click);
             // 
@@ -216,7 +212,6 @@ namespace deRenzisBruno2ETPFinal
         private System.Windows.Forms.ToolStripMenuItem todosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoPedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verPedidosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.Label lblEstadisticaEnvios;
     }
 }

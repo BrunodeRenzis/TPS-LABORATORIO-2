@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace TestUnitario
 {
     [TestClass]
-    public class PedidoNoGeneradoExceptionTest
+    public class ExceptionsTest
     {
         [TestMethod]
         [ExpectedException (typeof(PedidoRepetidoException))]
@@ -13,7 +13,7 @@ namespace TestUnitario
         {
             Cliente clienteTest = new Cliente("Bruno","de Renzis",Persona.ESexo.Hombre,"Combate de juncal 943",1);
             List<Producto> productoTest = new List<Producto>();
-            Pedido pedidoTest = new Pedido(clienteTest,productoTest,EEstado.Entregado);
+            Pedido pedidoTest = new Pedido(clienteTest,productoTest);
             Mensajeria.Pedidos += pedidoTest;
             Mensajeria.Pedidos += pedidoTest;
 

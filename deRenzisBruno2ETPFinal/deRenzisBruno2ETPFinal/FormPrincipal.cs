@@ -92,7 +92,7 @@ namespace deRenzisBruno2ETPFinal
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Informe.ProductoMasPedido());
+            MessageBox.Show(Informe.ProductoMasPedido(Mensajeria.Pedidos));
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -105,12 +105,44 @@ namespace deRenzisBruno2ETPFinal
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            this.lblEstadisticaEnvios.Text = Informe.EstadisticaEnvios();
+            this.lblEstadisticaEnvios.Text = Informe.EstadisticaEnvios(Mensajeria.Pedidos);
         }
 
         private void FormPrincipal_MouseMove(object sender, MouseEventArgs e)
         {
-            this.lblEstadisticaEnvios.Text = Informe.EstadisticaEnvios();
+            this.lblEstadisticaEnvios.Text = Informe.EstadisticaEnvios(Mensajeria.Pedidos);
+        }
+
+        private void btnInformePerfumeria_Click(object sender, EventArgs e)
+        {
+            if (Mensajeria.Pedidos.Count > 0)
+                MessageBox.Show(Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Perfumería));
+            else
+                MessageBox.Show("No hay pedidos para mostrar");
+        }
+
+        private void btnIndumentaria_Click(object sender, EventArgs e)
+        {
+            if (Mensajeria.Pedidos.Count > 0)
+                MessageBox.Show(Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Indumentaria));
+            else
+                MessageBox.Show("No hay pedidos para mostrar");
+        }
+
+        private void btnEntretenimiento_Click(object sender, EventArgs e)
+        {
+            if (Mensajeria.Pedidos.Count > 0)
+                MessageBox.Show(Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Entretenimiento));
+            else
+                MessageBox.Show("No hay pedidos para mostrar");
+        }
+
+        private void btnCocina_Click(object sender, EventArgs e)
+        {
+            if (Mensajeria.Pedidos.Count > 0)
+                MessageBox.Show(Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Cocina));
+            else
+                MessageBox.Show("No hay pedidos para mostrar");
         }
     }
 }

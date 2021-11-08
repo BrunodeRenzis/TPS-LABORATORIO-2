@@ -12,11 +12,20 @@ namespace Entidades
         int idProducto;
         string nombreProducto;
         ETipo tipo;
-
+        /// <summary>
+        /// Constructor por defecto de la clase producto
+        /// </summary>
         public Producto()
         {
             this.NombreProducto = String.Empty;
         }
+
+        /// <summary>
+        /// Constructor con parámetros de la clase producto
+        /// </summary>
+        /// <param name="idProducto"></param>
+        /// <param name="nombreProducto"></param>
+        /// <param name="tipo"></param>
         public Producto(int idProducto,string nombreProducto, ETipo tipo)
         {
             this.IdProducto = idProducto;
@@ -28,6 +37,9 @@ namespace Entidades
         public string NombreProducto { get => nombreProducto; set => nombreProducto = value; }
         public ETipo Tipo { get => tipo; set => tipo = value; }
 
+        /// <summary>
+        /// Hardcodeo de productos para utilizar como archivo xml en el programa
+        /// </summary>
         public static void HardcodearXmlProductos()
         {
 
@@ -51,7 +63,10 @@ namespace Entidades
                 throw new ArchivoException(ex.Message, ex);
             }
         }
-
+        /// <summary>
+        /// Sobrecarga del método ToString
+        /// </summary>
+        /// <returns>NombreProducto</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -62,7 +77,12 @@ namespace Entidades
             }
             return sb.ToString();
         }
-
+        /// <summary>
+        /// Sobrecarga del operador == de la clase Producto
+        /// </summary>
+        /// <param name="productos"></param>
+        /// <param name="producto"></param>
+        /// <returns>true si un producto de lista es igual al id del producto pasado, false caso contrario</returns>
         public static bool operator ==(List<Producto> productos, Producto producto)
         {
 
@@ -76,10 +96,22 @@ namespace Entidades
             return false;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador != de la clase Producto
+        /// </summary>
+        /// <param name="productos"></param>
+        /// <param name="producto"></param>
+        /// <returns>true si un producto de lista es distinto al id del producto pasado, false caso contrario</returns>
         public static bool operator !=(List<Producto> productos, Producto producto)
         {
             return !(productos == producto);
         }
+        /// <summary>
+        /// Sobrecarga del operador +
+        /// </summary>
+        /// <param name="productos"></param>
+        /// <param name="producto"></param>
+        /// <returns>Devuelve una lista con el producto a agregar si este no se encuentra en la lista, caso contrario arroja excepción</returns>
         public static List<Producto> operator +(List<Producto> productos, Producto producto)
         {
             try
@@ -103,26 +135,7 @@ namespace Entidades
 
     }
 
-    [Serializable]
-    internal class ProductoRepetidoException : Exception
-    {
-        public ProductoRepetidoException()
-        {
-        }
-
-        public ProductoRepetidoException(string message) : base(message)
-        {
-        }
-
-        public ProductoRepetidoException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected ProductoRepetidoException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-
+    
     public enum ETipo
     {
         Indumentaria,
