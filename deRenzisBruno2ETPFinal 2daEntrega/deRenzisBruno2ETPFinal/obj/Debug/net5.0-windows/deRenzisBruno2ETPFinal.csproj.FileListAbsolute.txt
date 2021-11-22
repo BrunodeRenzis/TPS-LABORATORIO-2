@@ -1,0 +1,65 @@
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.exe
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.deps.json
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.runtimeconfig.json
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.runtimeconfig.dev.json
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\ref\deRenzisBruno2ETPFinal.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Entidades.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Entidades.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.csproj.AssemblyReference.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.FormPrincipal.resources
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.csproj.GenerateResource.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.AssemblyInfoInputs.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.AssemblyInfo.cs
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.csproj.CoreCompileInputs.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.csproj.CopyComplete
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\ref\deRenzisBruno2ETPFinal.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.pdb
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.genruntimeconfig.cache
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.FormNuevoPedido.resources
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.FormPedidos.resources
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.exe
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.deps.json
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.runtimeconfig.json
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.runtimeconfig.dev.json
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\ref\deRenzisBruno2ETPFinal.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\deRenzisBruno2ETPFinal.pdb
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Entidades.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Entidades.pdb
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.csproj.AssemblyReference.cache
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.FormNuevoPedido.resources
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.FormPedidos.resources
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.FormPrincipal.resources
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.csproj.GenerateResource.cache
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.AssemblyInfoInputs.cache
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.AssemblyInfo.cs
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.csproj.CoreCompileInputs.cache
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\ref\deRenzisBruno2ETPFinal.dll
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.pdb
+C:\Users\bderenzis\Desktop\tps labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\obj\Debug\net5.0-windows\deRenzisBruno2ETPFinal.genruntimeconfig.cache
+C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\ChartJSCore.dll
+C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Web.DataVisualization.Design.dll
+C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Web.DataVisualization.dll
+C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.Design.dll
+C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.dll
+C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\bderenzis\Desktop\Tps Labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\TeeChart.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\ChartJSCore.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Web.DataVisualization.Design.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Web.DataVisualization.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.Design.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\TeeChart.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

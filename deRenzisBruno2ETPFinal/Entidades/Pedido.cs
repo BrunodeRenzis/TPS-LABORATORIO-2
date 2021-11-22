@@ -9,6 +9,8 @@ namespace Entidades
     [Serializable]
     public class Pedido
     {
+        public delegate string ActualizacionPorcentajes(List<Pedido> lista);
+        public static event ActualizacionPorcentajes actualizar;
         int idPedido;
         static int id=0;
         Cliente cliente;
@@ -25,6 +27,17 @@ namespace Entidades
             id++;
         }
 
+        static Pedido()
+        {
+            actualizar += Pedido_actualizar;
+        }
+
+        private static string Pedido_actualizar(List<Pedido> lista)
+        {
+            string actualizar = String.Empty;
+            return actualizar.EstadisticaEnvios(Mensajeria.Pedidos);
+        }
+
         /// <summary>
         /// Constructor con parámetros de pedido,asignará el cliente y lista de productos
         /// </summary>
@@ -37,7 +50,24 @@ namespace Entidades
             this.Cliente = cliente;
             this.Productos = productos;
         }
-
+        /// <summary>
+        /// Constructor con parámetros de pedido,asignará el cliente y el id de pedido en la base de datos
+        /// </summary>
+        /// <param name="cliente"></param>
+        public Pedido(Cliente cliente) : this()
+        {
+            this.IdPedido = id;
+            this.Cliente = cliente;
+        }
+        /// <summary>
+        /// Constructor con parámetros de pedido,asignará el cliente
+        /// </summary>
+        /// <param name="cliente"></param>
+        public Pedido(int idPedido,Cliente cliente)
+        {
+            this.IdPedido = idPedido;
+            this.Cliente = cliente;
+        }
         public int IdPedido { get => idPedido; set => idPedido = value; }
         public Cliente Cliente { get => cliente; set => cliente = value; }
         public EEstado Estado { get => estado; set => estado = value; }

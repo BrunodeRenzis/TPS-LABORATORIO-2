@@ -5,40 +5,52 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 namespace deRenzisBruno2ETPFinal
 {
+
     public partial class FormPrincipal : Form
     {
+
+        static string estadistica = String.Empty;
         public FormPrincipal()
         {
             InitializeComponent();
+        }
+
+        public static async Task<string> TaskEstadistica()
+        {
+
+            string mensaje=String.Empty;
+            while(true)
+            {
+                await Task.Run(() =>
+                {
+                    Thread.Sleep(100);
+                    mensaje = estadistica.EstadisticaEnvios(Mensajeria.Pedidos);
+                },Mensajeria.Cts.Token);
+                return mensaje;
+            }
         }
 
         static FormPrincipal()
         {
             try
             {
-                List<Cliente> clientesLeer = new List<Cliente>();
-                List<Producto> productosLeer = new List<Producto>();
+                
                 List<Pedido> pedidosLeer = new List<Pedido>();
-
-                Xml<List<Cliente>> clientes = new Xml<List<Cliente>>();
-                Xml<List<Producto>> productos = new Xml<List<Producto>>();
                 Xml<List<Pedido>> pedidos = new Xml<List<Pedido>>();
 
-                string pathClientes = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Clientes.xml");
-                string pathProductos = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Productos.xml");
                 string pathPedidos = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Pedidos.xml");
-                clientes.Leer(pathClientes, out clientesLeer);
-                productos.Leer(pathProductos, out productosLeer);
                 pedidos.Leer(pathPedidos, out pedidosLeer);
-                Mensajeria.Clientes = clientesLeer;
-                Mensajeria.Productos = productosLeer;
                 Mensajeria.Pedidos = pedidosLeer;
-
+               
+                Task cargarDatos = Task.Run(DB.TraerListasDB);
+                cargarDatos.Wait();
+                
 
             }
 
@@ -92,31 +104,35 @@ namespace deRenzisBruno2ETPFinal
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Informe.ProductoMasPedido(Mensajeria.Pedidos));
+            lblInforme.Text = Informe.ProductoMasPedido(Mensajeria.Pedidos);
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
             if (Mensajeria.Pedidos.Count > 0)
-                MessageBox.Show(Informe.SexoMasPedidos(Mensajeria.Pedidos));
+                lblInforme.Text = Informe.SexoMasPedidos(Mensajeria.Pedidos);
             else
                 MessageBox.Show("No hay pedidos para mostrar");
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            this.lblEstadisticaEnvios.Text = Informe.EstadisticaEnvios(Mensajeria.Pedidos);
+            
+
         }
 
-        private void FormPrincipal_MouseMove(object sender, MouseEventArgs e)
+        private async void FormPrincipal_MouseMove(object sender, MouseEventArgs e)
         {
-            this.lblEstadisticaEnvios.Text = Informe.EstadisticaEnvios(Mensajeria.Pedidos);
+            if (this.lblEstadisticaEnvios.InvokeRequired)
+                this.lblEstadisticaEnvios.Text = await TaskEstadistica();
+            else
+                this.lblEstadisticaEnvios.Text = await TaskEstadistica();
         }
 
         private void btnInformePerfumeria_Click(object sender, EventArgs e)
         {
             if (Mensajeria.Pedidos.Count > 0)
-                MessageBox.Show(Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Perfumería));
+                lblInforme.Text = Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Perfumería);
             else
                 MessageBox.Show("No hay pedidos para mostrar");
         }
@@ -124,7 +140,7 @@ namespace deRenzisBruno2ETPFinal
         private void btnIndumentaria_Click(object sender, EventArgs e)
         {
             if (Mensajeria.Pedidos.Count > 0)
-                MessageBox.Show(Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Indumentaria));
+                lblInforme.Text = Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Indumentaria);
             else
                 MessageBox.Show("No hay pedidos para mostrar");
         }
@@ -132,7 +148,7 @@ namespace deRenzisBruno2ETPFinal
         private void btnEntretenimiento_Click(object sender, EventArgs e)
         {
             if (Mensajeria.Pedidos.Count > 0)
-                MessageBox.Show(Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Entretenimiento));
+                lblInforme.Text = Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Entretenimiento);
             else
                 MessageBox.Show("No hay pedidos para mostrar");
         }
@@ -140,9 +156,23 @@ namespace deRenzisBruno2ETPFinal
         private void btnCocina_Click(object sender, EventArgs e)
         {
             if (Mensajeria.Pedidos.Count > 0)
-                MessageBox.Show(Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Cocina));
+                lblInforme.Text = Informe.SexoQueMasCompraUnaCategoria(Mensajeria.Pedidos,ETipo.Cocina);
             else
                 MessageBox.Show("No hay pedidos para mostrar");
+        }
+
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                Mensajeria.GuardarPedidos(Mensajeria.Pedidos);
+            }
+
+            catch (ArchivoException ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al serializar", ex.InnerException.ToString());
+            }
+
         }
     }
 }

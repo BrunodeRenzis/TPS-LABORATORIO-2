@@ -10,15 +10,20 @@ using System.Windows.Forms;
 using Entidades;
 namespace deRenzisBruno2ETPFinal
 {
+    public delegate bool DelegadoPedido(Pedido pedido);
     public partial class FormNuevoPedido : Form
     {
         Cliente unCliente;
         List<Producto> productosPedido;
+        public event DelegadoPedido agregarPedidoDB;
+        Xml<List<Pedido>> pedidoXml;
+        string pathPedidos = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "Pedidos.xml");
         public FormNuevoPedido()
         {
             InitializeComponent();
             productosPedido = new List<Producto>();
             unCliente = new Cliente();
+            pedidoXml = new Xml<List<Pedido>>();
         }
 
         static FormNuevoPedido()
@@ -30,6 +35,9 @@ namespace deRenzisBruno2ETPFinal
         {
             this.dgvClientes.DataSource = Mensajeria.Clientes;
             this.dgvProductos.DataSource = Mensajeria.Productos;
+            agregarPedidoDB += DB.PedidoNuevo;
+            agregarPedidoDB += Mensajeria.AgregarALaLista;
+            
         }
 
         
@@ -67,7 +75,7 @@ namespace deRenzisBruno2ETPFinal
                     unCliente.Sexo = (Persona.ESexo)this.dgvClientes.CurrentRow.Cells["Sexo"].Value;
                     unCliente.Direccion = this.dgvClientes.CurrentRow.Cells["Direccion"].Value.ToString();
                     Pedido nuevoPedido = new Pedido(unCliente, productosPedido);
-                    Mensajeria.Pedidos.Add(nuevoPedido);
+                    agregarPedidoDB.Invoke(nuevoPedido);
                     LimpiarListaProductos();
                     unCliente = new Cliente();
                     productosPedido = new List<Producto>();

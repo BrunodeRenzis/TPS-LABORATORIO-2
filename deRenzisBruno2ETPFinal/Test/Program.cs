@@ -7,9 +7,9 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Cliente unCliente = new Cliente("Cosme", "Fulanito", Persona.ESexo.Hombre, "Avenida siempreviva 742", 1);
-            Cliente unaClienta = new Cliente("Cosma", "Fulanita", Persona.ESexo.Mujer, "Avenida siempreviva 742", 2);
-            Cliente uneCliente = new Cliente("Cosme", "Fulanite", Persona.ESexo.Binario, "Avenida siempreviva 742", 3);
+            Cliente unCliente = new Cliente("Cosme", "Fulanito", Persona.ESexo.Hombre, "Avenida siempreviva 742", 1,ELocalidad.ZonaSur);
+            Cliente unaClienta = new Cliente("Cosma", "Fulanita", Persona.ESexo.Mujer, "Avenida siempreviva 742", 2,ELocalidad.ZonaOeste);
+            Cliente uneCliente = new Cliente("Cosme", "Fulanite", Persona.ESexo.Binario, "Avenida siempreviva 742", 3,ELocalidad.CABA);
             Producto productoUno = new Producto(1, "Zapatillas", ETipo.Indumentaria);
             Producto productoDos = new Producto(2, "Desodorante", ETipo.Perfumería);
             Producto productoTres = new Producto(3, "Tostadora", ETipo.Cocina);

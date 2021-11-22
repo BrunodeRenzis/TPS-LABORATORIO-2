@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entidades;
 namespace deRenzisBruno2ETPFinal
 {
+    public delegate Task ActualizarEstadoDelegate();
     public partial class FormPedidos : Form
     {
         public FormPedidos()
@@ -26,6 +27,7 @@ namespace deRenzisBruno2ETPFinal
         private void FormPedidos_Load(object sender, EventArgs e)
         {
             this.dgvPedidos.DataSource = Mensajeria.Pedidos;
+            
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -34,7 +36,9 @@ namespace deRenzisBruno2ETPFinal
             {
                 if(pedido.IdPedido==(int)this.dgvPedidos.CurrentRow.Cells["idPedido"].Value)
                 pedido.Estado = EEstado.Entregado;
+                
             }
+
             ActualizarDataGrid();
         }
 
@@ -46,6 +50,7 @@ namespace deRenzisBruno2ETPFinal
                     pedido.Estado = EEstado.NoEntregado;
             }
             ActualizarDataGrid();
+
         }
 
         private void dgvPedidos_Click(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Entidades
 {
@@ -8,6 +9,7 @@ namespace Entidades
         static List<Pedido> pedidos;
         static List<Cliente> clientes;
         static List<Producto> productos;
+        static CancellationTokenSource cts;
 
         /// <summary>
         /// Constructor estático de la clase Mensajería, se ejecutará solo una vez para dar inicialización a las listas.
@@ -22,6 +24,24 @@ namespace Entidades
         public static List<Pedido> Pedidos { get => pedidos; set => pedidos = value; }
         public static List<Cliente> Clientes { get => clientes; set => clientes = value; }
         public static List<Producto> Productos { get => productos; set => productos = value; }
+
+        public static CancellationTokenSource Cts
+        {
+            get
+            {
+                if (cts is null || cts.IsCancellationRequested)
+                {
+                    cts = new CancellationTokenSource();
+                }
+                return cts;
+            }
+        }
+
+        public static bool AgregarALaLista(Pedido pedido)
+        {
+            Mensajeria.Pedidos.Add(pedido);
+            return true;
+        }
 
         /// <summary>
         /// Método estático que guardará pedidos generados en el programa.

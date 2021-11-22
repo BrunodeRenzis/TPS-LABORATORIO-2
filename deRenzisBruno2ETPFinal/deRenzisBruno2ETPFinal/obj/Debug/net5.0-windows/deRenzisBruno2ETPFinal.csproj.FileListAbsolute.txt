@@ -57,3 +57,9 @@ C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFin
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Windows.Forms.DataVisualization.dll
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
 C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\TeeChart.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Bruno de Renzis\Desktop\TPS labo\TPS-LABORATORIO-2\deRenzisBruno2ETPFinal\deRenzisBruno2ETPFinal\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
