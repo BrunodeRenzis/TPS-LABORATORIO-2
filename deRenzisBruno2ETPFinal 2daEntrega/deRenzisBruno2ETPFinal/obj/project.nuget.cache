@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DK5CCq+WbM1d7wwC2cEqNS99HIeakfyCfYhqM1WQ2wrZ0bdH0ppHiKVYWQvBJzvUmsNJ7A5BZM/Fr6XE3zkneA==",
+  "dgSpecHash": "/2Un2XUSbdXy1AJyUoLqo9eZinzRKcXfhv0KVYdoc8LGIJ2+I5+W+thez11kVvUzdjF57dROhvBQrv1Et9ub1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal\\deRenzisBruno2ETPFinal\\deRenzisBruno2ETPFinal.csproj",
+  "projectFilePath": "C:\\Users\\Bruno de Renzis\\Desktop\\TPS labo\\TPS-LABORATORIO-2\\deRenzisBruno2ETPFinal 2daEntrega\\deRenzisBruno2ETPFinal\\deRenzisBruno2ETPFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bruno de Renzis\\.nuget\\packages\\chartjscore\\1.5.8\\chartjscore.1.5.8.nupkg.sha512",
     "C:\\Users\\Bruno de Renzis\\.nuget\\packages\\microsoft.chart.controls\\4.7.2046\\microsoft.chart.controls.4.7.2046.nupkg.sha512",

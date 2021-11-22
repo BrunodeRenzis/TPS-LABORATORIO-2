@@ -107,75 +107,97 @@ namespace deRenzisBruno2ETPFinal
             // lblEstadisticaEnvios
             // 
             this.lblEstadisticaEnvios.AutoSize = true;
+            this.lblEstadisticaEnvios.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEstadisticaEnvios.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblEstadisticaEnvios.Location = new System.Drawing.Point(60, 520);
             this.lblEstadisticaEnvios.Name = "lblEstadisticaEnvios";
-            this.lblEstadisticaEnvios.Size = new System.Drawing.Size(0, 15);
+            this.lblEstadisticaEnvios.Size = new System.Drawing.Size(0, 20);
             this.lblEstadisticaEnvios.TabIndex = 7;
             // 
             // btnInformePerfumeria
             // 
+            this.btnInformePerfumeria.BackColor = System.Drawing.Color.Black;
+            this.btnInformePerfumeria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnInformePerfumeria.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInformePerfumeria.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnInformePerfumeria.Location = new System.Drawing.Point(13, 92);
             this.btnInformePerfumeria.Name = "btnInformePerfumeria";
             this.btnInformePerfumeria.Size = new System.Drawing.Size(154, 136);
             this.btnInformePerfumeria.TabIndex = 0;
-            this.btnInformePerfumeria.Text = "Perfumería";
-            this.btnInformePerfumeria.UseVisualStyleBackColor = true;
+            this.btnInformePerfumeria.Text = "PERFUMERÍA";
+            this.btnInformePerfumeria.UseVisualStyleBackColor = false;
             this.btnInformePerfumeria.Click += new System.EventHandler(this.btnInformePerfumeria_Click);
             // 
             // btnIndumentaria
             // 
+            this.btnIndumentaria.BackColor = System.Drawing.Color.Black;
+            this.btnIndumentaria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnIndumentaria.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnIndumentaria.Location = new System.Drawing.Point(326, 92);
             this.btnIndumentaria.Name = "btnIndumentaria";
             this.btnIndumentaria.Size = new System.Drawing.Size(154, 136);
             this.btnIndumentaria.TabIndex = 1;
-            this.btnIndumentaria.Text = "Indumentaria";
-            this.btnIndumentaria.UseVisualStyleBackColor = true;
+            this.btnIndumentaria.Text = "INDUMENTARIA";
+            this.btnIndumentaria.UseVisualStyleBackColor = false;
             this.btnIndumentaria.Click += new System.EventHandler(this.btnIndumentaria_Click);
             // 
             // btnEntretenimiento
             // 
+            this.btnEntretenimiento.BackColor = System.Drawing.Color.Black;
+            this.btnEntretenimiento.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEntretenimiento.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEntretenimiento.Location = new System.Drawing.Point(635, 92);
             this.btnEntretenimiento.Name = "btnEntretenimiento";
             this.btnEntretenimiento.Size = new System.Drawing.Size(154, 136);
             this.btnEntretenimiento.TabIndex = 2;
-            this.btnEntretenimiento.Text = "Entretenimiento";
-            this.btnEntretenimiento.UseVisualStyleBackColor = true;
+            this.btnEntretenimiento.Text = "ENTRETENIMIENTO";
+            this.btnEntretenimiento.UseVisualStyleBackColor = false;
             this.btnEntretenimiento.Click += new System.EventHandler(this.btnEntretenimiento_Click);
             // 
             // btnCocina
             // 
+            this.btnCocina.BackColor = System.Drawing.Color.Black;
+            this.btnCocina.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCocina.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCocina.Location = new System.Drawing.Point(13, 340);
             this.btnCocina.Name = "btnCocina";
             this.btnCocina.Size = new System.Drawing.Size(154, 136);
             this.btnCocina.TabIndex = 3;
-            this.btnCocina.Text = "Cocina";
-            this.btnCocina.UseVisualStyleBackColor = true;
+            this.btnCocina.Text = "COCINA";
+            this.btnCocina.UseVisualStyleBackColor = false;
             this.btnCocina.Click += new System.EventHandler(this.btnCocina_Click);
             // 
             // btnPedidos
             // 
+            this.btnPedidos.BackColor = System.Drawing.Color.Black;
+            this.btnPedidos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPedidos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPedidos.Location = new System.Drawing.Point(326, 340);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(154, 136);
             this.btnPedidos.TabIndex = 4;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Text = "PEDIDOS";
+            this.btnPedidos.UseVisualStyleBackColor = false;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // btnCliente
             // 
+            this.btnCliente.BackColor = System.Drawing.Color.Black;
+            this.btnCliente.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCliente.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCliente.Location = new System.Drawing.Point(635, 340);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(154, 136);
             this.btnCliente.TabIndex = 5;
-            this.btnCliente.Text = "Clientes";
-            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Text = "CLIENTES";
+            this.btnCliente.UseVisualStyleBackColor = false;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // lblInforme
             // 
             this.lblInforme.AutoSize = true;
             this.lblInforme.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInforme.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblInforme.Location = new System.Drawing.Point(13, 692);
             this.lblInforme.Name = "lblInforme";
             this.lblInforme.Size = new System.Drawing.Size(0, 25);
@@ -185,6 +207,7 @@ namespace deRenzisBruno2ETPFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(814, 730);
             this.Controls.Add(this.lblInforme);
             this.Controls.Add(this.lblEstadisticaEnvios);
